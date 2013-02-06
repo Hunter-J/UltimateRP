@@ -1,0 +1,82 @@
+persistent = 1;
+disabledAI = 1;
+showCompass = 1;
+showGPS = 1;
+showWatch = 1;
+showmap = 1;
+showNotepad = 1;
+respawn = "BASE";
+respawnDelay = 20;
+OnLoadMission = "";
+statsColumn=1;
+titleParam1="INTRO";
+valuesParam1[]={1,0};
+defvalueParam1=1;
+textsParam1[]={"ON","OFF"};
+class Header {
+	gametype = RolePlay;
+	maxplayers = 60;
+	minplayers = 1;
+};
+class CfgSounds {
+sounds[] = {};
+	class copSiren {
+		name = "copSiren"; // Name for mission editor
+		sound[] = {\RPM\Sound\Siren.ogg, db + 0, 1.0};
+		titles[] = {0, ""};
+	};
+	class Alarm1 {
+		name = "";
+		sound[]  = {"\RPM\Sound\Alarm1.ogg", 1, 1};
+		titles[] = {};
+	};
+};
+// RPM
+#include "RPM\UI\Includes\RscDefines.hpp"
+//#include "RPM\UI\Includes\RscTitles.hpp"
+#include "RPM\UI\Includes\Government\CCS\Arrest.hpp"
+#include "RPM\UI\Includes\Government\CCS\Arrested.hpp"
+#include "RPM\UI\Includes\Government\CCS\Bail.hpp"
+#include "RPM\UI\Includes\Government\CCS\Issue.hpp"
+#include "RPM\UI\Includes\Government\CCS\Receive.hpp"
+#include "RPM\UI\Includes\Government\CCS\Police.hpp"
+#include "RPM\UI\Includes\Government\CCS\QueryLicenses.hpp"
+#include "RPM\UI\Includes\Government\CCS\Release.hpp"
+#include "RPM\UI\Includes\Government\CCS\Search.hpp"
+#include "RPM\UI\Includes\Government\CCS\Want.hpp"
+#include "RPM\UI\Includes\Government\CCS\Wanted.hpp"
+#include "RPM\UI\Includes\Government\CCS\VehRelease.hpp"
+#include "RPM\UI\Includes\Government\Groups\Groups.hpp"
+#include "RPM\UI\Includes\Government\Groups\Fee.hpp"
+#include "RPM\UI\Includes\Government\Police\CrimeLog\Compose.hpp"
+#include "RPM\UI\Includes\Government\Police\CrimeLog\CrimeLog.hpp"
+#include "RPM\UI\Includes\Government\Police\CrimeLog\Read.hpp"
+#include "RPM\UI\Includes\Government\Politics\Frequency.hpp"
+#include "RPM\UI\Includes\Government\Politics\Laws.hpp"
+#include "RPM\UI\Includes\Government\Politics\LawsEdit.hpp"
+#include "RPM\UI\Includes\Government\Politics\Politics.hpp"
+#include "RPM\UI\Includes\Government\Politics\Statement.hpp"
+#include "RPM\UI\Includes\Government\Politics\Taxes.hpp"
+#include "RPM\UI\Includes\Government\Politics\Vote.hpp"
+#include "RPM\UI\Includes\Industry\Banking\Bank.hpp"
+#include "RPM\UI\Includes\Industry\Factory\Factory.hpp"
+#include "RPM\UI\Includes\Industry\Factory\FactoryStorage.hpp"
+#include "RPM\UI\Includes\Industry\Shops\Shops.hpp"
+#include "RPM\UI\Includes\Items\Bombs\Bombs.hpp"
+#include "RPM\UI\Includes\Personal\Interact\Interact.hpp"
+#include "RPM\UI\Includes\Personal\Inventory\Inventory.hpp"
+#include "RPM\UI\Includes\Personal\Inventory\Animations\Animations.hpp"
+#include "RPM\UI\Includes\Personal\Inventory\Keychain\Keychain.hpp"
+#include "RPM\UI\Includes\Personal\Inventory\Rules\Rules.hpp"
+#include "RPM\UI\Includes\Personal\Inventory\Settings\Settings.hpp"
+#include "RPM\UI\Includes\Personal\Inventory\Stats\Stats.hpp"
+#include "RPM\UI\Includes\Personal\Logs\Logs.hpp"
+#include "RPM\UI\Includes\Personal\Logs\LogsPasscode.hpp"
+#include "RPM\UI\Includes\Personal\Messaging\Messaging.hpp"
+#include "RPM\UI\Includes\Personal\Messaging\MessagingAttachments.hpp"
+#include "RPM\UI\Includes\Personal\Messaging\MessagingCompose.hpp"
+#include "RPM\UI\Includes\Personal\Messaging\MessagingRead.hpp"
+#include "RPM\UI\Includes\Personal\Skills\Skills.hpp"
+#include "RPM\UI\Includes\Personal\Skills\Reassign.hpp"
+#include "RPM\UI\Includes\Personal\Storage\Storage.hpp"
+#include "RPM\UI\Includes\Personal\Vehicle\Interact.hpp"
