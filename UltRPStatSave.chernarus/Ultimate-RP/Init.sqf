@@ -22,12 +22,9 @@ _scripts = [
 	"Ultimate-RP\Init\DisablePumps.sqf",
 	"Ultimate-RP\Houses\HouseActions.sqf",
 	"Ultimate-RP\Bank\DoorActions.sqf",
-	"Ultimate-RP\Init\CivDescriptions.sqf",
-	"Ultimate-RP\ClientLoop.sqf",
-	//"Ultimate-RP\medical.sqf",
-	"Ultimate-RP\net.sqf",
-	"Ultimate-RP\monitor.sqf",
-	"Ultimate-RP\Init\GFX.sqf"
+	"Ultimate-RP\Init\CivDescriptions.sqf"
+	//"Ultimate-RP\net.sqf",
+	//"Ultimate-RP\monitor.sqf"
 ];
 
 if (RPM_K9Dog) then {
@@ -47,5 +44,6 @@ for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
     waitUntil {scriptDone _h};
     _loaded = _loaded + 1;
 };
-		
+
+execVM "Ultimate-RP\ClientLoop.sqf";
 player commandChat "Ultimate RP 1.1 Initialized!";

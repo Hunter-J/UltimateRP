@@ -14,6 +14,7 @@ Remove E for entering/exiting vehicle
 
 
 //Hunter
+Add net and monitor scripts to Ultimate-RP folder
 Redo item weights
 Backup PD & FD Base positions
 Add Voting

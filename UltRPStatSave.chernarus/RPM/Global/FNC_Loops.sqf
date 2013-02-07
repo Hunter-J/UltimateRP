@@ -44,8 +44,6 @@ RPM_Cfg_Loops_InitClient = {
                 call RPM_Cfg_Loops_Taxes;
                 // JIP/Etc
                 call RPM_Saving_Init;
-				//HUD
-				[] execVM "Ultimate-RP\ui.sqf";
             };
             b2 = false;
         };
