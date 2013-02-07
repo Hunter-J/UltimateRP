@@ -120,6 +120,7 @@ if (isstunned) exitwith {};
 switch _key do {
 	//TAB key
 	case 15: {
+		if (!_shift) exitwith {};
 		if (INV_shortcuts) then {
 			INV_shortcuts=false; 
 			titletext["Ult-RP keys off", "PLAIN DOWN"];
