@@ -1885,7 +1885,7 @@ RPM_Cfg_Inv_Use = {
 							sleep 5;
 							waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"};
 							[556, 1] call RPM_Cfg_Inv_DelItemAmount;
-							[557, 1] call RPM_Cfg_Inv_AddItemAmount;
+							[537, 1] call RPM_Cfg_Inv_AddItemAmount;
 							player commandChat "You harvested some Hops!";
 							Planting = false;
 						};

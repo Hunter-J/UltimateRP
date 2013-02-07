@@ -1,7 +1,7 @@
 // By Ultimate-RP Dev Team: http://ultimate-rp.com
 player commandChat "1";
 _Pump = nearestObject [player, "Land_Ind_Oil_Pump_EP1"];
-if (player != vehicle player) exitwith {};
+if (vehicle player != player) exitwith {};
 if (RPM_Cop) exitwith {};
 if (Drilling) exitwith {player commandChat "You're still drilling!";
 if (_Pump getVariable "inuse" == "True") exitwith {player commandChat "Someone else is using this Oil Pump!";

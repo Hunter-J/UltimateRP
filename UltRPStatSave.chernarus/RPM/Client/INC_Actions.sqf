@@ -11,8 +11,8 @@ RPM_Person_GlobalActions = [
 ];
 
 RPM_Person_DebugActions = [
-    [RPM_Role, [format[localize "STRM_Act_Teleport_S"], "RPM\Global\STD_NoScript.sqf", ["On"] "call UltRP_Teleport;", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && !Teleport"]],
-    [RPM_Role, [format[localize "STRM_Act_Teleport_E"], "RPM\Global\STD_NoScript.sqf", ["Off"] "call UltRP_Teleport;", 0, "RPM_Debug", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && Teleport"]],
+    [RPM_Role, [format[localize "STRM_Act_Teleport_S"], "RPM\Global\STD_NoScript.sqf", "["On"] call UltRP_Debug_Teleport;", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && !Teleport"]],
+    [RPM_Role, [format[localize "STRM_Act_Teleport_E"], "RPM\Global\STD_NoScript.sqf", "["Off"] call UltRP_Debug_Teleport;", 0, "RPM_Debug", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && Teleport"]],
 ];
 
 

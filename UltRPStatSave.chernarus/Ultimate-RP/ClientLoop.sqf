@@ -1,10 +1,13 @@
 // By Ultimate-RP Dev Team: http://ultimate-rp.com
-while {true} do {
+
+while {true and alive player} do {
 	//Acre
-	execVM "Ultimate-RP\ACRE.sqf";
-	
-	//UI Display
-	call UltRP_UI_Display;
+	if (RPM_Cop or RPM_FF) then {
+		["Emerg"] call UltRP_ACRE;
+	};
+	if (RPM_Civ) then {
+		["Civ"] call UltRP_ACRE;
+	};
 	
 	//Civ Steal Prevention
 	if (RPM_Civ) then {
@@ -13,7 +16,7 @@ while {true} do {
 	};
 		
 	//Display UI
-	call UltRP_UI_Display;
+	["HUD"] call UltRP_UI;
 	
 	//PD Base Bank Alarm
 	if (!canUseBank) then {

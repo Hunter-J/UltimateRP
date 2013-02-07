@@ -63,6 +63,9 @@ for [{_i = 0}, {_i < count(init_scripts)}, {_i = _i + 1}] do {
 };
 sleep 4;
 
+//Init Ultimate-RP Scripts
+execVM "Ultimate-RP\Init.sqf";
+	
 // Version variables
 execVM "version.sqf";
 waitUntil {(!(isNil("ARMA2_CO")))};
@@ -88,9 +91,6 @@ call RPM_Cfg_Loops_InitServer;
 
 // Client settings
 if(!(isDedicated)) then {
-	//Init Ultimate-RP Scripts
-	execVM "Ultimate-RP\Init.sqf";
-	
 	CBA_display_ingame_warnings = false;
     while {RPM_Saving_Loading} do {
         cutText ["","BLACK OUT"];
