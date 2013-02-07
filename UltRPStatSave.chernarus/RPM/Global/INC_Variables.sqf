@@ -824,8 +824,8 @@ RPM_Vehicle_Interacts_Person = [
 RPM_Vehicle_Interacts_Vehicle = [
     [objNull, [format["<t size='1.1' color='#FFFF00' align='left'>%1</t>", format[localize "v357"]], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Inv_GUI;", 6, "(((driver(vehicle RPM_Role)) == RPM_Role) && (!(b50)))"]],
     //[objNull, [format[localize "v550"], "RPM\Global\STD_NoScript.sqf", "call UlRP_Cfg_Cop_Gate;", 5, "((RPM_Cop) && ((driver(vehicle RPM_Role)) == RPM_Role))"]],
-	[objNull, ["<t size='1.1' color='#087FF7' >PD [IN] GATE</t>", "UltimateRP\Police\PDGateRight.sqf", "", 5, "((RPM_Cop) || (RPM_Role call RPM_Cfg_Objects_IsAdmin))"]],
-	[objNull, ["<t size='1.1' color='#087FF7' >PD [OUT] GATE</t>", "UltimateRP\Police\PDGateLeft.sqf", "", 5, "((RPM_Cop) || (RPM_Role call RPM_Cfg_Objects_IsAdmin))"]],
+	[objNull, ["<t size='1.1' color='#087FF7' >PD [IN] GATE</t>", "Ultimate-RP\Police\PDGateRight.sqf", "", 5, "((RPM_Cop) || (RPM_Role call RPM_Cfg_Objects_IsAdmin))"]],
+	[objNull, ["<t size='1.1' color='#087FF7' >PD [OUT] GATE</t>", "Ultimate-RP\Police\PDGateLeft.sqf", "", 5, "((RPM_Cop) || (RPM_Role call RPM_Cfg_Objects_IsAdmin))"]],
     [objNull, [format[localize "v440"], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Vehicles_Lock;", 5, "((driver(vehicle RPM_Role) == RPM_Role) && ((vehicle RPM_Role) call RPM_Cfg_Vehicles_IsMyVehicle))"]],
     [objNull, [format[localize "v439"], "RPM\Global\STD_NoScript.sqf", "(vehicle RPM_Role) call RPM_Cfg_Vehicles_Interact;", 5, ""]]
 ];

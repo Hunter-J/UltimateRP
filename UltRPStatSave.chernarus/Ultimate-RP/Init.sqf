@@ -24,9 +24,9 @@ _scripts = [
 	"Ultimate-RP\Bank\DoorActions.sqf",
 	"Ultimate-RP\Init\CivDescriptions.sqf",
 	"Ultimate-RP\ClientLoop.sqf",
-	//"UltimateRP\medical.sqf",
-	"UltimateRP\net.sqf",
-	"UltimateRP\monitor.sqf",
+	//"Ultimate-RP\medical.sqf",
+	"Ultimate-RP\net.sqf",
+	"Ultimate-RP\monitor.sqf",
 	"Ultimate-RP\Init\GFX.sqf"
 ];
 

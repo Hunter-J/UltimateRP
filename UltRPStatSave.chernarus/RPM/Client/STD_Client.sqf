@@ -26,7 +26,6 @@ if (count(_narr) > 16) then {
 if (_badname) exitWith {
     RPM_Role commandChat format[localize "v530"];
 };
-removeAllWeapons RPM_Role;
 waitUntil {(!(RPM_JIP))};
 RPM_JIP = true;
 publicVariable "RPM_JIP";
@@ -51,8 +50,8 @@ RPM_Role addEventHandler ["handleDamage", {
     _this call RPM_Cfg_Inv_HandleDamage;
 }];
 // Stun
-player addEventHandler ["fired", {["fired", (_this select 4), (_this select 1)] execVM "UltimateRP\Police\stun.sqf";}];
-player addEventHandler ["handleDamage", {_this call compile preprocessfile "UltimateRP\Police\sethit.sqf"}];
+player addEventHandler ["fired", {["fired", (_this select 4), (_this select 1)] execVM "RPM\Global\Handlers\stun.sqf";}];
+player addEventHandler ["handleDamage", {_this call compile preprocessfile "RPM\Global\Handlers\sethit.sqf"}];
 // Arrest
 arrest = [];
 "arrest" addPublicVariableEventHandler {
@@ -381,6 +380,7 @@ if (count(_gotvars) >= 1) then {
     RPM_Role commandChat _line;
 };
 RPM_Saving_LoadingClient = false;
+
 // Bank
 if (!("i4" in _gotvars)) then {
     if (RPM_Debug) then {
@@ -401,10 +401,8 @@ if (!("i4" in _gotvars)) then {
 		i4 = 10000000;
 	};
 };
-// Bank indicator hint
-[] spawn {
-    sleep 4;
-    hint parseText (format[localize "v443", format["%1", i4]]);
-};
+
+RPM_JIP = false;
+publicVariable "RPM_JIP";
 RPM_Role setVariable ["jip", false, true];
 b47 = true;

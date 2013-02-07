@@ -45,7 +45,7 @@ RPM_Cfg_Loops_InitClient = {
                 // JIP/Etc
                 call RPM_Saving_Init;
 				//HUD
-				[] execVM "UltimateRP\ui.sqf";
+				[] execVM "Ultimate-RP\ui.sqf";
             };
             b2 = false;
         };
@@ -117,7 +117,7 @@ RPM_Cfg_Loops_DrugSell = {
                     };
                     if (([a53 select _i] call RPM_Cfg_Inv_GetItemAmount) >= _amount) then {
                         [(a53 select _i), _amount] call RPM_Cfg_Inv_DelItemAmount;
-                        [299, (_amount*_price)] call RPM_Cfg_Inv_AddItemAmount;
+                        [521, (_amount*_price)] call RPM_Cfg_Inv_AddItemAmount;
                         cutText [format[localize "v220", _amount, _itemname, _amount * _price],"PLAIN", 1.5];
                         sleep (round(((random(3)) + (1.5))));
                         cutText ["", "PLAIN", 0.001];

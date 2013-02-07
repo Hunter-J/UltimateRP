@@ -2035,11 +2035,11 @@ RPM_Cfg_Inv_Use = {
                 _use = false;
             };
 			case 568: {
-                ["MethLab"] execVM "UltimateRP\CreateObject.sqf";
+                ["MethLab"] execVM "Ultimate-RP\CreateObject.sqf";
                 _use = true;
             };
 			case 569: {
-                ["StorageBox"] execVM "UltimateRP\CreateObject.sqf";
+                ["StorageBox"] execVM "Ultimate-RP\CreateObject.sqf";
                 _use = true;
             };
 			case 570: {
