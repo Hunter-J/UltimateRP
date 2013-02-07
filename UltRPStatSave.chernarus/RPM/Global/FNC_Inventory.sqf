@@ -2000,7 +2000,7 @@ RPM_Cfg_Inv_Use = {
                 _newcash = _amount * 10000;
                 if ((([521] call RPM_Cfg_Inv_GetItemAmount) + _newcash) <= RPM_MAX_NUMBER) then {
                     [521, _newcash] call RPM_Cfg_Inv_AddItemAmount;
-                    hint format[localize "v387", _amount, ([([521] call RPM_Cfg_Inv_GetItemAmount), 1, 0, true] call CBA_fnc_formatNumber;) + _newcash];
+                    hint format[localize "v387", _amount, ([521] call UltRP_Cfg_Inv_GetItemAmount) + _newcash];
                     _use = true;
                     _nomsg = true;
                 } else {
@@ -2013,7 +2013,7 @@ RPM_Cfg_Inv_Use = {
                 _newcash = _amount * 100000;
                 if ((([521] call RPM_Cfg_Inv_GetItemAmount) + _newcash) <= RPM_MAX_NUMBER) then {
                     [521, _newcash] call RPM_Cfg_Inv_AddItemAmount;
-                    hint format[localize "v388", _amount, ([([521] call RPM_Cfg_Inv_GetItemAmount), 1, 0, true] call CBA_fnc_formatNumber;) + _newcash];
+                    hint format[localize "v388", _amount, ([521] call UltRP_Cfg_Inv_GetItemAmount) + _newcash];
                     _use = true;
                     _nomsg = true;
                 } else {
@@ -2219,7 +2219,7 @@ RPM_Cfg_Inv_CompileStatsArray = {
                     _str = (RPM_Stats_InfoArray select _i) select 0;
                 };
                 case 4: {
-                    _newstr = format[localize "STRM_BankAccount"] + ": " + format["$%1", [floor(i4), 1, 0, true] call CBA_fnc_formatNumber;];
+                    _newstr = format[localize "STRM_BankAccount"] + ": " + format["$%1", [floor(i4), 1, 0, true] call CBA_fnc_formatNumber];
                     (RPM_Stats_InfoArray select _i) set[0, _newstr];
                     _str = (RPM_Stats_InfoArray select _i) select 0;
                 };
