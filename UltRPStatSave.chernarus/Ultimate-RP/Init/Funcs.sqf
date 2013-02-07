@@ -79,8 +79,8 @@ _Radio = [] call acre_api_fnc_getCurrentRadio;
 
 UltRP_UI = {
 _Sel = _this select 0;
-	if (_Sel == "HUD") then {
-		[] spawn {
+	[] spawn {
+		if (_Sel == "HUD") then {
 			disableSerialization;
 			100 cutRsc ["UltRP_Dlg_ui", "PLAIN"];
 			
@@ -95,17 +95,15 @@ _Sel = _this select 0;
 	};
 	
 	if (_Sel == "Intro") then {
-		[] spawn {
-			waitUntil{!(isNil "BIS_fnc_init")};
-			sleep 3;
-			[name player, "Welcome To Ultimate-RP"] call BIS_fnc_infoText;
-			sleep 1;
-			["Ultimate-RP Version 1.1"] call BIS_fnc_infoText;
-			sleep 1;
-			["Special Thanks To: Hunter.J, OneShot.J, And The Community"] call BIS_fnc_infoText;
-			sleep 3;
-			server globalChat format ["Welcome %1 To Ulimate-RP", name player];
-		};
+		waitUntil{!(isNil "BIS_fnc_init")};
+		sleep 3;
+		[name player, "Welcome To Ultimate-RP"] call BIS_fnc_infoText;
+		sleep 1;
+		["Ultimate-RP Version 1.1"] call BIS_fnc_infoText;
+		sleep 1;
+		["Special Thanks To: Hunter.J, OneShot.J, And The Community"] call BIS_fnc_infoText;
+		sleep 3;
+		server globalChat format ["Welcome %1 To Ulimate-RP", name player];
 	};
 };
 
@@ -143,6 +141,7 @@ _Sel = _this select 0;
 		};
 		if (_Sel == "Off") then {
 			Teleport = Off;
+			onMapSingleClick "";
 		};
 	};
 };
