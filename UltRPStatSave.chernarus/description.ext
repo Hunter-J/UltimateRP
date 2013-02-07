@@ -15,20 +15,54 @@ defvalueParam1=1;
 textsParam1[]={"ON","OFF"};
 class Header {
 	gametype = RolePlay;
-	maxplayers = 60;
+	maxplayers = 64;
 	minplayers = 1;
 };
 class CfgSounds {
 sounds[] = {};
-	class copSiren {
-		name = "copSiren"; // Name for mission editor
-		sound[] = {\RPM\Sound\Siren.ogg, db + 0, 1.0};
-		titles[] = {0, ""};
-	};
-	class Alarm1 {
-		name = "";
-		sound[]  = {"\RPM\Sound\Alarm1.ogg", 1, 1};
+	class Default {
+		name     = "";
 		titles[] = {};
+	};
+	
+	class Bark1 : Default {
+		sound[]  = {"Sounds\Bark1.ogg", 0.2, 1};
+	};
+	class Bark2 : Default {
+		sound[]  = {"Sounds\Bark2.ogg", 0.2, 1};
+	};
+	class Bark3 : Default {
+		sound[]  = {"Sounds\Bark3.ogg", 0.2, 1};
+	};
+	class Bark4 : Default {
+		sound[]  = {"Sounds\Bark4.ogg", 0.2, 1};
+	};
+	class Bark5 : Default {
+		sound[]  = {"Sounds\Bark5.ogg", 0.2, 1};
+	};
+	
+	class Dispatch_Robbery : Default {
+		sound[]  = {"Sounds\Dispatch_Robbery.ogg", 0.2, 1};
+	};
+	
+	class BankAlarm_PD : Default {
+		sound[]  = {"Sounds\bankalarm_pd.ogg", 2, 1};
+	};
+
+	class Flash_Bang : Default {
+		sound[]  = {"Sounds\Flashbang.ogg", 0.8, 1};
+	};
+ 
+	class DuctTapeStrap : Default {
+	   sound[] = {"Sounds\DuctTapeStrap.ogg", 0.2, 1};
+	};
+
+	class Unlock : Default {
+		sound[] = {"Sounds\Unlock.ogg", 0.2, 1};
+	}; 
+	
+	class carallarm : Default {
+		sound[] = {Sounds\carallarm.ogg, 1, 1};
 	};
 };
 // RPM
