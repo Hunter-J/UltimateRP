@@ -183,8 +183,6 @@ RPM_Saving_LoadingClient = true;
 	disableUserInput false;
 	titleText ["", "PLAIN"];
 	player enableSimulation true;
-	server globalChat format ["Welcome %1 To Ulimate-RP", name player];
-	[]call RPM_Intro;
 };
 _stime = time;
 // Variables to get

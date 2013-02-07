@@ -1,6 +1,10 @@
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 while {true} do {
 	//Acre
-	[] execVM "Ultimate-RP\ACRE.sqf";
+	execVM "Ultimate-RP\ACRE.sqf";
+	
+	//UI Display
+	call UltRP_UI_Display;
 	
 	//Civ Steal Prevention
 	if (RPM_Civ) then {
@@ -9,7 +13,7 @@ while {true} do {
 	};
 		
 	//Display UI
-	[] execVM "Ultimate-RP\UI\ui.sqf";
+	call UltRP_UI_Display;
 	
 	//PD Base Bank Alarm
 	if (!canUseBank) then {
@@ -17,7 +21,7 @@ while {true} do {
 		sleep 8;
 	};
 	
-	//Force First Person on foot
+	//Force First Person On Foot
 	if ((vehicle player == player) && (cameraView == "EXTERNAL" || cameraView == "GROUP")) then {
 		vehicle player switchCamera "INTERNAL";
 		titleText ["3RD PERSON ON FOOT DISABLED!!!","PLAIN DOWN"]; 

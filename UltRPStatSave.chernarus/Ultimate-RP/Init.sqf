@@ -45,5 +45,6 @@ for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
     _loaded = _loaded + 1;
 };
 
-execVM "Ultimate-RP\ClientLoop.sqf";
+call UltRP_UI_Intro;
 player commandChat "Ultimate RP 1.1 Initialized!";
+execVM "Ultimate-RP\ClientLoop.sqf";
