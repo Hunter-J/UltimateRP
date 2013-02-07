@@ -131,3 +131,18 @@ _Sel = _this select 0;
 		};
 	};
 };
+
+
+
+UltRP_Debug_Teleport = {
+_Sel = _this select 0;
+	[] spawn {
+		if (_Sel == "On") then {
+			onMapSingleClick 'vehicle player setPos _pos; ["AdminTele"] call CBA_fnc_globalEvent; true;';
+			Teleport = On;
+		};
+		if (_Sel == "Off") then {
+			Teleport = Off;
+		};
+	};
+};
