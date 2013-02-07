@@ -202,13 +202,13 @@ RPM_ShopsArray = [
         [470,1,100,100],
         [471,1,100,100],
 		[472,1,100,100]
-    ], "", objNull, ["boatspawn1", "boatspawn2", "boatspawn3"], objNull, 15000, 800, [[1, 0.009],[2, 0.0045]], []], 0],
+    ], "", objNull, ["shop_boat_sp1", "shop_boat_sp2", "shop_boat_sp3"], objNull, 15000, 800, [[1, 0.009],[2, 0.0045]], []], 0],
     [22,[5, npc_shop_boat2, [
         [473,0,10,10],
         [474,1,100,100],
         [475,1,100,100],
         [476,1,100,100]
-    ], "", objNull, ["boatspawn1", "boatspawn2", "boatspawn3"], objNull, 15000, 800, [[1, 0.009],[2, 0.0045]], []], 0],
+    ], "", objNull, ["shop_boat_sp1", "shop_boat_sp2", "shop_boat_sp3"], objNull, 15000, 800, [[1, 0.009],[2, 0.0045]], []], 0],
 	
 	// Car Shops
     [23,[5, npc_shop_usedcars, [
