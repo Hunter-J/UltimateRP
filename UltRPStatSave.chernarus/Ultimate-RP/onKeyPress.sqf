@@ -3,7 +3,7 @@ private["_handled", "_faceCP", "_faceVP"];
 _key     = _this select 1;
 _shift   = _this select 2;
 _handled = false;
-_keylist = [2,3,4,6,8,9,15,17,18,20,21,33,34,38,41,42,57,78,79,80,81];
+_keylist = [2,6,8,9,15,17,18,20,21,33,34,38,41,42,57,78,79,80,81];
 
 /*
 ESC = 1 
@@ -123,11 +123,11 @@ switch _key do {
 		if (INV_shortcuts) then {
 			INV_shortcuts=false; 
 			titletext["Ult-RP keys off", "PLAIN DOWN"];
-			[] execVM "Ultimate-RP\Actions\actions.sqf";
+			call UltRP_Actions_Remove;
 		} else {
 			INV_shortcuts=true; 
 			titletext["Ult-RP keys on", "PLAIN DOWN"];
-			[] execVM "Ultimate-RP\Actions\actions.sqf";
+			call UltRP_Actions_Add;
 		};
 		_handled = true;
 	};

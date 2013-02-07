@@ -64,6 +64,7 @@ for [{_i = 0}, {_i < count(init_scripts)}, {_i = _i + 1}] do {
 sleep 4;
 
 //Init Ultimate-RP Scripts
+waitUntil {alive player};
 execVM "Ultimate-RP\Init.sqf";
 	
 // Version variables

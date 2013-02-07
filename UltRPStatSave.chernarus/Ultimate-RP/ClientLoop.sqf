@@ -16,7 +16,7 @@ while {true and alive player} do {
 	};
 		
 	//Display UI
-	["HUD"] call UltRP_UI;
+	call UltRP_UI_HUD;
 	
 	//PD Base Bank Alarm
 	if (!canUseBank) then {

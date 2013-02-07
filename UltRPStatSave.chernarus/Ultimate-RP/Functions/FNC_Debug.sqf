@@ -1,15 +1,19 @@
 // By Ultimate-RP Dev Team: http://ultimate-rp.com
+
 UltRP_Debug_Teleport = {
 _Sel = _this select 0;
-	if (_Sel == "On") then {
-		Teleport = true;
-		onMapSingleClick 'vehicle player setPos _pos; ["AdminTele"] call CBA_fnc_globalEvent; true;';
-	};
-	if (_Sel == "Off") then {
-		Teleport = false;
-		onMapSingleClick "";
+	[] spawn {
+		if (_Sel == "On") then {
+			onMapSingleClick 'vehicle player setPos _pos; ["AdminTele"] call CBA_fnc_globalEvent; true;';
+			Teleport = On;
+		};
+		if (_Sel == "Off") then {
+			Teleport = Off;
+			onMapSingleClick "";
+		};
 	};
 };
+
 
 UltRP_Debug_Loop = {
 	[] spawn {
