@@ -4,52 +4,16 @@
 
 private ["_h","_i","_script","_loaded","_scripts","_line"];
 enableSaving[false, false];
+WEST setFriend[CIVILIAN, 1];
+CIVILIAN setFriend[WEST, 1];
 
-// Required
-// Functions
-_scripts = [
-    "RPM\Global\INC_Items.sqf",
-    "RPM\Global\INC_Farms.sqf",
-    "RPM\Global\INC_Factory.sqf",
-    "RPM\Global\INC_Shops.sqf",
-    "RPM\Global\FNC_Strings.sqf",
-    "RPM\Global\KRON_Strings.sqf",
-    "RPM\Global\FNC_Crimes.sqf",
-    "RPM\Global\FNC_Farms.sqf",
-    "RPM\Global\FNC_Factory.sqf",
-    "RPM\Global\FNC_Groups.sqf",
-    "RPM\Global\FNC_Inventory.sqf",
-    "RPM\Global\FNC_Items.sqf",
-    "RPM\Global\FNC_Logs.sqf",
-    "RPM\Global\FNC_Loops.sqf",
-    "RPM\Global\FNC_Objects.sqf",
-    "RPM\Global\FNC_Police.sqf",
-    "RPM\Global\FNC_Saving.sqf",
-    "RPM\Global\FNC_Shops.sqf",
-	"RPM\Global\FNC_Skills.sqf",
-    "RPM\Global\FNC_Storage.sqf",
-    "RPM\Global\FNC_Vehicles.sqf",
-    "RPM\Client\FNC_Banking.sqf",
-    "RPM\Client\FNC_Delivery.sqf",
-    "RPM\Client\FNC_Jail.sqf",
-    "RPM\Client\FNC_Licenses.sqf",
-    "RPM\Client\FNC_Keychain.sqf",
-    "RPM\Client\FNC_Politics.sqf",
-    "RPM\Client\GUI\FNC_Banking.sqf",
-    "RPM\Client\GUI\FNC_Factory.sqf",
-    "RPM\Client\GUI\FNC_Groups.sqf",
-    "RPM\Client\GUI\FNC_Interact.sqf",
-    "RPM\Client\GUI\FNC_Inventory.sqf",
-    "RPM\Client\GUI\FNC_Keychain.sqf",
-    "RPM\Client\GUI\FNC_Jail.sqf",
-    "RPM\Client\GUI\FNC_Logs.sqf",
-    "RPM\Client\GUI\FNC_Police.sqf",
-    "RPM\Client\GUI\FNC_Politics.sqf",
-    "RPM\Client\GUI\FNC_Shops.sqf",
-	"RPM\Client\GUI\FNC_Skills.sqf",
-    "RPM\Client\GUI\FNC_Storage.sqf",
-    "RPM\Client\GUI\FNC_Vehicles.sqf"
-];
+init_scripts = [];
+player switchMove "";
+
+waitUntil {time > 0.1};
+player enableSimulation false;
+_h = []execVM "load.sqf";
+waitUntil {scriptDone _h};
 
 _loaded = 0;
 for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {

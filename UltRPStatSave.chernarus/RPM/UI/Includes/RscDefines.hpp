@@ -464,3 +464,4 @@ class RscGroup
 		colorActive[] = {1, 1, 1, 1};
 	};
 };
+

@@ -176,6 +176,7 @@ RPM_Saving_LoadingClient = true;
 	disableUserInput false;
 	titleText ["", "PLAIN"];
 	player enableSimulation true;
+	server globalChat format ["Welcome %1 To Ulimate-RP", name player];
 	[]call RPM_Intro;
 };
 _stime = time;
@@ -202,9 +203,9 @@ for [{_i = 0}, {_i < count(_vars)}, {_i = _i + 1}] do {
     _line = ("(Client) " + format[localize "STRM_Loading"] + " " + ((_vars select _i) select 2) + " data...");
     if (RPM_Saving_Debug) then {
         diag_log _line;
-        RPM_Role commandChat _line;
+        RPM_Role groupChat _line;
     } else {
-        RPM_Role commandChat _line;
+        2 cutText [_line,"PLAIN",2];
     };
     // Check if a pre-inited variable
     _arr = call compile ((_vars select _i) select 0);
@@ -226,9 +227,9 @@ for [{_i = 0}, {_i < count(_vars)}, {_i = _i + 1}] do {
                     _line = ("(Client) " + format[localize "STRM_Loading"] + " " + _this + " data...");
                     if (RPM_Saving_Debug) then {
                         diag_log _line;
-                        RPM_Role commandChat _line;
+                        RPM_Role groupChat _line;
                     } else {
-                        RPM_Role commandChat _line;
+                        2 cutText [_line,"PLAIN",2];
                     };
                     RPM_Saving_LastMessage = time;
                 };
@@ -237,9 +238,9 @@ for [{_i = 0}, {_i < count(_vars)}, {_i = _i + 1}] do {
                 _line = format["UltRP(Stats)|Timed out|%1 attempts",_loadedtries];
                 if (RPM_Saving_Debug) then {
                     diag_log _line;
-                    RPM_Role commandChat _line;
+                    RPM_Role groupChat _line;
                 } else {
-                    RPM_Role commandChat _line;
+                    2 cutText [_line,"PLAIN",2];
                 };
                 _loadedtries = 0;
                 _failedtries = _failedtries + 1;

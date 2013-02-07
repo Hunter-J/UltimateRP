@@ -23,7 +23,11 @@ _scripts = [
 	"Ultimate-RP\Houses\HouseActions.sqf",
 	"Ultimate-RP\Bank\DoorActions.sqf",
 	"Ultimate-RP\Init\CivDescriptions.sqf",
-	"Ultimate-RP\ClientLoop.sqf"
+	"Ultimate-RP\ClientLoop.sqf",
+	//"UltimateRP\medical.sqf",
+	"UltimateRP\net.sqf",
+	"UltimateRP\monitor.sqf",
+	"Ultimate-RP\Init\GFX.sqf"
 ];
 
 if (RPM_K9Dog) then {
@@ -32,11 +36,11 @@ if (RPM_K9Dog) then {
 
 _loaded = 0;
 for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
-    _line = format["Loading script %1 of %2...", _i + 1, count(_scripts)];
+    _line = format["Loading UltRP Script %1 of %2", _i + 1, count(_scripts)];
     if (isDedicated) then {
         diag_log _line;
     } else {
-        player commandChat _line;
+        2 cutText [_line,"PLAIN",2];
     };
     _script = _scripts select _i;
     _h = execVM _script;
@@ -45,4 +49,3 @@ for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
 };
 		
 player commandChat "Ultimate RP 1.1 Initialized!";
-execVM "Ultimate-RP\Init\GFX.sqf";
