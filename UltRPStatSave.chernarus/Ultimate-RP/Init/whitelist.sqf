@@ -37,7 +37,6 @@ _id = getPlayerUID player;
 
 if (_id in _AdminList) then {
 	isAdmin = true;
-	[true] execVM "Ultimate-RP\AdminDebug.sqf";
 };
 
 if (!(_id in _AdminList)) then {

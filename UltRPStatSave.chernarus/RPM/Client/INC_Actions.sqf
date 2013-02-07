@@ -11,29 +11,27 @@ RPM_Person_GlobalActions = [
 ];
 
 RPM_Person_DebugActions = [
-    [RPM_Role, [format[localize "STRM_Act_Teleport_S"], "RPM\Global\STD_NoScript.sqf", format["hint format[localize ""v69""];onMapSingleClick {vehicle RPM_Role setPos _pos};"], 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug))"]],
-    [RPM_Role, [format[localize "STRM_Act_Teleport_E"], "RPM\Global\STD_NoScript.sqf", "onmapsingleclick {};", 0, "RPM_Debug", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug))"]],
-    [RPM_Role, [format[localize "STRM_Act_Seeds"], "RPM\Global\STD_NoScript.sqf", "{[_x, 1] call RPM_Cfg_Inv_AddItemAmount;} forEach a76;hint format[localize ""v385""];", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug))"]]
+    [RPM_Role, [format[localize "STRM_Act_Teleport_S"], "RPM\Global\STD_NoScript.sqf", ["On"] "call UltRP_Teleport;", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && !Teleport"]],
+    [RPM_Role, [format[localize "STRM_Act_Teleport_E"], "RPM\Global\STD_NoScript.sqf", ["Off"] "call UltRP_Teleport;", 0, "RPM_Debug", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && Teleport"]],
 ];
 
 
 // Anchor, String, Script, Argument, Priority, Condition, Distance
 RPM_NPC_CivActions = [
-    //Factory
+    //Factories
     [npc_distillery, [format[localize "v334"], "RPM\Global\STD_NoScript.sqf", "[0] call RPM_Cfg_Factory_GUI;", 5, "", 4]],
     [npc_factory_food, [format[localize "v335"], "RPM\Global\STD_NoScript.sqf", "[1] call RPM_Cfg_Factory_GUI;", 5, "", 4]],
     [npc_factory_item, [format[localize "v336"], "RPM\Global\STD_NoScript.sqf", "[2] call RPM_Cfg_Factory_GUI;", 5, "", 4]],
     [npc_factory_resource, [format[localize "v337"], "RPM\Global\STD_NoScript.sqf", "[3] call RPM_Cfg_Factory_GUI;", 5, "", 4]],
 
-	// Areas Takeover
+	//Areas
+	//Areas Takeover
     [npc_ctrlarea1, [format[localize "STRM_Act_Areas_Takeover"], "RPM\Global\STD_NoScript.sqf", "[npc_ctrlarea1] call RPM_Cfg_Groups_Takeover;", 5, "((([0] call RPM_Cfg_Areas_GetOwner) != ([name RPM_Role] call RPM_Cfg_Groups_InGroup)) && (!(b49)))", 4]],
     [npc_ctrlarea2, [format[localize "STRM_Act_Areas_Takeover"], "RPM\Global\STD_NoScript.sqf", "[npc_ctrlarea2] call RPM_Cfg_Groups_Takeover;", 5, "((([1] call RPM_Cfg_Areas_GetOwner) != ([name RPM_Role] call RPM_Cfg_Groups_InGroup)) && (!(b49)))", 4]],
-    
-	// Areas Storage
+    //Areas Storage
     [npc_ctrlarea1, [format[localize "STRM_Act_Areas_Storage"], "RPM\Global\STD_NoScript.sqf", format["[""Group_Storage"", %1] call RPM_Cfg_Storage_GUI;", npc_ctrlarea1], 5, "((([0] call RPM_Cfg_Areas_GetOwner) call RPM_str_Length >= 1) && (isNull([0] call RPM_Cfg_Areas_GetActive)) && (([0] call RPM_Cfg_Areas_GetOwner) == ([name RPM_Role] call RPM_Cfg_Groups_InGroup)))", 4]],
     [npc_ctrlarea2, [format[localize "STRM_Act_Areas_Storage"], "RPM\Global\STD_NoScript.sqf", format["[""Group_Storage"", %1] call RPM_Cfg_Storage_GUI;", npc_ctrlarea2], 5, "((([1] call RPM_Cfg_Areas_GetOwner) call RPM_str_Length >= 1) && (isNull([1] call RPM_Cfg_Areas_GetActive)) && (([1] call RPM_Cfg_Areas_GetOwner) == ([name RPM_Role] call RPM_Cfg_Groups_InGroup)))", 4]],
-   
-	// Areas Reprocess
+	//Areas Reprocess
     [npc_ctrlarea1, [format[localize "STRM_Act_Reprocess"], "RPM\Global\STD_NoScript.sqf", "npc_ctrlarea1 call RPM_Cfg_Groups_Reprocess;", 5, "((([0] call RPM_Cfg_Areas_GetOwner) call RPM_str_Length >= 1) && (isNull([0] call RPM_Cfg_Areas_GetActive)) && (([0] call RPM_Cfg_Areas_GetOwner) == ([name RPM_Role] call RPM_Cfg_Groups_InGroup)) && (npc_ctrlarea1 call RPM_Cfg_Groups_HasDrugs) && (!(b35)))", 4]],
     [npc_ctrlarea2, [format[localize "STRM_Act_Reprocess"], "RPM\Global\STD_NoScript.sqf", "npc_ctrlarea2 call RPM_Cfg_Groups_Reprocess;", 5, "((([1] call RPM_Cfg_Areas_GetOwner) call RPM_str_Length >= 1) && (isNull([1] call RPM_Cfg_Areas_GetActive)) && (([1] call RPM_Cfg_Areas_GetOwner) == ([name RPM_Role] call RPM_Cfg_Groups_InGroup)) && (npc_ctrlarea2 call RPM_Cfg_Groups_HasDrugs) && (!(b35)))", 4]],
      
@@ -47,9 +45,6 @@ RPM_NPC_CivActions = [
     [obj_atm2, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm2 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
     [obj_atm7, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm7 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
 	[obj_atm4, [format[localize "v347"], "RPM\Global\STD_NoScript.sqf", "obj_atm4 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-    
-	// Politics
-    [npc_politics, [format[localize "v341"], "RPM\Global\STD_NoScript.sqf", "npc_politics call RPM_Cfg_Groups_GUI;", 5, "", 4]],
     
 	//Licensing
     [dmv, [format[localize "v239", 25000], "RPM\Global\STD_NoScript.sqf", format["[""lic_air"", 25000, ""%1""] call RPM_Cfg_Inv_InitLicense;", format[localize "v238", 25000]], 4, format['(!("lic_air" call RPM_Cfg_Inv_HasLicense))'], 4]],
@@ -117,7 +112,6 @@ RPM_NPC_CivActions = [
 
 
 RPM_NPC_CopActions = [
-    // Shops
     [PDGear, [format[localize "v321"], "RPM\Global\STD_NoScript.sqf", "[40] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
     [PDEquipment, [format[localize "v322"], "RPM\Global\STD_NoScript.sqf", "[41] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
     [PDHelis, [format[localize "v323"], "RPM\Global\STD_NoScript.sqf", "[42] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
@@ -129,15 +123,11 @@ RPM_NPC_CopActions = [
 
 
 RPM_NPC_FFActions = [
-    //Tele
-	[FDHelis, [format[localize "v328"], "Ultimate-RP\FDTele.sqf", "To", 4, "", 4]],
-	[FDTeleTop, [format[localize "v329"], "Ultimate-RP\FDTele.sqf", "From", 4, "", 4]],
-	
-	// Shops
     [FDEquipment, [format[localize "v330"], "RPM\Global\STD_NoScript.sqf", "[47] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
 	[FDCars, [format[localize "v331"], "RPM\Global\STD_NoScript.sqf", "[48] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
     [FDHelis, [format[localize "v332"], "RPM\Global\STD_NoScript.sqf", "[49] call RPM_Cfg_Shops_GUI;", 4, "", 4]]
 ];
+
 
 RPM_NPC_GlobalActions = [
 ];

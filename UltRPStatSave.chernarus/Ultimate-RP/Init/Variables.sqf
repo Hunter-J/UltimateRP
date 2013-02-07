@@ -1,5 +1,5 @@
 isAdmin = false;
-AdminMode = false;
+Teleport = false;
 Planting = false;
 Mining = false;
 Fishing = false;

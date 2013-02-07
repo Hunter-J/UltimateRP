@@ -128,12 +128,20 @@ _h = call RPM_Cfg_Inv_CompileStatsArray;
 waitUntil {_h};
 // Actions
 [] execVM "RPM\Client\STD_Actions.sqf";
+
+//Debugging
 [] spawn {
     waitUntil {(!(isNil("RPM_Person_DebugActions")))};
     if (RPM_Debug) then {
-        call CL_AddDebugActions;
-    };
+		call CL_AddDebugActions;
+		execVM "Ultimate-RP\DebugLoop.sqf";
+		[521, 10000000] call RPM_Cfg_Inv_AddItemAmount;
+		if (!("i4" in _gotvars)) then {
+			i4 = 10000000;
+		};
+	};
 };
+
 // Holster
 [] execVM "RPM\Client\STD_Holster.sqf";
 if (!(RPM_Debug)) then {
@@ -380,27 +388,6 @@ if (count(_gotvars) >= 1) then {
     RPM_Role commandChat _line;
 };
 RPM_Saving_LoadingClient = false;
-
-// Bank
-if (!("i4" in _gotvars)) then {
-    if (RPM_Debug) then {
-        [521, 10000000] call RPM_Cfg_Inv_AddItemAmount;
-        i4 = 10000000;
-    } else {
-        [521, 10000000] call RPM_Cfg_Inv_AddItemAmount;
-        i4 = 10000000;
-    };
-	if (RPM_Cop) then
-	{
-		[521, 10000000] call RPM_Cfg_Inv_AddItemAmount;
-		i4 = 10000000;
-	};
-	if (RPM_FF) then
-	{
-		[521, 10000000] call RPM_Cfg_Inv_AddItemAmount;
-		i4 = 10000000;
-	};
-};
 
 RPM_JIP = false;
 publicVariable "RPM_JIP";

@@ -1,76 +1,76 @@
-player RemoveAction AdminMode1;
-player RemoveAction AdminMode2;
+iif (RPM_Civ) then {
+	player RemoveAction CivAction1;
+	player RemoveAction CivAction2;
+	player RemoveAction CivAction3;
+	player RemoveAction CivAction4;
+	player RemoveAction CivAction5;
+	player RemoveAction CivAction6;
+	player RemoveAction CivAction7;
+	player RemoveAction CivAction8;
+	player RemoveAction CivAction9;
+	player RemoveAction CivAction10;
+	player RemoveAction CivAction11;
+	player RemoveAction CivAction12;
+	player RemoveAction CivAction13;
+	player RemoveAction CivAction14;
+	player RemoveAction CivAction15;
+	player RemoveAction CivAction16;
+	player RemoveAction CivAction17;
+	player RemoveAction CivAction18;
+	player RemoveAction CivAction19;
+	player RemoveAction CivAction20;
+	player RemoveAction CivAction21;
 
-player RemoveAction CivAction1;
-player RemoveAction CivAction2;
-player RemoveAction CivAction3;
-player RemoveAction CivAction4;
-player RemoveAction CivAction5;
-player RemoveAction CivAction6;
-player RemoveAction CivAction7;
-player RemoveAction CivAction8;
-player RemoveAction CivAction9;
-player RemoveAction CivAction10;
-player RemoveAction CivAction11;
-player RemoveAction CivAction12;
-player RemoveAction CivAction13;
-player RemoveAction CivAction14;
-player RemoveAction CivAction15;
-player RemoveAction CivAction16;
-player RemoveAction CivAction17;
-player RemoveAction CivAction18;
-player RemoveAction CivAction19;
-player RemoveAction CivAction20;
-player RemoveAction CivAction21;
+	player RemoveAction TrainAction1;
+	player RemoveAction TrainAction2;
+	player RemoveAction TrainAction3;
+	player RemoveAction TrainAction4;
 
-player RemoveAction TrainAction1;
-player RemoveAction TrainAction2;
-player RemoveAction TrainAction3;
-player RemoveAction TrainAction4;
+	player RemoveAction TrainAction5;
+	player RemoveAction TrainAction6;
+	player RemoveAction TrainAction7;
+	player RemoveAction TrainAction8;
 
-player RemoveAction TrainAction5;
-player RemoveAction TrainAction6;
-player RemoveAction TrainAction7;
-player RemoveAction TrainAction8;
+	player RemoveAction TrainAction9;
+	player RemoveAction TrainAction10;
+	player RemoveAction TrainAction11;
+	player RemoveAction TrainAction12;
 
-player RemoveAction TrainAction9;
-player RemoveAction TrainAction10;
-player RemoveAction TrainAction11;
-player RemoveAction TrainAction12;
+	player RemoveAction TrainAction13;
+	player RemoveAction TrainAction14;
+	player RemoveAction TrainAction15;
+	player RemoveAction TrainAction16;
 
-player RemoveAction TrainAction13;
-player RemoveAction TrainAction14;
-player RemoveAction TrainAction15;
-player RemoveAction TrainAction16;
+	player RemoveAction TrainAction17;
+	player RemoveAction TrainAction18;
+	player RemoveAction TrainAction19;
+	player RemoveAction TrainAction20;
+};
 
-player RemoveAction TrainAction17;
-player RemoveAction TrainAction18;
-player RemoveAction TrainAction19;
-player RemoveAction TrainAction20;
+if (RPM_Cop or RPM_FF) then {
+	player RemoveAction EmergAction1;
+	player RemoveAction EmergAction2;
+};
 
-player RemoveAction EmergAction1;
-player RemoveAction EmergAction2;
+if (RPM_Cop) then {
+	player RemoveAction CopAction1;
+	player RemoveAction CopAction2;
+	player RemoveAction CopAction3;
+	player RemoveAction CopAction4;
+	player RemoveAction CopAction5;
+	player RemoveAction CopAction6;
+	player RemoveAction CopAction7;
+	player RemoveAction CopAction8;
+	player RemoveAction CopAction9;
+	player RemoveAction CopAction10;
+	player RemoveAction CopAction11;
+	player RemoveAction CopAction12;
 
-player RemoveAction CopAction1;
-player RemoveAction CopAction2;
-player RemoveAction CopAction3;
-player RemoveAction CopAction4;
-player RemoveAction CopAction5;
-player RemoveAction CopAction6;
-player RemoveAction CopAction7;
-player RemoveAction CopAction8;
-player RemoveAction CopAction9;
-player RemoveAction CopAction10;
-player RemoveAction CopAction11;
-player RemoveAction CopAction12;
-
-player RemoveAction K9Action14;
-player RemoveAction K9Action15;
+	player RemoveAction K9Action14;
+	player RemoveAction K9Action15;
+};
 
 player RemoveAction AnyAction1;
 player RemoveAction AnyAction2;
 player RemoveAction AnyAction3;
 player RemoveAction AnyAction4;
-player RemoveAction AnyAction5;
-
-player RemoveAction FFAction1;

@@ -1,13 +1,5 @@
 //By OneShot.J
 
-if (isAdmin) then {
-//====================================== Admin =====================================================
-//AdminMode1 = player addaction ["<t color=""#FF8000"">" +"Enable Admin Mode","Ultimate-RP\AdminMode.sqf","Enable",1,false,true,"",'!AdminMode'];
-//AdminMode2 = player addaction ["<t color=""#FF8000"">" +"Disable Admin Mode","Ultimate-RP\AdminMode.sqf","Disable",1,false,true,"",'AdminMode'];
-};
-
-
-
 if (RPM_Civ) then {
 //========================================= HUNTING ===================================================
 CivAction1 = player addaction ["Take boar meat","noscript.sqf",'_no = ceil(random 7);if (((call INV_GetOwnWeight) + ("boarmeat" call INV_getitemTypeKg)*_no) > INV_Tragfaehigkeit)exitwith{player commandChat localize "STRS_inv_buyitems_maxgewicht"};(nearestobjects [getpos player, ["wildboar"],  3] select 0) setvariable ["inuse", 1, true]; player playmove "AinvPknlMstpSlayWrflDnon_medic";sleep 4;waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"};deletevehicle (nearestobjects [getpos player, ["wildboar"],  3] select 0);["boarmeat", _no] call INV_AddInvItem;player commandChat format["you got %1 boar meat", _no];',1,false,true,"",'_w = (nearestobjects [getpos player, ["wildboar"],  3] select 0) getvariable "inuse"; isnil "_w" and player distance (nearestobjects [getpos player, ["wildboar"],  3] select 0) <= 5 and !alive (nearestobjects [getpos player, ["wildboar"],  3] select 0)'];
@@ -103,8 +95,6 @@ CopAction9 = player addaction ["<t color=""#0000FF"">" +localize "STRS_addaction
 CopAction10 = player addaction ["<t color=""#0000FF"">" +"Impound Vehicle","scripts\impound.sqf",[],1,false,true,"",'_vcl = nearestObject [player, "LandVehicle"]; player distance _vcl <= 5 and count crew _vcl == 0 and _vcl in INV_ServerVclArray'];
 CopAction11 = player addaction ["<t color=""#0000FF"">" +"Pull civ out","noscript.sqf",'(nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0) execVM "pullout.sqf";',1,true,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 5] select 0); player distance _vcl <= 5 and count (crew _vcl) > 0'];
 CopAction12 = player addaction ["<t color=""#0000FF"">" +"Put civ in","preArrest.sqf",nearestObject [player, "LandVehicle"],1,true,true,"",'_civ = nearestobjects [player, ["Man"], 5] - [player] select 0; _vcl = nearestObject [player, "LandVehicle"]; player distance _vcl <= 5 and !(isNull _civ) and (_civ in civarray)'];
-};
-
 
 
 if (RPM_K9) then {
@@ -112,22 +102,12 @@ if (RPM_K9) then {
 K9Action1 = player addaction ["<t color=""#0000FF"">" +"Load K9","Scripts\LoadK9.sqf","Load",1,false,true,"",'_Car = nearestObject [player, "suburban_pd_k9"]; _K9 = nearestObject [player, "Pastor"]; player distance _Car <= 5 and _K9 distance _Car <= 5 and _Car getVariable "HasK9" == "False"'];
 K9Action2 = player addaction ["<t color=""#0000FF"">" +"Unload K9","Scripts\LoadK9.sqf","Unload",1,false,true,"",'_Car = nearestObject [player, "suburban_pd_k9"]; _K9 = nearestObject [player, "Pastor"]; player distance _Car <= 5 and _K9 distance _Car <= 5 and _Car getVariable "HasK9" == "True"'];
 };
+};
 
 
-
-// Any
-//====================================== VEHICLE ACTIONS ================================================
-AnyAction1 = player addaction [localize "STRS_addAction_vehicleinfo","noscript.sqf",'(nearestObject [player, "LandVehicle"]) execVM "vehinfo.sqf";',1,false,true,"",'_vcl = nearestObject [player, "LandVehicle"]; _tgt = cursorTarget; _tgt == _vcl and player distance _vcl <= 3 and _vcl in INV_ServerVclArray'];
 
 //====================================== OBJECT ACTIONS ================================================
-AnyAction2 = player addaction ["Take Meth Lab","Scripts\deleteVehicle.sqf",["methlab", "a2l_methlab"],1,false,true,"",'player distance (nearestobjects [getpos player, ["a2l_methlab"],  3] select 0) <= 5'];
-AnyAction3 = player addaction ["Take Storage Box","Scripts\deleteVehicle.sqf",["storagebox", "UNBasicAmmunitionBox_EP1"],1,false,true,"",'_Box = nearestObject [player, "UNBasicAmmunitionBox_EP1"]; _Owner = _Box getVariable "Owner"; _Owner == name player and player distance _Box <= 2'];
-AnyAction4 = player addaction ["<t color=""#FFFF00"">" +"Attach Vehicle","Scripts\tow.sqf","Attach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "False" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
-AnyAction5 = player addaction ["<t color=""#FFFF00"">" +"Detach Vehicle","Scripts\tow.sqf","Detach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "True" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
-
-
-
-if (RPM_FF) then {
-//====================================== VEHICLE ACTIONS ================================================
-FFAction1 = player addaction ["<t color=""#0000FF"">" +"Flip Vehicle","unflipvehicle.sqf",["unflip"],1,false,true,"",'_vcl = nearestObject [player, "LandVehicle"]; player distance _vcl <= 5 and vectorUp _vcl select 3 < .9'];
-};
+AnyAction1 = player addaction ["Take Meth Lab","Scripts\deleteVehicle.sqf",["methlab", "a2l_methlab"],1,false,true,"",'player distance (nearestobjects [getpos player, ["a2l_methlab"],  3] select 0) <= 5'];
+AnyAction2 = player addaction ["Take Storage Box","Scripts\deleteVehicle.sqf",["storagebox", "UNBasicAmmunitionBox_EP1"],1,false,true,"",'_Box = nearestObject [player, "UNBasicAmmunitionBox_EP1"]; _Owner = _Box getVariable "Owner"; _Owner == name player and player distance _Box <= 2'];
+AnyAction3 = player addaction ["<t color=""#FFFF00"">" +"Attach Vehicle","Scripts\tow.sqf","Attach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "False" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
+AnyAction4 = player addaction ["<t color=""#FFFF00"">" +"Detach Vehicle","Scripts\tow.sqf","Detach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "True" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
