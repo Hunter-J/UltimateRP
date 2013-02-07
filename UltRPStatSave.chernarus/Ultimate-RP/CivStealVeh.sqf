@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 _vcl = vehicle player;
 _Restricted = ["laddertruck","a2l_f350ambo","a2l_suburban_FD","a2l_squad"];
 

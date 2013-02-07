@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 if (RPM_Civ) then {
 //========================================= HUNTING ===================================================

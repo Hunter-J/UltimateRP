@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 _Item = _this select 0;
 
 if (_Item == "Marijuana") exitwith {

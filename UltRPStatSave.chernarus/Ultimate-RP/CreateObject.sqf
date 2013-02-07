@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 _Item = _this select 0;
 
 if (getPosATL player select 2 > 0.8) exitWith {

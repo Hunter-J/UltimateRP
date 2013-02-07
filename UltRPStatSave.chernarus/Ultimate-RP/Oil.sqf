@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 player commandChat "1";
 _Pump = nearestObject [player, "Land_Ind_Oil_Pump_EP1"];
 if (player != vehicle player) exitwith {};

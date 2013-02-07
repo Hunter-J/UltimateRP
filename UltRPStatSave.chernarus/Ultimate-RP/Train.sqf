@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 _Array = _this select 3;
 _Dest  = _Array select 0;

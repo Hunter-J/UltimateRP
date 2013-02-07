@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 _hasRespirator = 'respirator' call INV_GetItemAmount >= 1;
 _hasMethylamine = 'methylamine' call INV_GetItemAmount >= 1;
 _startpos = getpos player;

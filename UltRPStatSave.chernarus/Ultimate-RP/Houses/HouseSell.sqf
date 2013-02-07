@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 _House = _this select 3;
 _Price = _House getVariable "Price";

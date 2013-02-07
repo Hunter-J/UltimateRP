@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 //House1
 House1DoorBellAction = player addaction ["Door Bell","Scripts\Houses\HouseDoorBell.sqf","House1",1,false,true,"",'player distance getMarkerPos "House1DoorF" <= 2'];

@@ -1,7 +1,7 @@
 // This source is licensed under the 3-clause BSD license (See README)
 // (c) 2012 ARMA-RP Project
 // http://www.arma-rp.com/
-// Modified by Ultimate-RP Dev Team for Gold Coast
+// Modified by Ultimate-RP Dev Team: http://ultimate-rp.com
 
 private ["_h","_i","_script","_loaded","init_scripts","_line"];
 enableSaving[false, false];

@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 ["AdminTele", { player commandChat "Admin teleport detected!"; }] call CBA_fnc_addEventHandler;
 

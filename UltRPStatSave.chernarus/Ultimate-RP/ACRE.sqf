@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 //Modifed By Hunter.J For Stat Save
 _vcl = vehicle player;
 

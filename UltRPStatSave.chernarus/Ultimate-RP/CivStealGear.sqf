@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 _vcl = nearestObject [player, "LandVehicle"];
 _PatrolCars = ["ilpd_beat_f101","ilpd_slick_b40_pb"];
