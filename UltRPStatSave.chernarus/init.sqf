@@ -2,48 +2,20 @@
 // (c) 2012 ARMA-RP Project
 // http://www.arma-rp.com/
 
-private ["_h","_i","_script","_loaded","_scripts","_line"];
+private ["_h","_i","_script","_loaded","init_scripts","_line"];
 enableSaving[false, false];
-WEST setFriend[CIVILIAN, 1];
-CIVILIAN setFriend[WEST, 1];
-
-init_scripts = [];
-player switchMove "";
 
 waitUntil {time > 0.1};
 player enableSimulation false;
 _h = []execVM "load.sqf";
 waitUntil {scriptDone _h};
 
-_loaded = 0;
-for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
-    _line = format["Loading script %1 of %2...", _i + 1, count(_scripts)];
-    if (isDedicated) then {
-        diag_log _line;
-    } else {
-        player commandChat _line;
-    };
-    _script = _scripts select _i;
+for [{_i = 0}, {_i < count(init_scripts)}, {_i = _i + 1}] do {
+    _script = init_scripts select _i;
     _h = execVM _script;
-    waitUntil {scriptDone _h};
-    _loaded = _loaded + 1;
-};
-for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
-    _script = _scripts select _i;
     preprocessFile _script;
 };
-/*_line = format["RPM 1.1 Initialised!", _i + 1, count(_scripts)];
-if (isDedicated) then {
-    diag_log _line;
-} else {
-    player commandChat _line;
-};
-*/
 sleep 4;
-
-// Variables
-_h = execVM "RPM\Global\INC_Variables.sqf";
-waitUntil {scriptDone _h};
 
 // Version variables
 execVM "version.sqf";
@@ -64,8 +36,10 @@ b46 = nil;
 _h = call RPM_Cfg_Objects_RecompileArrays;
 waitUntil {_h};
 format["call RPM_Cfg_Inv_CompilePlayers;"] call RPM_Cfg_Network_Broadcast;
+
 // Server loops
 call RPM_Cfg_Loops_InitServer;
+
 // Client settings
 if(!(isDedicated)) then {
 	//Init Ultimate-RP Scripts
