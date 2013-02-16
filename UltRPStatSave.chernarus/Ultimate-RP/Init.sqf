@@ -2,6 +2,7 @@
 
 //Process Funcs for later use
 _scripts = [
+	"Ultimate-RP\Functions\FNC_Respawn.sqf",
 	"Ultimate-RP\Functions\FNC_ACRE.sqf",
 	"Ultimate-RP\Functions\FNC_Actions.sqf",
 	"Ultimate-RP\Functions\FNC_CBAEventHandlers.sqf",
@@ -10,8 +11,8 @@ _scripts = [
 	"Ultimate-RP\Functions\FNC_Dispatch.sqf",
 	"Ultimate-RP\Functions\FNC_Train.sqf",
 	"Ultimate-RP\Functions\FNC_Rob.sqf",
-	"Ultimate-RP\Functions\FNC_UI.sqf"
-	//"Ultimate-RP\Functions\FNC_Taxi.sqf",
+	"Ultimate-RP\Functions\FNC_UI.sqf",
+	"Ultimate-RP\Functions\FNC_Taxi.sqf"
 ];
 _loaded = 0;
 for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
@@ -39,13 +40,16 @@ waituntil {!(IsNull (findDisplay 46))};
 _scripts = [
 	"Ultimate-RP\Init\Variables.sqf",
 	//"Ultimate-RP\Init\whitelist.sqf",
+	"Ultimate-RP\Init\initRespawn",
     "Ultimate-RP\Init\CreateMarkers.sqf",
 	"Ultimate-RP\Init\initCopVcls.sqf",
 	"Ultimate-RP\Init\HideObjects.sqf",
 	"Ultimate-RP\Init\DisablePumps.sqf",
 	"Ultimate-RP\Init\CivDescriptions.sqf",
 	"Ultimate-RP\Houses\HouseActions.sqf",
-	"Ultimate-RP\Bank\DoorActions.sqf"
+	"Ultimate-RP\Bank\DoorActions.sqf",
+	"Ultimate-RP\itemactions.sqf",
+	"Ultimate-RP\SpeedCams.sqf"
 	//"Ultimate-RP\net.sqf",
 	//"Ultimate-RP\monitor.sqf"
 ];
@@ -75,6 +79,7 @@ _line = format["Loading UltRP script %1 of %2", _i + 1, count(_scripts)];
 removeAllWeapons player;
 if (!RPM_K9Dog) then {
 	player addWeapon "ItemGPS";
+	[511, 1] call RPM_Cfg_Inv_AddItemAmount;
 	["Add"] call UltRP_Actions;
 };
 call UltRP_UI_Intro;

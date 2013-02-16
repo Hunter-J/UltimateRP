@@ -1435,7 +1435,7 @@ RPM_Cfg_Inv_Use = {
                 };
             };
             case 511: {
-                hint format[localize "v32"];
+                execVM "Ultimate-RP\CellPhone\CellPhoneMenu.sqf";
                 _use = false;
             };
             case 512: {

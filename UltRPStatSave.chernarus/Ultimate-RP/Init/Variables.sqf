@@ -30,3 +30,5 @@ Working = false;
 Drilling = false;
 
 INV_shortcuts = true;
+
+demerits = 10;
