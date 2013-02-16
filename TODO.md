@@ -1,6 +1,8 @@
-//Does not reflect Priority!
-
-//OneShot
+==========================
+This Does not reflect Priority!
+==========================
+OneShot
+==========================
 - Require empty backs for bank robbery, obtain cash bag item instead of money
 - Redo Train Stations
 - Backup magikarp's housing community and apply markers + variables
@@ -12,8 +14,9 @@
 - Test T for trunk access
 - Remove E for entering/exiting vehicle
 
-
-//Hunter
+========
+Hunter
+========
 - Add net and monitor scripts to Ultimate-RP folder
 - Redo item weights
 - Backup PD & FD Base positions
@@ -23,7 +26,8 @@
 - Move pickup/european and executive show cars away from spawns
 - Create Hostage script (playsound DuctTapeStrap, force sit anim, disable simulation)
 
-
-//Testers
+=======
+Testers
+=======
 - Test Fishing
 - Test player + group storage
