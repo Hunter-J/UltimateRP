@@ -1,4 +1,5 @@
-By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
+
 _Array = _this select 3;
 _Item  = _Array select 0;
 _Object  = _Array select 1;

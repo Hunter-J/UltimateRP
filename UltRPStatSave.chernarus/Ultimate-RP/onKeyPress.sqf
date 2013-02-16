@@ -124,11 +124,11 @@ switch _key do {
 		if (INV_shortcuts) then {
 			INV_shortcuts=false; 
 			titletext["Ult-RP keys off", "PLAIN DOWN"];
-			call UltRP_Actions_Remove;
+			["Remove"] call UltRP_Actions;
 		} else {
 			INV_shortcuts=true; 
 			titletext["Ult-RP keys on", "PLAIN DOWN"];
-			call UltRP_Actions_Add;
+			["Add"] call UltRP_Actions;
 		};
 		_handled = true;
 	};

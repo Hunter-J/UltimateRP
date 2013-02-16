@@ -2,14 +2,14 @@
 
 UltRP_Debug_Teleport = {
 _Sel = _this select 0;
-	[] spawn {
-		if (_Sel == "On") then {
+	switch (_Sel) do {
+		case "On": {
 			onMapSingleClick 'vehicle player setPos _pos; ["AdminTele"] call CBA_fnc_globalEvent; true;';
 			Teleport = On;
 		};
-		if (_Sel == "Off") then {
-			Teleport = Off;
+		case "Off": {
 			onMapSingleClick "";
+			Teleport = Off;
 		};
 	};
 };
@@ -17,12 +17,13 @@ _Sel = _this select 0;
 
 UltRP_Debug_Loop = {
 	[] spawn {
-	_obj = format ["%1", typeOf cursorTarget];
-	_path = (getText (configFile >> "CfgVehicles" >> _obj >> "model"));
-	_vcl = vehicle player;
-		//hint format ["%1", copcount];
-		//hint format ["%1", typeOf _vcl];
-		//hint format ["%1", _path];
-		sleep .5;
+		while {true} do {
+		_path = (getText (configFile >> "CfgVehicles" >> _obj >> "model"));
+		_tgt = typeOf cursorTarget;
+			//hint format ["%1", _tgt];
+			//hint format ["%1", _path];
+			//hint format ["Teleport Enabled: %1", Teleport];
+			sleep .5;
+		};
 	};
 };

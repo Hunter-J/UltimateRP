@@ -6,13 +6,13 @@ RPM_Person_CivActions = [
 
 RPM_Person_GlobalActions = [
     //[RPM_Role, ["Open File", "\dta\file.sqf", "", 5, "((RPM_Debug) || (RPM_Role call RPM_Cfg_Objects_IsAdmin))"]],
-    [RPM_Role, [format["<t size='1.1' color='#00ccff' align='left'>%1</t>", format[localize "v357"]], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Inv_GUI;", 6, "((vehicle RPM_Role == RPM_Role) && (!(b50)))"]],
-    [RPM_Role, [format["<t size='1.1' color='#00ccff' align='left'>%1</t>", format[localize "v365"]], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Inv_Animations_GUI;", 6, "(vehicle RPM_Role == RPM_Role)"]]
+    [RPM_Role, [format["<t size='1.1' color='#FFFF00' align='left'>%1</t>", format[localize "v357"]], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Inv_GUI;", 6, "((vehicle RPM_Role == RPM_Role) && (!(b50)))"]],
+    [RPM_Role, [format["<t size='1.1' color='#FFFF00' align='left'>%1</t>", format[localize "v365"]], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Inv_Animations_GUI;", 6, "(vehicle RPM_Role == RPM_Role)"]]
 ];
 
 RPM_Person_DebugActions = [
-    [RPM_Role, [format[localize "STRM_Act_Teleport_S"], "RPM\Global\STD_NoScript.sqf", "["On"] call UltRP_Debug_Teleport;", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && !Teleport"]],
-    [RPM_Role, [format[localize "STRM_Act_Teleport_E"], "RPM\Global\STD_NoScript.sqf", "["Off"] call UltRP_Debug_Teleport;", 0, "RPM_Debug", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && Teleport"]],
+    [RPM_Role, [format[localize "STRM_Act_Teleport_S"], "RPM\Global\STD_NoScript.sqf", "[""On""] call UltRP_Debug_Teleport;", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && !Teleport"]],
+    [RPM_Role, [format[localize "STRM_Act_Teleport_E"], "RPM\Global\STD_NoScript.sqf", "[""Off""] call UltRP_Debug_Teleport;", 0, "((vehicle RPM_Role == RPM_Role) && (RPM_Debug)) && Teleport"]]
 ];
 
 

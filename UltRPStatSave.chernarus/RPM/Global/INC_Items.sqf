@@ -105,7 +105,7 @@ RPM_AllMagazineObjects = [
 	
 	//Semi-Auto Rifle Mags
 	[78, [1, TRUE, 500, "1", [], [], [[327,175]], "10x_303", format[localize "STRM_10x_303"], ""]],
-	[79, [1, TRUE, 500, "1", [], [], [[327,175]], "5x_22_LR_17_HMR", format[localize "STRM_55x_22_LR_17_HMR"], ""]],
+	[79, [1, TRUE, 500, "1", [], [], [[327,175]], "5x_22_LR_17_HMR", format[localize "STRM_5x_22_LR_17_HMR"], ""]],
 	[80, [1, TRUE, 200, "1", [], [], [[327,35]], "20Rnd_556x45_Stanag", format[localize "STRM_20Rnd_556x45_Stanag"], ""]],
 	[81, [1, TRUE, 1000, "1", [], [], [[327,250]], "10Rnd_762x54_SVD", format[localize "STRM_10Rnd_762x54_SVD"], ""]],
     [82, [1, TRUE, 500, "1", [], [], [[327,175]], "5Rnd_762x51_M24", format[localize "STRM_5Rnd_762x51_M24"], ""]],
@@ -597,7 +597,7 @@ RPM_AllVehiclesObjects = [
 	[480, [2, TRUE, 150, "10", [], [], [[316,60]], "tcg_hrlycop", format[localize "STRM_tcg_hrlycop"], ""]],
 	
 	[481, [2, TRUE, 150, "10", [], [], [[316,60]], "ilpd_beat_f101", format[localize "STRM_ilpd_beat_f101"], ""]],
-	[482, [2, TRUE, 150, "10", [], [], [[316,60]], "ilpd_slick_b40_pb", format[localize "STRM_tilpd_slick_b40_pb"], ""]],
+	[482, [2, TRUE, 150, "10", [], [], [[316,60]], "ilpd_slick_b40_pb", format[localize "STRM_ilpd_slick_b40_pb"], ""]],
 	
 	[483, [2, TRUE, 150, "10", [], [], [[316,60]], "suburban_pd_k9", format[localize "STRM_suburban_pd_k9"], ""]],
 	
@@ -707,7 +707,11 @@ RPM_AllItemsArray = [
 	[569, [3, TRUE, 1, "3", [], [], [], "Storage_Box", format[localize "STRM_Storage_Box"], "RPM\Global\FNC_Inventory.sqf"]],
 	[570, [3, TRUE, 1, "1", [], [], [], "resource_mari", format[localize "STRM_resource_mari"], "RPM\Global\FNC_Inventory.sqf"]],
 	[571, [3, TRUE, 1, "1", [], [], [], "resource_wood", format[localize "STRM_resource_wood"], "RPM\Global\FNC_Inventory.sqf"]],
-	[572, [3, TRUE, 1, "1", [], [], [[546,1],[572,2]], "equipment_axe", format[localize "STRM_equipment_axe"], "RPM\Global\FNC_Inventory.sqf"]]
+	[572, [3, TRUE, 1, "1", [], [], [[546,1],[572,2]], "equipment_axe", format[localize "STRM_equipment_axe"], "RPM\Global\FNC_Inventory.sqf"]],
+	[573, [3, TRUE, 1, "1", [], [], [], "resource_rawboar", format[localize "STRM_resource_rawboar"], "RPM\Global\FNC_Inventory.sqf"]],
+	[574, [3, TRUE, 1, "1", [], [], [], "resource_rawcow", format[localize "STRM_resource_rawcow"], "RPM\Global\FNC_Inventory.sqf"]],
+	[575, [3, TRUE, 1, "1", [], [], [], "food_pork", format[localize "STRM_food_pork"], "RPM\Global\FNC_Inventory.sqf"]],
+	[576, [3, TRUE, 1, "1", [], [], [], "food_beef", format[localize "STRM_food_beef"], "RPM\Global\FNC_Inventory.sqf"]]
 ];
 
 RPM_AllUnitsArray = [

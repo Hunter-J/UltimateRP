@@ -134,7 +134,7 @@ waitUntil {_h};
     waitUntil {(!(isNil("RPM_Person_DebugActions")))};
     if (RPM_Debug) then {
 		call CL_AddDebugActions;
-		execVM "Ultimate-RP\DebugLoop.sqf";
+		call UltRP_Debug_Loop;
 		[521, 10000000] call RPM_Cfg_Inv_AddItemAmount;
 		if (!("i4" in _gotvars)) then {
 			i4 = 10000000;

@@ -114,3 +114,4 @@ sounds[] = {};
 #include "RPM\UI\Includes\Personal\Skills\Reassign.hpp"
 #include "RPM\UI\Includes\Personal\Storage\Storage.hpp"
 #include "RPM\UI\Includes\Personal\Vehicle\Interact.hpp"
+#include "RPM\UI\Includes\Personal\UI\ui.hpp"

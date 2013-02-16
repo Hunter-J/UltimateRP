@@ -1,7 +1,6 @@
 // By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 //Process Funcs for later use
-player commandChat "Processing Ultimate-RP Functions...";
 _scripts = [
 	"Ultimate-RP\Functions\FNC_ACRE.sqf",
 	"Ultimate-RP\Functions\FNC_Actions.sqf",
@@ -9,17 +8,18 @@ _scripts = [
 	"Ultimate-RP\Functions\FNC_CopCount.sqf",
 	"Ultimate-RP\Functions\FNC_Debug.sqf",
 	"Ultimate-RP\Functions\FNC_Dispatch.sqf",
+	"Ultimate-RP\Functions\FNC_Train.sqf",
 	"Ultimate-RP\Functions\FNC_Rob.sqf",
-	"Ultimate-RP\Functions\FNC_Taxi.sqf",
 	"Ultimate-RP\Functions\FNC_UI.sqf"
-};
+	//"Ultimate-RP\Functions\FNC_Taxi.sqf",
+];
 _loaded = 0;
 for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
-_line = format["Loading Ultimate-RP function %1 of %2", _i + 1, count(_scripts)];
-    if (isDedicated or isServer) then {
+    _line = format["Loading script %1 of %2...", _i + 1, count(_scripts)];
+    if (isDedicated) then {
         diag_log _line;
     } else {
-        2 cutText [_line,"PLAIN",2];
+		//2 cutText [_line,"PLAIN",2];
     };
     _script = _scripts select _i;
     _h = execVM _script;
@@ -28,7 +28,7 @@ _line = format["Loading Ultimate-RP function %1 of %2", _i + 1, count(_scripts)]
     _loaded = _loaded + 1;
 };
 player commandChat "Ultimate-RP functions processed successfully!";
-sleep 2;
+sleep 4;
 
 onKeyPress = compile preprocessFile "Ultimate-RP\onKeyPress.sqf";
 waituntil {!(IsNull (findDisplay 46))};
@@ -36,10 +36,9 @@ waituntil {!(IsNull (findDisplay 46))};
 
 
 //Load Scripts
-player commandChat "Loading Ultimate-RP Scripts...";
 _scripts = [
 	"Ultimate-RP\Init\Variables.sqf",
-	"Ultimate-RP\Init\whitelist.sqf",
+	//"Ultimate-RP\Init\whitelist.sqf",
     "Ultimate-RP\Init\CreateMarkers.sqf",
 	"Ultimate-RP\Init\initCopVcls.sqf",
 	"Ultimate-RP\Init\HideObjects.sqf",
@@ -65,7 +64,7 @@ _line = format["Loading UltRP script %1 of %2", _i + 1, count(_scripts)];
     if (isDedicated or isServer) then {
         diag_log _line;
     } else {
-        2 cutText [_line,"PLAIN",2];
+		//2 cutText [_line,"PLAIN",2];
     };
     _script = _scripts select _i;
     _h = execVM _script;
@@ -76,7 +75,7 @@ _line = format["Loading UltRP script %1 of %2", _i + 1, count(_scripts)];
 removeAllWeapons player;
 if (!RPM_K9Dog) then {
 	player addWeapon "ItemGPS";
-	call UltRP_Actions_Add;
+	["Add"] call UltRP_Actions;
 };
 call UltRP_UI_Intro;
 player commandChat "Ultimate-RP scripts loaded successfully!";

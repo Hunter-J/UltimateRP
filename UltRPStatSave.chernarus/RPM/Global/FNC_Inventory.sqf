@@ -744,7 +744,7 @@ RPM_Cfg_Inv_GetLicenseName = {
         case "lic_air": {
             _ret = format[localize "v238"];
         };
-        case"lic_boat": {
+        case "lic_boat": {
             _ret = format[localize "v240"];
         };
         case "lic_car": {

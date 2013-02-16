@@ -29,4 +29,4 @@ Fishing = false;
 Working = false;
 Drilling = false;
 
-INV_shortcuts = false;
+INV_shortcuts = true;
