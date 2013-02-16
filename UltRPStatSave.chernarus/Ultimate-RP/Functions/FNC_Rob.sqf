@@ -1,4 +1,4 @@
-//By OneShot.J
+// By Ultimate-RP Dev Team: http://ultimate-rp.com
 
 UltRP_Rob = {
 _Sel  = _this select 0;
@@ -34,6 +34,13 @@ _Description = call compile format ["%1description", player];
 							player commandChat "The Bank is already being robbed!";
 						};
 						
+						_Random = ceil(random 5);
+						_Sound = format ["Rob%1", _Random];
+						[player, _Sound] call CBA_fnc_globalSay3d;
+						sleep 1;
+						mainbank playAction "surrender";
+						mainbank setVariable ["Surrender", "True", true];
+						sleep 3;
 						canUseBank = false;
 						publicvariable "canUseBank";
 						sleep 5;
@@ -44,13 +51,10 @@ _Description = call compile format ["%1description", player];
 					};
 
 					case "Take": {
-					_newamount = ('geld' call INV_GetItemAmount) + 50000;
-					_Pile  = _Array select 1;
+						sleep 4;
 						[nil, _Pile, rHideObject, true] call RE;
 						_Pile setVariable ["Taken", "True", true];
-						sleep 4;	
-						[564, _StolenAmount] call RPM_Cfg_Inv_AddItemAmount;
-						player commandChat "+ $50,000";
+						[564, 1] call RPM_Cfg_Inv_AddItemAmount;
 					};
 				};
 			};
@@ -68,7 +72,14 @@ _Description = call compile format ["%1description", player];
 				if (!_canRob) exitwith {
 					player commandChat "You are already robbing a gas station!";
 				};
-
+				
+				_Random = ceil(random 5);
+				_Sound = format ["Rob%1", _Random];
+				[player, _Sound] call CBA_fnc_globalSay3d;
+				sleep 1;
+				mainbank playAction "surrender";
+				mainbank setVariable ["Surrender", "True", true];
+				sleep 3;
 				_canRob = false;
 				[521, _StolenAmount] call RPM_Cfg_Inv_AddItemAmount;
 				player commandChat format ["You stole $%1", _stolenamount];
