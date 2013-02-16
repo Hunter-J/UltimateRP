@@ -7,19 +7,21 @@ _Description = call compile format ["%1description", player];
 	switch (_Sel) do {
 		case "Bank": {
 		_Type = _this select 1;
-			[_Type, _Sex, _Description] spawn {
+		_Pile = _this select 2;
+			[_Type, _Pile, _Sex, _Description] spawn {
 			_Type = _this select 0;
-			_Sex = _this select 1;
-			_Description = _this select 2;
+			_Pile = _this select 1;
+			_Sex = _this select 2;
+			_Description = _this select 3;
 				switch (_Type) do {
 					case "Reset": {
 						canUseBank = true;
 						publicvariable "canUseBank";
 						_CashPiles = [cashpile1, cashpile2, cashpile3, cashpile4, cashpile5, cashpile6, cashpile7, cashpile8];
 						{
-							if (_x getVariable "IsHidden" == "True") then {
+							if (_x getVariable "Taken" == "True") then {
 								[nil, _x, rHideObject, false] call RE;
-								_x setVariable ["IsHidden", "False", true];
+								_x setVariable ["Taken", "False", true];
 							};
 						} forEach _CashPiles;
 					};
@@ -45,7 +47,7 @@ _Description = call compile format ["%1description", player];
 					_newamount = ('geld' call INV_GetItemAmount) + 50000;
 					_Pile  = _Array select 1;
 						[nil, _Pile, rHideObject, true] call RE;
-						_Pile setVariable ["IsHidden", "True", true];
+						_Pile setVariable ["Taken", "True", true];
 						sleep 4;	
 						[564, _StolenAmount] call RPM_Cfg_Inv_AddItemAmount;
 						player commandChat "+ $50,000";

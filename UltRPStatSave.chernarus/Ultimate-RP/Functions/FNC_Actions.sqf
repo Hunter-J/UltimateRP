@@ -14,23 +14,23 @@ _Sel = _this select 0;
 
 				CivAction5 = pub1 addaction ["<t color=""#FF0000"">" +"Rob Pub","Ultimate-RP\Rob.sqf","Pub",1,false,true,"",'call INV_isArmed'];
 
-				CivAction6 = fuelshop1 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","call INV_isArmed and station1money >= 500"];
-				CivAction7 = fuelshop2 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 2],1,false,true,"","call INV_isArmed and station2money >= 500"];
-				CivAction8 = fuelshop8 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","call INV_isArmed and station8money >= 500"];
-				CivAction9 = fuelshop4 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","call INV_isArmed and station4money >= 500"];
-				CivAction10 = fuelshop7 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","call INV_isArmed and station7money >= 500"];
-				CivAction11 = fuelshop13 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","call INV_isArmed and station13money >= 500"];
+				CivAction6 = fuelshop1 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","player distance fuelshop1 <= 5 and call INV_isArmed"];
+				CivAction7 = fuelshop2 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 2],1,false,true,"","cplayer distance fuelshop2 <= 5 and all INV_isArmed"];
+				CivAction8 = fuelshop8 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","player distance fuelshop8 <= 5 and call INV_isArmed"];
+				CivAction9 = fuelshop4 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","player distance fuelshop4 <= 5 and call INV_isArmed"];
+				CivAction10 = fuelshop7 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","player distance fuelshop7 <= 5 and call INV_isArmed"];
+				CivAction11 = fuelshop13 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","player distance fuelshop13 <= 5 and call INV_isArmed"];
 
-				CivAction12 = mainbank addaction ["<t color=""#FF0000"">" +"Rob Bank","Ultimate-RP\Rob.sqf",["Bank", "Rob"],1,false,true,"",'canUseBank and call INV_isArmed'];
+				CivAction12 = player addaction ["<t color=""#FF0000"">" +"Rob Bank","Ultimate-RP\Rob.sqf",["Bank", "Rob"],1,false,true,"",'player distance mainbank <= 5 and canUseBank and call INV_isArmed'];
 
-				CivAction13 = cashpile1 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 1],1,false,true,"",'!canUseBank'];
-				CivAction14 = cashpile2 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 2],1,false,true,"",'!canUseBank'];
-				CivAction15 = cashpile3 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 3],1,false,true,"",'!canUseBank'];
-				CivAction16 = cashpile4 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 4],1,false,true,"",'!canUseBank'];
-				CivAction17 = cashpile5 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 5],1,false,true,"",'!canUseBank'];
-				CivAction18 = cashpile6 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 6],1,false,true,"",'!canUseBank'];
-				CivAction19 = cashpile7 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 7],1,false,true,"",'!canUseBank'];
-				CivAction20 = cashpile8 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", 8],1,false,true,"",'!canUseBank'];
+				CivAction13 = cashpile1 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile1],1,false,true,"",'!canUseBank'];
+				CivAction14 = cashpile2 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile2],1,false,true,"",'!canUseBank'];
+				CivAction15 = cashpile3 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile3],1,false,true,"",'!canUseBank'];
+				CivAction16 = cashpile4 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile4],1,false,true,"",'!canUseBank'];
+				CivAction17 = cashpile5 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile5],1,false,true,"",'!canUseBank'];
+				CivAction18 = cashpile6 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile6],1,false,true,"",'!canUseBank'];
+				CivAction19 = cashpile7 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile7],1,false,true,"",'!canUseBank'];
+				CivAction20 = cashpile8 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile8],1,false,true,"",'!canUseBank'];
 
 				//Kamenka
 				TrainAction1 = Kamenka addaction ["Komarovo (Costs $25)","Ultimate-RP\Train.sqf",["Komarovo", 25],1,false,true,"",''];
