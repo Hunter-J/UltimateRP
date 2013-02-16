@@ -23,7 +23,7 @@ _Cost = _this select 1;
 		[521, - _Cost] call RPM_Cfg_Inv_DelItemAmount;
 		titleText ["","BLACK OUT",1];
 		sleep 1;
-		player setpos [getMarkerPos _Marker select 0, getMarkerPos _Marker select 1, 0];
+		player setpos [getMarkerPos _Marker select 0, getMarkerPos _Marker select 1, getPosATL _Sel select 2];
 		player setDir (getDir _Sel);
 		sleep 2;
 		titleText ["","BLACK IN",1];

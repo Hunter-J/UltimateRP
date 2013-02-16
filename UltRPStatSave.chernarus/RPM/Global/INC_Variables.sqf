@@ -19,7 +19,7 @@ RPM_LastSave = 0;
 RPM_Saving_C_LoopActive = false;
 RPM_Saving_S_LoopActive = false;
 // Is save debug on?
-RPM_Saving_Debug = true;
+RPM_Saving_Debug = false;
 // Was banking saved?
 RPM_Saving_BankSaved = false;
 // Was licenses saved?
@@ -92,10 +92,8 @@ a6 = [
     box_shop_item,
     box_shop_police,
     box_shop_weapons,
-    box_storage_civ,
     box_ctrlarea1,
-    box_ctrlarea2,
-    box_storage_civ
+    box_ctrlarea2
 ];
 // Crimelog (Don't touch!)
 a7 = [];
@@ -543,11 +541,11 @@ RPM_Diary = [
         ['Basic Definitions', '<br />-&quot;Roleplay&quot; is defined as &quot;Acting as In Real Life&quot;.<br />-<strong>Non-RP action</strong> is an action without a sufficient reason, purpose or sense.<br /><br />-<strong>Safe Zone</strong> - is a green circle area of civilian storage, cop base and jail. Any hostile actions towards players is scrictly forbidden in these areas.<br /><br /><strong>Deathmatch (DM)</strong> - is killing a player or destrucing property without rp reason;<br /><br /><strong>Revenge Kill</strong> - is harming another player or his property in return for doing same to you or your property. It is allowed as long as it doesnt contradict with other rules (eg. killing an unarmed player);<br /><br /><strong>Shoot on Sight</strong> - is a playing behaviour, when player shoots before confirming the target as a proper target, or if there is no reason to shoot lethal at all;<br /><br /><strong>Killing of unarmed player</strong> - is intentional killing of unarmed and unprovoking person;<br /><br /><strong>Safe Camping</strong> - camping storage or cop base in attempt to harm a player or his property on his way in or out of the safe zone; estimate 100m from the zone or untill the first road crossing.<br /><br /><strong>Logging to Avoid</strong> - quitting the game to avoid being arrested, killed or in the middle of RP situation;<br /><br /><strong>Terrorism</strong> - is a series of violent acts against cops, mayor or any other government groups only. Terrorism must be performed in roleplay manner, through game chat.<br /><br /> Terrorism may not be directed agaisnt random civilians or their property. These actions will get you banned.']]
     ],
     ["playingCiv", 'Playing as a Civilian', 1, [
-        ['Shops', '<br />*Shop buys from you at 100% basic price <br />*All shops has stock limit - shop will not buy from you if capacity is reached. Stocks are being saved if you reconnect.<br />*Buy shop doesnt do anything yet'],
+        ['Shops', '<br />*Shop buys from you at 100% basic price <br />*All shops has stock limit - shop will not buy from you if capacity is reached. Stocks are being saved if you reconnect.<br />*Buy shop doesnt do anything yet'],
         ['Production', '<br />1. Gather resources like iron, oil, copper at mines<br />2. Take resources to reprocess factory called &quot;Resource Factory&quot; at Workplace 1 and make materials like Steel, Electronics, Gasoline<br />3. Take materials to Weapon, Vehicles or Item factory and produce desired stuff.<br /><br />*Factory storage content is not saved if you reconnect<br />*Buy factory allows you to use the factory'],
         ['Playing as a Civilian', '<br />TBD'],
         ['Making Money', '<br />*Take a delievery job at any of 3 Workplaces<br />*Make and sell drugs<br />*Rob a bank'],
-        ['Group Area', '<br />*Group areas are located around main town. <br />*You need to be in group and have a gun to take control over area.<br />*Group area npc has storage for vehicles and guns<br />*Group area npc is a place to reprocess drugs'],
+        ['Group Area', '<br />*Group areas are located around main town. <br />*You need to be in group and have a gun to take control over area.<br />*Group area npc has storage for vehicles and guns<br />*Group area npc is a place to reprocess drugs'],
         ['Drugs', '<br />Drugs are for sell only, they have no use.<br /><br />How drug dealing works:<br />1. Harvest raw drug at drug field;<br />2. Put raw drug into Group Area storage;<br />3. Use action Reprocess Drugs;<br />4. Take drug from Group storage and go to the red spot in town. Drug will be selled automatically.']
     ]],
     ["playingCop", 'Playing as a Cop', 2, [
@@ -822,7 +820,7 @@ RPM_Vehicle_Interacts_Person = [
 // Vehicle Interacts (Inside)
 // Object, Action ID, Array
 RPM_Vehicle_Interacts_Vehicle = [
-    [objNull, [format["<t size='1.1' color='#FFFF00' align='left'>%1</t>", format[localize "v357"]], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Inv_GUI;", 6, "(((driver(vehicle RPM_Role)) == RPM_Role) && (!(b50)))"]],
+    [objNull, [format["<t size='1.1' color='#00ccff' align='left'>%1</t>", format[localize "v357"]], "RPM\Global\STD_NoScript.sqf", "call RPM_Cfg_Inv_GUI;", 6, "(((driver(vehicle RPM_Role)) == RPM_Role) && (!(b50)))"]],
     //[objNull, [format[localize "v550"], "RPM\Global\STD_NoScript.sqf", "call UlRP_Cfg_Cop_Gate;", 5, "((RPM_Cop) && ((driver(vehicle RPM_Role)) == RPM_Role))"]],
 	[objNull, ["<t size='1.1' color='#087FF7' >PD [IN] GATE</t>", "Ultimate-RP\Police\PDGateRight.sqf", "", 5, "((RPM_Cop) || (RPM_Role call RPM_Cfg_Objects_IsAdmin))"]],
 	[objNull, ["<t size='1.1' color='#087FF7' >PD [OUT] GATE</t>", "Ultimate-RP\Police\PDGateLeft.sqf", "", 5, "((RPM_Cop) || (RPM_Role call RPM_Cfg_Objects_IsAdmin))"]],
@@ -848,19 +846,19 @@ RPM_Logs = [
 //RPM_Admins = [["123456","mypasscode123"]];
 RPM_VehicleClassifications = [
     // Air
-    [0,[186,187,188,189,190,191,192,193]],
+    [0,[440,441,442,443,445,446,447,448,449,450,451,452,453,454,456,457,458,459,460,461,462,463,464,465,466,498,479]],
     // Armored
-    [1,[198,199,200,202]],
+    [1,[]],
     // Boats
-    [2,[194,195,196,197]],
+    [2,[467,468,469,470,471,472,473,474,475,476,477,478]],
     // Bikes
-    [3,[206,207]],
+    [3,[405]],
     // Cars
-    [4,[201,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,245,246,247,248,249,250,251,252,253,254,255,256,261,262,263,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270]],
+    [4,[186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,312,313,314,315,316,317,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497]],
     // Motos
-    [5,[205,243,244]],
+    [5,[406,407,408,409,410,411,412,413,414,415,416,430,431,432,433,434,435,436,437,438,439]],
     // Trucks
-    [6,[203,204,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,257,258,259,260]]
+    [6,[339,400,401,402,403,404]]
 ];
 //Msg System [NOT IMPLEMENTED]
 //RPM_HINTS = RPM_HINTS + ["<t ' size = '1.15' align = 'center' color = '#009BFF'>Ultimate-RP<br/>Messaging System<br/></t>"];
