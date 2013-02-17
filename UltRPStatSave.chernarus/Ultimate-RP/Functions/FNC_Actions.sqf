@@ -14,12 +14,12 @@ _Sel = _this select 0;
 
 				CivAction5 = pub1 addaction ["<t color=""#FF0000"">" +"Rob Pub","Ultimate-RP\Rob.sqf","Pub",1,false,true,"",'call INV_isArmed'];
 
-				CivAction6 = fuelshop1 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","player distance fuelshop1 <= 5 and call INV_isArmed"];
-				CivAction7 = fuelshop2 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 2],1,false,true,"","cplayer distance fuelshop2 <= 5 and all INV_isArmed"];
-				CivAction8 = fuelshop8 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","player distance fuelshop8 <= 5 and call INV_isArmed"];
-				CivAction9 = fuelshop4 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","player distance fuelshop4 <= 5 and call INV_isArmed"];
-				CivAction10 = fuelshop7 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","player distance fuelshop7 <= 5 and call INV_isArmed"];
-				CivAction11 = fuelshop13 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","player distance fuelshop13 <= 5 and call INV_isArmed"];
+				CivAction6 = npc_petrol1 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","player distance npc_petrol1 <= 5 and call INV_isArmed"];
+				CivAction7 = npc_petrol2 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 2],1,false,true,"","player distance npc_petrol2 <= 5 and all INV_isArmed"];
+				CivAction8 = npc_petrol3 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","player distance npc_petrol3 <= 5 and call INV_isArmed"];
+				CivAction9 = npc_petrol4 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","player distance npc_petrol4 <= 5 and call INV_isArmed"];
+				CivAction10 = npc_petrol5 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","player distance npc_petrol5 <= 5 and call INV_isArmed"];
+				CivAction11 = npc_petrol6 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","player distance npc_petrol6 <= 5 and call INV_isArmed"];
 
 				CivAction12 = player addaction ["<t color=""#FF0000"">" +"Rob Bank","Ultimate-RP\Rob.sqf",["Bank", "Rob"],1,false,true,"",'player distance mainbank <= 5 and canUseBank and call INV_isArmed'];
 
@@ -189,22 +189,22 @@ _Sel = _this select 0;
 				player RemoveAction CivAction2;
 				player RemoveAction CivAction3;
 				player RemoveAction CivAction4;
-				player RemoveAction CivAction5;
-				player RemoveAction CivAction6;
-				player RemoveAction CivAction7;
-				player RemoveAction CivAction8;
-				player RemoveAction CivAction9;
-				player RemoveAction CivAction10;
-				player RemoveAction CivAction11;
+				pub1 RemoveAction CivAction5;
+				npc_petrol1 RemoveAction CivAction6;
+				npc_petrol2 RemoveAction CivAction7;
+				npc_petrol3 RemoveAction CivAction8;
+				npc_petrol4 RemoveAction CivAction9;
+				npc_petrol5 RemoveAction CivAction10;
+				npc_petrol6 RemoveAction CivAction11;
 				player RemoveAction CivAction12;
-				player RemoveAction CivAction13;
-				player RemoveAction CivAction14;
-				player RemoveAction CivAction15;
-				player RemoveAction CivAction16;
-				player RemoveAction CivAction17;
-				player RemoveAction CivAction18;
-				player RemoveAction CivAction19;
-				player RemoveAction CivAction20;
+				cashpile1 RemoveAction CivAction13;
+				cashpile2 RemoveAction CivAction14;
+				cashpile3 RemoveAction CivAction15;
+				cashpile4 RemoveAction CivAction16;
+				cashpile5 RemoveAction CivAction17;
+				cashpile6 RemoveAction CivAction18;
+				cashpile7 RemoveAction CivAction19;
+				cashpile8 RemoveAction CivAction20;
 
 				Kamenka RemoveAction TrainAction1;
 				Kamenka RemoveAction TrainAction2;

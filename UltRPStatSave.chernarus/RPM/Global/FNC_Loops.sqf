@@ -332,14 +332,13 @@ RPM_Cfg_Loops_Salary = {
                 };
                 sleep 40;
                 if (RPM_Cop) then {
-                    /*if (i4 + _cop_pay <= RPM_MAX_NUMBER) then {
+					if (i4 + _cop_pay <= RPM_MAX_NUMBER) then {
                         i4 = i4 + _cop_pay;
                         _payout = _cop_pay;
                         hint format[localize "v378", name RPM_Role, _cop_pay call RPM_str_intToStr, i4 call RPM_str_IntToStr];
                     } else {
                         hint format["%1 %2", format[localize "v379"], format[localize "v380", _cop_pay]];
                     };
-					*/
                 } else {
                     _shoppay = 0;
                     for [{_i = 0}, {_i < count(RPM_ShopsArray)}, {_i = _i + 1}] do {
@@ -356,7 +355,7 @@ RPM_Cfg_Loops_Salary = {
                     };
                 };
                 if (RPM_Cop) then {
-                    //i30 = i30 + _payout;
+                    i30 = i30 + _payout;
                 } else {
                     i30 = i30 + _payout;
                 };

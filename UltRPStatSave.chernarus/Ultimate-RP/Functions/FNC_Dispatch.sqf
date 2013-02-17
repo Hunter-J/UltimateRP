@@ -20,6 +20,8 @@ _Sel = _this select 0;
 			cutText [format["911 Dispatch: Robbery reported at the Bank! Suspect is a %1 wearing %2", _Sex, _Description], "PLAIN DOWN"];
 		};
 		case "Station": {
+		_Marker = format ["npc_petrol%1", _Station];
+			[player, getMarkerPos _Marker] spawn fnc_NavTask;
 			cutText [format["911 Dispatch: Robbery reported at Gas Station %1! Suspect is a %2 wearing %3", _Station, _Sex, _Description], "PLAIN DOWN"];
 		};
 	};

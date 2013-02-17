@@ -142,8 +142,6 @@ waitUntil {_h};
 	};
 };
 
-// Holster
-[] execVM "RPM\Client\STD_Holster.sqf";
 if (!(RPM_Debug)) then {
     [] spawn {
         private ["_add","_text"];
