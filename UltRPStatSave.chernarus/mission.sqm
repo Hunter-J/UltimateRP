@@ -23,7 +23,6 @@ class Mission
 		"ca_modules_functions",
 		"as_eu_oa_signs",
 		"acre_sys_radio",
-		"messageboard",
 		"castructures_e_housea_a_villa",
 		"mbg_buildings_3",
 		"mbg_killhouses",
@@ -107,7 +106,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=128;
+		items=130;
 		class Item0
 		{
 			side="CIV";
@@ -2746,13 +2745,13 @@ class Mission
 				class Item0
 				{
 					position[]={6268.5537,301.185,7745.9072};
-					azimut=217.08868;
+					azimut=217.089;
 					id=280;
 					side="CIV";
 					vehicle="Worker4";
 					leader=1;
 					skill=0.60000002;
-					text="npc_factory_food_1";
+					text="npc_distillery";
 					init="this setpos [getpos this select 0, getpos this select 1, 0]; this setUnitPos ""UP""; removeAllWeapons this; this allowFleeing 0; this addEventHandler [""hit"", {this setDammage -4000}]; this addEventHandler [""dammaged"", {this setDammage -4000}];  this disableAI ""move"";  this allowdamage false; this disableAI ""anim""; nul = [""nomove"", this] execVM ""RPM\Server\FNC_Misc.sqf"";";
 				};
 			};
@@ -2862,15 +2861,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8363.2813,5.9989233,2996.7549};
-					azimut=-1030.9707;
+					position[]={8363.4219,5.9990492,2996.5085};
+					azimut=-1030.97;
 					special="NONE";
 					id=427;
 					side="WEST";
 					vehicle="vilas_sira_policeman";
 					leader=1;
 					skill=0.60000002;
-					text="SwatGearShop_1";
+					text="SwatGearShop";
 					init="this setpos [getpos this select 0, getpos this select 1, 0]; this setUnitPos ""UP""; removeAllWeapons this; this allowFleeing 0; this addEventHandler [""hit"", {this setDammage -4000}]; this addEventHandler [""dammaged"", {this setDammage -4000}];  this disableAI ""move"";  this allowdamage false; this disableAI ""anim""; nul = [""nomove"", this] execVM ""RPM\Server\FNC_Misc.sqf"";";
 				};
 			};
@@ -2884,14 +2883,14 @@ class Mission
 				class Item0
 				{
 					position[]={8365.0205,5.9998655,2995.0393};
-					azimut=-1029.8097;
+					azimut=-1029.8101;
 					special="NONE";
 					id=428;
 					side="WEST";
 					vehicle="vilas_sira_policeman";
 					leader=1;
 					skill=0.60000002;
-					text="PDCars_1";
+					text="PDCars";
 					init="this disableAI ""move""; removeallweapons this; this allowdamage false;";
 				};
 			};
@@ -2905,14 +2904,14 @@ class Mission
 				class Item0
 				{
 					position[]={8366.916,6.0008788,2993.2004};
-					azimut=42.988567;
+					azimut=42.988602;
 					special="NONE";
 					id=429;
 					side="WEST";
 					vehicle="vilas_sira_policeman";
 					leader=1;
 					skill=0.60000002;
-					text="PDUCCars_1";
+					text="PDUCCars";
 					init="this disableAI ""move""; removeallweapons this; this allowdamage false;";
 				};
 			};
@@ -2926,14 +2925,14 @@ class Mission
 				class Item0
 				{
 					position[]={8368.0498,6.0014582,2992.1411};
-					azimut=42.988567;
+					azimut=42.988602;
 					special="NONE";
 					id=430;
 					side="WEST";
 					vehicle="vilas_sira_policeman";
 					leader=1;
 					skill=0.60000002;
-					text="PDBikes_1";
+					text="PDBikes";
 					init="this disableAI ""move""; removeallweapons this; this allowdamage false;";
 				};
 			};
@@ -2947,15 +2946,57 @@ class Mission
 				class Item0
 				{
 					position[]={8366.0166,6.0003777,2994.1177};
-					azimut=47.557514;
+					azimut=47.557499;
 					special="NONE";
 					id=431;
 					side="WEST";
 					vehicle="vilas_sira_policeman";
 					leader=1;
 					skill=0.60000002;
-					text="PDK9Cars_1";
+					text="PDK9Cars";
 					init="this disableAI ""move""; removeallweapons this; this allowdamage false;";
+				};
+			};
+		};
+		class Item128
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8362.8926,5.9988403,2996.8621};
+					azimut=-1030.97;
+					special="NONE";
+					id=899;
+					side="WEST";
+					vehicle="vilas_sira_policeman";
+					leader=1;
+					skill=0.60000002;
+					text="PDEquipment";
+					init="this setpos [getpos this select 0, getpos this select 1, 0]; this setUnitPos ""UP""; removeAllWeapons this; this allowFleeing 0; this addEventHandler [""hit"", {this setDammage -4000}]; this addEventHandler [""dammaged"", {this setDammage -4000}];  this disableAI ""move"";  this allowdamage false; this disableAI ""anim""; nul = [""nomove"", this] execVM ""RPM\Server\FNC_Misc.sqf"";";
+				};
+			};
+		};
+		class Item129
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8362.4873,5.9986248,2997.2502};
+					azimut=-1030.97;
+					special="NONE";
+					id=900;
+					side="WEST";
+					vehicle="vilas_sira_policeman";
+					leader=1;
+					skill=0.60000002;
+					text="PDGear";
+					init="this setpos [getpos this select 0, getpos this select 1, 0]; this setUnitPos ""UP""; removeAllWeapons this; this allowFleeing 0; this addEventHandler [""hit"", {this setDammage -4000}]; this addEventHandler [""dammaged"", {this setDammage -4000}];  this disableAI ""move"";  this allowdamage false; this disableAI ""anim""; nul = [""nomove"", this] execVM ""RPM\Server\FNC_Misc.sqf"";";
 				};
 			};
 		};
@@ -4442,13 +4483,13 @@ class Mission
 		};
 		class Item145
 		{
-			position[]={8362.9902,5.9984012,2997.8298};
+			position[]={8362.4434,5.998127,2998.3079};
 			azimut=-764.65503;
 			id=282;
 			side="EMPTY";
 			vehicle="USBasicWeaponsBox";
 			skill=0.60000002;
-			text="box_shop_police_1";
+			text="box_shop_police";
 			init="clearWeaponCargo this; clearMagazineCargo this; this allowdamage false; ";
 		};
 		class Item146
@@ -5732,13 +5773,13 @@ class Mission
 		class Item285
 		{
 			position[]={8364.4912,5.9991651,2996.4565};
-			azimut=-1308.7639;
+			azimut=-1308.76;
 			id=426;
 			side="EMPTY";
 			vehicle="UNBasicAmmunitionBox_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="SwatGearBox_1";
+			text="SwatGearBox";
 			init="clearMagazineCargo this; clearWeaponCargo this; this allowdamage false;";
 		};
 		class Item286

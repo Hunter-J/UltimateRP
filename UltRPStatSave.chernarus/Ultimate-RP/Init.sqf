@@ -40,9 +40,8 @@ waituntil {!(IsNull (findDisplay 46))};
 _scripts = [
 	"Ultimate-RP\Init\Variables.sqf",
 	//"Ultimate-RP\Init\whitelist.sqf",
-	"Ultimate-RP\Init\initRespawn",
+	"Ultimate-RP\Init\initRespawn.sqf",
     "Ultimate-RP\Init\CreateMarkers.sqf",
-	"Ultimate-RP\Init\initCopVcls.sqf",
 	"Ultimate-RP\Init\HideObjects.sqf",
 	"Ultimate-RP\Init\DisablePumps.sqf",
 	"Ultimate-RP\Init\CivDescriptions.sqf",
