@@ -12,16 +12,16 @@ _Sel = _this select 0;
 
 				CivAction4 = player addaction ["<t color=""#FFFF00"">" +"Refuel Vehicle ($100)","Ultimate-RP\PetrolRefuel.sqf","",1,false,true,"",'_Pumps = nearestobjects [getpos player, ["Land_A_Fuelstation_Feed", "cl_police_fuel_point"], 5]; _Pump1 = _Pumps select 0; _Pump2 = _Pumps select 1; _Car = nearestObject [player, "LandVehicle"]; (vehicle player == player) and (player distance _Car <= 3) and (_Car distance _Pump1 <= 5 or _Car distance _Pump2 <= 5) and (Fuel _Car <= .9)'];
 
-				CivAction5 = pub1 addaction ["<t color=""#FF0000"">" +"Rob Pub","Ultimate-RP\Rob.sqf","Pub",1,false,true,"",'call INV_isArmed'];
+				CivAction5 = pub1 addaction ["<t color=""#FF0000"">" +"Rob Pub","Ultimate-RP\Rob.sqf","Pub",1,false,true,"",'RPM_Role call RPM_Cfg_Objects_IsArmed'];
 
-				CivAction6 = npc_petrol1 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","player distance npc_petrol1 <= 5 and call INV_isArmed"];
+				CivAction6 = npc_petrol1 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","player distance npc_petrol1 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
 				CivAction7 = npc_petrol2 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 2],1,false,true,"","player distance npc_petrol2 <= 5 and all INV_isArmed"];
-				CivAction8 = npc_petrol3 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","player distance npc_petrol3 <= 5 and call INV_isArmed"];
-				CivAction9 = npc_petrol4 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","player distance npc_petrol4 <= 5 and call INV_isArmed"];
-				CivAction10 = npc_petrol5 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","player distance npc_petrol5 <= 5 and call INV_isArmed"];
-				CivAction11 = npc_petrol6 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","player distance npc_petrol6 <= 5 and call INV_isArmed"];
+				CivAction8 = npc_petrol3 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","player distance npc_petrol3 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction9 = npc_petrol4 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","player distance npc_petrol4 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction10 = npc_petrol5 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","player distance npc_petrol5 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction11 = npc_petrol6 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","player distance npc_petrol6 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
 
-				CivAction12 = player addaction ["<t color=""#FF0000"">" +"Rob Bank","Ultimate-RP\Rob.sqf",["Bank", "Rob"],1,false,true,"",'player distance mainbank <= 5 and canUseBank and call INV_isArmed'];
+				CivAction12 = player addaction ["<t color=""#FF0000"">" +"Rob Bank","Ultimate-RP\Rob.sqf",["Bank", "Rob"],1,false,true,"",'player distance mainbank <= 5 and canUseBank and RPM_Role call RPM_Cfg_Objects_IsArmed'];
 
 				CivAction13 = cashpile1 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile1],1,false,true,"",'!canUseBank'];
 				CivAction14 = cashpile2 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile2],1,false,true,"",'!canUseBank'];

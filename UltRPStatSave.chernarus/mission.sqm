@@ -10309,7 +10309,7 @@ class Mission
 		};
 		class Item38
 		{
-			position[]={13394.305,6.1841002,6356.2061};
+			position[]={13390.134,6.0983009,6356.8154};
 			name="shop_pickup_sp1";
 			type="Empty";
 			angle=148.1694;
@@ -10454,7 +10454,7 @@ class Mission
 		};
 		class Item57
 		{
-			position[]={13390.235,6.1018448,6356.8481};
+			position[]={13394.261,6.1839447,6356.2759};
 			name="shop_pickup_sp2";
 			type="Empty";
 			angle=144.11232;
@@ -10909,9 +10909,9 @@ class Mission
 		class Item114
 		{
 			position[]={12521.953,6.02,9527.957};
-			name="shop_eurocars__sp1";
+			name="shop_eurocars_sp1";
 			type="Empty";
-			angle=-170.31036;
+			angle=-170.31;
 		};
 		class Item115
 		{
@@ -11064,7 +11064,7 @@ class Mission
 		class Item136
 		{
 			position[]={11926.914,68.482323,8962.0488};
-			name="shop_execcars__sp1";
+			name="shop_execcars_sp1";
 			type="Empty";
 			angle=81.828903;
 		};
