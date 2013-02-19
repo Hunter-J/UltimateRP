@@ -106,7 +106,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=130;
+		items=140;
 		class Item0
 		{
 			side="CIV";
@@ -3000,10 +3000,200 @@ class Mission
 				};
 			};
 		};
+		class Item130
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2035.4471,9.3797321,2213.5181};
+					azimut=-18.110447;
+					id=901;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Kamenka";
+				};
+			};
+		};
+		class Item131
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3666.1221,6.6349921,2396.4487};
+					azimut=-20.3444;
+					id=902;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Komarovo";
+				};
+			};
+		};
+		class Item132
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4404.3745,9.2996454,2308.8218};
+					azimut=32.2645;
+					id=903;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Balota";
+				};
+			};
+		};
+		class Item133
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6600.3779,9.2225103,2703.3818};
+					azimut=-56.404099;
+					id=904;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Cherno";
+				};
+			};
+		};
+		class Item134
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8069.7651,9.867095,3264.8967};
+					azimut=19.944401;
+					id=905;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Prigorodki";
+				};
+			};
+		};
+		class Item135
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10343.006,8.8105354,2114.6677};
+					azimut=-13.7669;
+					id=906;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Elektro";
+				};
+			};
+		};
+		class Item136
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11967.6,9.4050522,3552.0466};
+					azimut=-24.923;
+					id=907;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Kamyshovo";
+				};
+			};
+		};
+		class Item137
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13361.389,9.6102257,6164.7246};
+					azimut=-97.986298;
+					id=908;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Solnichniy";
+				};
+			};
+		};
+		class Item138
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13000.854,9.9750233,7986.5405};
+					azimut=-89.949799;
+					id=909;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Nizhnoye";
+				};
+			};
+		};
+		class Item139
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12896.966,11.382966,9917.5537};
+					azimut=-81.739899;
+					id=910;
+					side="CIV";
+					vehicle="Secretary1";
+					leader=1;
+					skill=0.60000002;
+					text="Berezino";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=753;
+		items=758;
 		class Item0
 		{
 			position[]={6798.4302,6,2588.0535};
@@ -9983,6 +10173,61 @@ class Mission
 			side="EMPTY";
 			vehicle="armat_jailfenc1";
 			skill=1;
+		};
+		class Item753
+		{
+			position[]={6349.1577,7.4456558,2726.9741};
+			azimut=-141.94701;
+			id=911;
+			side="EMPTY";
+			vehicle="Fort_RazorWire";
+			leader=1;
+			skill=0.60000002;
+			text="speedcam1";
+		};
+		class Item754
+		{
+			position[]={6351.2778,6.6797338,2728.0618};
+			azimut=-141.94701;
+			id=912;
+			side="EMPTY";
+			vehicle="Fort_RazorWire";
+			leader=1;
+			skill=0.60000002;
+			text="speedcam2";
+		};
+		class Item755
+		{
+			position[]={6353.1812,5.9993763,2729.532};
+			azimut=-141.94701;
+			id=913;
+			side="EMPTY";
+			vehicle="Fort_RazorWire";
+			leader=1;
+			skill=0.60000002;
+			text="speedcam3";
+		};
+		class Item756
+		{
+			position[]={6355.791,6.0011902,2730.8926};
+			azimut=-141.94701;
+			id=914;
+			side="EMPTY";
+			vehicle="Fort_RazorWire";
+			leader=1;
+			skill=0.60000002;
+			text="speedcam4";
+		};
+		class Item757
+		{
+			position[]={6358.1826,6.0024223,2732.3071};
+			azimut=-141.94701;
+			id=915;
+			side="EMPTY";
+			vehicle="Fort_RazorWire";
+			leader=1;
+			skill=0.60000002;
+			text="speedcam5";
 		};
 	};
 	class Markers

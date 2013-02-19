@@ -133,12 +133,11 @@ waitUntil {_h};
 [] spawn {
     waitUntil {(!(isNil("RPM_Person_DebugActions")))};
     if (RPM_Debug) then {
+		player commandChat "DEBUG";
 		call CL_AddDebugActions;
 		call UltRP_Debug_Loop;
-		[521, 10000000] call RPM_Cfg_Inv_AddItemAmount;
-		if (!("i4" in _gotvars)) then {
-			i4 = 10000000;
-		};
+		[521, 999999] call RPM_Cfg_Inv_AddItemAmount;
+		i4 = 999999;
 	};
 };
 

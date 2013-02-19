@@ -46,9 +46,9 @@ _scripts = [
 	"Ultimate-RP\Init\DisablePumps.sqf",
 	"Ultimate-RP\Init\CivDescriptions.sqf",
 	"Ultimate-RP\Houses\HouseActions.sqf",
-	"Ultimate-RP\Bank\DoorActions.sqf",
-	"Ultimate-RP\itemactions.sqf",
-	"Ultimate-RP\SpeedCams.sqf"
+	"Ultimate-RP\Bank\DoorActions.sqf"
+	//"Ultimate-RP\SpeedCams.sqf"
+	//"Ultimate-RP\itemactions.sqf"
 	//"Ultimate-RP\net.sqf",
 	//"Ultimate-RP\monitor.sqf"
 ];
@@ -67,20 +67,19 @@ _line = format["Loading UltRP script %1 of %2", _i + 1, count(_scripts)];
     if (isDedicated or isServer) then {
         diag_log _line;
     } else {
-		//2 cutText [_line,"PLAIN",2];
+		2 cutText [_line,"PLAIN",2];
     };
     _script = _scripts select _i;
     _h = execVM _script;
     waitUntil {scriptDone _h};
     _loaded = _loaded + 1;
 };
-
 removeAllWeapons player;
 if (!RPM_K9Dog) then {
 	player addWeapon "ItemGPS";
 	[511, 1] call RPM_Cfg_Inv_AddItemAmount;
 	["Add"] call UltRP_Actions;
 };
-call UltRP_UI_Intro;
+//call UltRP_UI_Intro;
 player commandChat "Ultimate-RP scripts loaded successfully!";
 execVM "Ultimate-RP\ClientLoop.sqf";
