@@ -383,7 +383,26 @@ if (count(_gotvars) >= 1) then {
     RPM_Role commandChat _line;
 };
 RPM_Saving_LoadingClient = false;
-
+// Bank
+if (!("i4" in _gotvars)) then {
+    if (RPM_Debug) then {
+        [521, 100] call RPM_Cfg_Inv_AddItemAmount;
+        i4 = 10000000;
+    } else {
+        [521, 100] call RPM_Cfg_Inv_AddItemAmount;
+        i4 = 10000000;
+    };
+	if (RPM_Cop) then
+	{
+		[521, 100] call RPM_Cfg_Inv_AddItemAmount;
+		i4 = 10000000;
+	};
+	if (RPM_FF) then
+	{
+		[521, 100] call RPM_Cfg_Inv_AddItemAmount;
+		i4 = 10000000;
+	};
+};
 RPM_JIP = false;
 publicVariable "RPM_JIP";
 RPM_Role setVariable ["jip", false, true];
