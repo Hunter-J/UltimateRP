@@ -19,7 +19,7 @@ Hunter
 ========
 [X] Add net and monitor scripts to Ultimate-RP folder
 - Redo item weights
-- Backup PD & FD Base positions
+[X] Backup PD & FD Base positions
 - Add Voting
 - Rotate spawns
 - Fix handledmg script to show health properly

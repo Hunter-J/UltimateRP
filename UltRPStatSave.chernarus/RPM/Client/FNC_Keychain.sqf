@@ -3,32 +3,6 @@
 // http://www.arma-rp.com/
 
 // Keychain
-RPM_Cfg_Inv_RetrieveKeys = {
-    private ["_i","_idx","_add","_ret","_vcl","_uid"];
-    _ret = false;
-    if ((isNull(RPM_Role)) || (!(alive RPM_Role))) exitWith {};
-    _uid = call RPM_Cfg_Objects_GetUID;
-    if (count(a37) > 0) then {
-        _idx = -1;
-        for [{_i = 0}, {_i < count(a37)}, {_i = _i + 1}] do {
-            if (((a37 select _i) select 0) == _uid) then {
-                _idx = _i;
-            };
-        };
-        if (_idx != -1) then {
-            _add = true;
-            if (_add) then {
-                for [{_i = 0}, {_i< count((a37 select _idx) select 1)}, {_i = _i + 1}] do {
-                    _vcl = ((a37 select _idx) select 1) select _i;
-                    if (!(_vcl in a20)) then {
-                        a20 = a20 + [_vcl];
-                    };
-                };
-            };
-        };
-    };
-    _ret;
-};
 RPM_Cfg_Inv_AddKey = {
     private ["_ret","_vcl","_playerobj","_unitname"];
     _ret = false;
@@ -40,12 +14,28 @@ RPM_Cfg_Inv_AddKey = {
             if (RPM_Role == %1) then {
                 if (!(""%2"" in a20)) then {
                     a20 set[count(a20), ""%2""];
+                    [""a20"", a20] call RPM_Saving_C_Save;
                 };
             };
         };", _playerobj, _vcl] call RPM_Cfg_Network_Broadcast;
         if (RPM_Diagnostics) then {
-            [format["RPM(Keychain)|Added|%1|%2", _unitname, _vcl], false] call RPM_Cfg_Server_DiagnosticsDumper;
+            [format["CHRP(Keychain)|Added|%1|%2", _unitname, _vcl], false] call RPM_Cfg_Server_DiagnosticsDumper;
         };
+    };
+    _ret = true;
+    _ret;
+};
+RPM_Cfg_Inv_DelKeyAll = {
+    private ["_vcl","_ret"];
+    _ret = false;
+    if (!(isNull(_this))) then {
+        _vcl = format["%1", _this];
+        format['
+        if ("%1" in a20) then {
+            a20 = a20 - ["%1"];
+            ["a20", a20] call RPM_Saving_C_Save;
+        };
+        ', _vcl] call RPM_Cfg_Network_Broadcast;
     };
     _ret = true;
     _ret;
@@ -61,11 +51,12 @@ RPM_Cfg_Inv_DelKey = {
             if (RPM_Role == %1) then {
                 if (""%2"" in a20) then {
                     a20 = a20 - [""%2""];
+                    [""a20"", a20] call RPM_Saving_C_Save;
                 };
             };
         };", _playerobj, _vcl] call RPM_Cfg_Network_Broadcast;
         if (RPM_Diagnostics) then {
-            [format["RPM(Keychain)|Removed|%1|%2", _player, _vcl], false] call RPM_Cfg_Server_DiagnosticsDumper;
+            [format["CHRP(Keychain)|Removed|%1|%2", _player, _vcl], false] call RPM_Cfg_Server_DiagnosticsDumper;
         };
     };
     _ret = true;
@@ -117,7 +108,7 @@ RPM_Cfg_Inv_Givekey = {
         _ret = true;
     };
     if (RPM_Diagnostics) then {
-        [format["RPM(Keychain)|Gave|%1|%2|%3", name RPM_Role, name _tgt, _key], false] call RPM_Cfg_Server_DiagnosticsDumper;
+        [format["CHRP(Keychain)|Gave|%1|%2|%3", name RPM_Role, name _tgt, _key], false] call RPM_Cfg_Server_DiagnosticsDumper;
     };
     _ret;
 };
@@ -144,7 +135,7 @@ RPM_Cfg_Inv_Dupekey = {
     };", _target, _key, format[localize "v215", _key]] call RPM_Cfg_Network_Broadcast;
     hint format[localize "v190", _key, _target, name _target];
     if (RPM_Diagnostics) then {
-        [format["RPM(Keychain)|Duplicated|%1|%2|%3", name RPM_Role, name _target, _key], false] call RPM_Cfg_Server_DiagnosticsDumper;
+        [format["CHRP(Keychain)|Duplicated|%1|%2|%3", name RPM_Role, name _target, _key], false] call RPM_Cfg_Server_DiagnosticsDumper;
     };
     _ret = true;
     _ret;

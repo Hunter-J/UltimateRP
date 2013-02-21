@@ -18,10 +18,10 @@ class RscTitles: RscGroup
         class moneyText : RscStructuredText
         {
             idc = 1;
-			x = 0.750;
-            y = 0.999;
-            h = (0.11 * SafeZoneH);
-			w = (0.4 * SafeZoneW);
+            x = 0.750;
+            y = safeZoneY;
+            w = 0.75;
+            h = 0.3;
 			size = 0.025;
             text = "";
         };
