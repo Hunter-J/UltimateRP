@@ -161,12 +161,6 @@ _Sel = _this select 0;
 				CopAction5 = player addaction ["<t color=""#0000FF"">" +"Take Searchlight","Ultimate-RP\DeleteObject.sqf",["SearchLight_UN_EP1", "SearchLight_UN_EP1"],1,false,true,"",'player distance (nearestobjects [getpos player, ["SearchLight_UN_EP1"],  5] select 0) <= 5'];
 				CopAction6 = player addaction ["<t color=""#0000FF"">" +"Take Roadblock","Ultimate-RP\DeleteObject.sqf",["roadblock", "Land_CncBlock_Stripes"],1,false,true,"",'player distance (nearestobjects [getpos player, ["Land_CncBlock_Stripes"],  5] select 0) <= 5'];
 				CopAction7 = player addaction ["<t color=""#0000FF"">" +"Take Bar Gate","Ultimate-RP\DeleteObject.sqf",["bargate", "ZavoraAnim"],1,false,true,"",'player distance Bargate > 5 and player distance (nearestobjects [getpos player, ["ZavoraAnim"],  5] select 0) <= 5'];
-
-
-				if (RPM_K9) then {
-					K9Action1 = player addaction ["<t color=""#0000FF"">" +"Load K9","Ultimate-RP\LoadK9.sqf","Load",1,false,true,"",'_Car = nearestObject [player, "suburban_pd_k9"]; _K9 = nearestObject [player, "Pastor"]; player distance _Car <= 5 and _K9 distance _Car <= 5 and _Car getVariable "HasK9" == "False"'];
-					K9Action2 = player addaction ["<t color=""#0000FF"">" +"Unload K9","Ultimate-RP\LoadK9.sqf","Unload",1,false,true,"",'_Car = nearestObject [player, "suburban_pd_k9"]; _K9 = nearestObject [player, "Pastor"]; player distance _Car <= 5 and _K9 distance _Car <= 5 and _Car getVariable "HasK9" == "True"'];
-				};
 			};
 			
 			if (RPM_FF) then {
@@ -323,9 +317,6 @@ _Sel = _this select 0;
 				player RemoveAction CopAction5;
 				player RemoveAction CopAction6;
 				player RemoveAction CopAction7;
-
-				player RemoveAction K9Action14;
-				player RemoveAction K9Action15;
 			};
 			
 			if (RPM_FF) then {

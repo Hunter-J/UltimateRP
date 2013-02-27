@@ -59,9 +59,11 @@ if (!(local server and !local player)) then {
 	};
 	if (RPM_Cop) then {
 		_scripts = _scripts + ["Ultimate-RP\Init\initCop.sqf"];
+		player setVariable ["Street", "None", true];
 	};
 	if (RPM_FF) then {
 		_scripts = _scripts + ["Ultimate-RP\Init\initFF.sqf"];
+		player setVariable ["Street", "None", true];
 	};
 	_loaded = 0;
 	for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {

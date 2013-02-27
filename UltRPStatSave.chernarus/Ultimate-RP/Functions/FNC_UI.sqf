@@ -7,9 +7,9 @@ _weight = [] call RPM_Cfg_Inv_GetOwnWeight;
 _hunger = floor(i9);
 _health = floor(call RPM_Cfg_Inv_GetHealth);
 _id = getPlayerUID player;
-//_Towns = nearestLocations [vehicle player, ["NameVillage","NameCity","NameCityCapital"], 20000]; 
-//_Town = text (_Towns select 0);
-//_Street = player getVariable "Street";
+_Towns = nearestLocations [vehicle player, ["NameVillage","NameCity","NameCityCapital"], 20000]; 
+_Town = text (_Towns select 0);
+_Street = player getVariable "Street";
 	
 	disableSerialization;
 	100 cutRsc ["UltRP_Dlg_ui", "PLAIN"];

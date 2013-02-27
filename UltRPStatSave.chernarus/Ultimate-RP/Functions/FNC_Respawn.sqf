@@ -9,13 +9,13 @@ _Sel = _this select 0;
 				removeAllWeapons player;
 				player addWeapon "ItemGPS";
 				if (RPM_Cop) then {
-					execVM "init\loadPD.sqf";
+					//PD STUFF
 				};
 				if (RPM_Civ) then {
 					//CIV STUFF
 				};
 				if (RPM_FF) then {
-					execVM "init\loadFD.sqf";
+					//FD STUFF
 				};
 				titleText ["", "PLAIN"];
 			};
