@@ -41,14 +41,6 @@ RPM_NPC_CivActions = [
 	//Delivery
     [npc_getjob1, [format[localize "STRM_Act_Delivery_Get"], "RPM\Global\STD_NoScript.sqf", "npc_getjob1 call RPM_Cfg_Delivery_Logic;", 4, "((!(b3)))", 4]],
    
-	//ATM/Bank
-	[obj_atm1, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm1 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-    [obj_atm2, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm2 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-    [obj_atm3, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm3 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-	[obj_atm4, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm4 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-    [obj_atm5, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm5 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-	[npc_bank, [format[localize "v347"], "RPM\Global\STD_NoScript.sqf", "npc_bank call RPM_Cfg_Banking_GUI;", 4, "", 4]],	
-    
 	//Licensing
     [dmv, [format[localize "v239", 25000], "RPM\Global\STD_NoScript.sqf", format["[""lic_air"", 25000, ""%1""] call RPM_Cfg_Inv_InitLicense;", format[localize "v238", 25000]], 4, format['(!("lic_air" call RPM_Cfg_Inv_HasLicense))'], 4]],
     [dmv, [format[localize "v241", 2500], "RPM\Global\STD_NoScript.sqf", format["[""lic_boat"", 2500, ""%1""] call RPM_Cfg_Inv_InitLicense;", format[localize "v240", 2500]], 4, format['(!("lic_boat" call RPM_Cfg_Inv_HasLicense))'], 4]],
@@ -133,10 +125,11 @@ RPM_NPC_FFActions = [
 
 
 RPM_NPC_GlobalActions = [
-	[obj_atm1, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm1 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-    [obj_atm2, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm2 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-    [obj_atm3, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm3 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-	[obj_atm4, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm4 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-    [obj_atm5, [format[localize "v346"], "RPM\Global\STD_NoScript.sqf", "obj_atm5 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
-	[npc_bank, [format[localize "v347"], "RPM\Global\STD_NoScript.sqf", "npc_bank call RPM_Cfg_Banking_GUI;", 7, "", 7]]
+	//ATM/Bank
+	[obj_atm2, [format[localize "v344"], "RPM\Global\STD_NoScript.sqf", "obj_atm2 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
+    [obj_atm7, [format[localize "v344"], "RPM\Global\STD_NoScript.sqf", "obj_atm7 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
+    [obj_atm4, [format[localize "v344"], "RPM\Global\STD_NoScript.sqf", "obj_atm4 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
+	[obj_atm1, [format[localize "v344"], "RPM\Global\STD_NoScript.sqf", "obj_atm1 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
+    [obj_atm5, [format[localize "v344"], "RPM\Global\STD_NoScript.sqf", "obj_atm5 call RPM_Cfg_Banking_GUI;", 4, "", 4]],
+	[npc_bank, [format[localize "v345"], "RPM\Global\STD_NoScript.sqf", "npc_bank call RPM_Cfg_Banking_GUI;", 4, "", 4]]
 ];

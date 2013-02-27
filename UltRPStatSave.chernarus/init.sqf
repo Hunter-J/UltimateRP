@@ -81,7 +81,7 @@ waitUntil {scriptDone _h};
 
 //Init Ultimate-RP Scripts
 waitUntil {alive player};
-execVM "Ultimate-RP\Init.sqf";
+execVM "Ultimate-RP\Init\Init.sqf";
 
 // Version variables
 execVM "version.sqf";

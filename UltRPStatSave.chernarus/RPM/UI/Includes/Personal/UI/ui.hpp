@@ -18,7 +18,7 @@ class RscTitles: RscGroup
         class moneyText : RscStructuredText
         {
             idc = 1;
-            x = 0.750;
+            x = .68;
             y = safeZoneY;
             w = 0.75;
             h = 0.3;

@@ -24,9 +24,9 @@ UltRP_UI_Intro = {
 		waitUntil{!(isNil "BIS_fnc_init")};
 		sleep 3;
 		[name player, "Welcome To Ultimate-RP"] call BIS_fnc_infoText;
-		sleep 1;
+		sleep 3;
 		["Ultimate-RP Version 1.1"] call BIS_fnc_infoText;
-		sleep 1;
+		sleep 3;
 		["Special Thanks To: Hunter.J, OneShot.J, And The Community"] call BIS_fnc_infoText;
 		sleep 3;
 		server globalChat format ["Welcome %1 To Ulimate-RP", name player];
