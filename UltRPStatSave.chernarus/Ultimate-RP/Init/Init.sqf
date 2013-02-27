@@ -46,7 +46,6 @@ if (!dedicatedserver) then {
 	//Load Scripts
 	_scripts = [
 		"Ultimate-RP\Init\Variables.sqf",
-		//"Ultimate-RP\Init\whitelist.sqf",
 		"Ultimate-RP\Init\initRespawn.sqf",
 		//"Ultimate-RP\Init\CreateMarkers.sqf",
 		"Ultimate-RP\Init\DisablePumps.sqf",
@@ -57,6 +56,9 @@ if (!dedicatedserver) then {
 		//"Ultimate-RP\net.sqf",
 		//"Ultimate-RP\monitor.sqf"
 	];
+	if (!isServer) then {
+		_scripts = _scripts + ["Ultimate-RP\Init\whitelist.sqf"];
+	};
 	if (RPM_Cop) then {
 		_scripts = _scripts + ["Ultimate-RP\Init\initCop.sqf"];
 	};
