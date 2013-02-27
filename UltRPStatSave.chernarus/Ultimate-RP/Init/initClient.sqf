@@ -41,8 +41,7 @@ _scripts = [
 	"Ultimate-RP\Init\Client\Variables.sqf",
 	//"Ultimate-RP\Init\Client\whitelist.sqf",
 	"Ultimate-RP\Init\Client\initRespawn.sqf",
-    "Ultimate-RP\Init\Client\CreateMarkers.sqf",
-	"Ultimate-RP\Init\Client\HideObjects.sqf",
+    //"Ultimate-RP\Init\Client\CreateMarkers.sqf",
 	"Ultimate-RP\Init\Client\DisablePumps.sqf",
 	"Ultimate-RP\Houses\HouseActions.sqf",
 	"Ultimate-RP\Bank\DoorActions.sqf"
