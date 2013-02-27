@@ -1,14 +1,10 @@
 // By Ultimate-RP Dev Team: http://ultimate-rp.com
 
-if (local server and !local player) then { 
-	dedicatedServer = true;
-};	
-
 if (isServer) then {
 	execVM "Server\StatSave\InitServer.sqf";
 };
 
-if (!dedicatedserver) then {
+if (!(local server and !local player)) then {
 	//Process Funcs for later use
 	_scripts = [
 		"Ultimate-RP\Functions\FNC_Respawn.sqf",

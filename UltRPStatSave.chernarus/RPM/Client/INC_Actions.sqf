@@ -36,7 +36,7 @@ RPM_NPC_CivActions = [
     [npc_ctrlarea2, [format[localize "STRM_Act_Reprocess"], "RPM\Global\STD_NoScript.sqf", "npc_ctrlarea2 call RPM_Cfg_Groups_Reprocess;", 5, "((([1] call RPM_Cfg_Areas_GetOwner) call RPM_str_Length >= 1) && (isNull([1] call RPM_Cfg_Areas_GetActive)) && (([1] call RPM_Cfg_Areas_GetOwner) == ([name RPM_Role] call RPM_Cfg_Groups_InGroup)) && (npc_ctrlarea2 call RPM_Cfg_Groups_HasDrugs) && (!(b35)))", 4]],
      
 	// Storage
-    [npc_storage_civ, [format[localize "v355"], "RPM\Global\STD_NoScript.sqf", format["[""Storage"", 0, 0, %1] call RPM_Cfg_Storage_GUI;", npc_storage_civ], 5, "", 4]],
+    [npc_storage_civ, [format[localize "v343"], "RPM\Global\STD_NoScript.sqf", format["[""Storage"", 0, 0, %1] call RPM_Cfg_Storage_GUI;", npc_storage_civ], 5, "", 4]],
     
 	//Delivery
     [npc_getjob1, [format[localize "STRM_Act_Delivery_Get"], "RPM\Global\STD_NoScript.sqf", "npc_getjob1 call RPM_Cfg_Delivery_Logic;", 4, "((!(b3)))", 4]],
