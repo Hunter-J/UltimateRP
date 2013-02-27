@@ -1,6 +1,8 @@
 // By Ultimate-RP Dev Team: http://ultimate-rp.com
 
-if(local server and !local player)then{dedicatedServer = true};	
+if (local server and !local player) then { 
+	dedicatedServer = true;
+};	
 
 if (isServer) then {
 	execVM "Server\StatSave\InitServer.sqf";
