@@ -1,1 +1,0 @@
-{ _x setFuelCargo 0; } forEach (nearestObjects [player, ["Land_A_FuelStation_Feed", "Barrels"], 10000]); 
