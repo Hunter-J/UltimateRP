@@ -43,43 +43,28 @@ waitUntil {!(isNil "ServerLoaded")};
 	waituntil {!(IsNull (findDisplay 46))};
 	(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call onKeyPress"];
 
-
-	//Load Scripts
-	_scripts = [
-		"Ultimate-RP\Init\Variables.sqf",
-		"Ultimate-RP\Init\initRespawn.sqf",
-		//"Ultimate-RP\Init\CreateMarkers.sqf",
-		"Ultimate-RP\Init\DisablePumps.sqf",
-		"Ultimate-RP\Houses\HouseActions.sqf",
-		"Ultimate-RP\Bank\DoorActions.sqf"
-		//"Ultimate-RP\SpeedCams.sqf"
-		//"Ultimate-RP\itemactions.sqf"
-		//"Ultimate-RP\net.sqf",
-		//"Ultimate-RP\monitor.sqf"
-	];
+	execVM "Ultimate-RP\Init\Variables.sqf";
 	if (!isServer) then {
-		_scripts = _scripts + ["Ultimate-RP\Init\whitelist.sqf"];
+		_h = execVM "Ultimate-RP\Init\whitelist.sqf";
+		waitUntil {scriptDone _h};
 	};
+	execVM "Ultimate-RP\Init\CreateMarkers.sqf";
+	execVM "Ultimate-RP\Init\DisablePumps.sqf";
+	execVM "Ultimate-RP\Init\Variables.sqf";
+	execVM "Ultimate-RP\Houses\HouseActions.sqf";
+	execVM "Ultimate-RP\Bank\DoorActions.sqf";
+	execVM "Ultimate-RP\SpeedCams.sqf";
+	execVM "Ultimate-RP\itemactions.sqf";
+	execVM "Ultimate-RP\net.sqf";
+	execVM "Ultimate-RP\monitor.sqf";
+
 	if (RPM_Cop) then {
-		_scripts = _scripts + ["Ultimate-RP\Init\initCop.sqf"];
+		execVM "Ultimate-RP\Init\initCop.sqf";
 		player setVariable ["Street", "None", true];
 	};
 	if (RPM_FF) then {
-		_scripts = _scripts + ["Ultimate-RP\Init\initFF.sqf"];
+		execVM "Ultimate-RP\Init\initFF.sqf";
 		player setVariable ["Street", "None", true];
-	};
-	_loaded = 0;
-	for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
-	_line = format["Loading UltRP script %1 of %2", _i + 1, count(_scripts)];
-		if (RPM_Debug) then {
-			diag_log _line;
-		} else {
-			2 cutText [_line,"PLAIN",2];
-		};
-		_script = _scripts select _i;
-		_h = execVM _script;
-		waitUntil {scriptDone _h};
-		_loaded = _loaded + 1;
 	};
 	
 	[511, 1] call RPM_Cfg_Inv_AddItemAmount;
