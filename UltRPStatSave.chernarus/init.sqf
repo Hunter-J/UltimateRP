@@ -3,9 +3,8 @@
 // http://www.arma-rp.com/
 
 private ["_h","_i","_script","_loaded","_scripts","_line"];
-enableSaving[false, false];
-//WEST setFriend[CIVILIAN, 1];
-//CIVILIAN setFriend[WEST, 1];
+enableSaving [false, false];
+
 
 // Required
 // Functions
@@ -80,7 +79,6 @@ _h = execVM "RPM\Global\INC_Variables.sqf";
 waitUntil {scriptDone _h};
 
 //Init Ultimate-RP Scripts
-waitUntil {alive player};
 execVM "Ultimate-RP\Init\Init.sqf";
 
 // Version variables
@@ -102,8 +100,10 @@ b46 = nil;
 _h = call RPM_Cfg_Objects_RecompileArrays;
 waitUntil {_h};
 format["call RPM_Cfg_Inv_CompilePlayers;"] call RPM_Cfg_Network_Broadcast;
+
 // Server loops
 call RPM_Cfg_Loops_InitServer;
+
 // Client settings
 if(!(isDedicated)) then {
     CBA_display_ingame_warnings = false;
@@ -118,5 +118,6 @@ if(!(isDedicated)) then {
     b47 = nil
 };
 waitUntil {(!(RPM_Saving_Loading))};
+
 // Client loops
 call RPM_Cfg_Loops_InitClient;

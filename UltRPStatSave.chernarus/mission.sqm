@@ -4660,6 +4660,7 @@ class Mission
 			side="EMPTY";
 			vehicle="cl_police_deployment";
 			skill=1;
+			text="PDBase";
 			init="this setVectorUp [0,0,+0.1]";
 		};
 		class Item148

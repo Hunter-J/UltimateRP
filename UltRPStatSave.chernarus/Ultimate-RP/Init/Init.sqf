@@ -2,9 +2,12 @@
 
 if (isServer) then {
 	execVM "Server\StatSave\InitServer.sqf";
+	diag_log "SERVER INIT";
 };
 
-if (!(local server and !local player)) then {
+if (!isDedicated) then {
+diag_log "CLIENT INIT";
+waitUntil {!(isNil "ServerLoaded")};
 	//Process Funcs for later use
 	_scripts = [
 		"Ultimate-RP\Functions\FNC_Respawn.sqf",
@@ -78,13 +81,13 @@ if (!(local server and !local player)) then {
 		waitUntil {scriptDone _h};
 		_loaded = _loaded + 1;
 	};
+	
+	[511, 1] call RPM_Cfg_Inv_AddItemAmount;
+	
+	waituntil {alive player};
 	removeAllWeapons player;
-	if (!RPM_K9Dog) then {
-		player addWeapon "ItemGPS";
-		[511, 1] call RPM_Cfg_Inv_AddItemAmount;
-		["Add"] call UltRP_Actions;
-	};
-	//call UltRP_UI_Intro;
+	["Add"] call UltRP_Actions;
+	call UltRP_UI_Intro;
 	player commandChat "Ultimate-RP scripts loaded successfully!";
 	execVM "Ultimate-RP\ClientLoop.sqf";
 };
