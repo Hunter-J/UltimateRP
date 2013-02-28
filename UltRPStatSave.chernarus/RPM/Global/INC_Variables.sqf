@@ -508,6 +508,7 @@ a67 = [
 // Storage Capacities ([NPC, [Kilograms]])
 a73 = [
     [npc_storage_civ, [100000]],
+	[npc_storage_cop, [100000]],
     [npc_ctrlarea1, [10000]],
     [npc_ctrlarea2, [10000]]
 ];
