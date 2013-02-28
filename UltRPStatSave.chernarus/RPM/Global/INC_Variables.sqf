@@ -13,13 +13,13 @@ PlayerCount = 60;
 RPM_Civ = false;
 RPM_Cop = false;
 // Enables big bank balance, Teleport and file launching
-RPM_Debug = true; // CHANGE BEFORE RELEASE
+RPM_Debug = false; // CHANGE BEFORE RELEASE
 // Used by server for session saving
 RPM_LastSave = 0;
 RPM_Saving_C_LoopActive = false;
 RPM_Saving_S_LoopActive = false;
 // Is save debug on?
-RPM_Saving_Debug = false;
+RPM_Saving_Debug = true;
 // Was banking saved?
 RPM_Saving_BankSaved = false;
 // Was licenses saved?

@@ -83,7 +83,7 @@ RPM_Saving_Loader = {
         RPM_Saving_Loading = true;
         if (RPM_Saving_Debug) then {
             if (RPM_Diagnostics) then {
-                [format["UltRP(Server)|Stats|Loading statsfile"], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                [format["CHRP(Server)|Stats|Loading statsfile"], false] call RPM_Cfg_Server_DiagnosticsDumper;
             };
         };
         publicVariable "RPM_Saving_Loading";
@@ -92,7 +92,7 @@ RPM_Saving_Loader = {
         waitUntil {(!(isNil("RPM_Saving_S_Array")))};
         if (RPM_Saving_Debug) then {
             if (RPM_Diagnostics) then {
-                [format["UltRP(Server)|Stats|Done loading statsfile"], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                [format["CHRP(Server)|Stats|Done loading statsfile"], false] call RPM_Cfg_Server_DiagnosticsDumper;
             };
         };
         RPM_Saving_Loading = false;
@@ -112,7 +112,7 @@ RPM_Saving_SaveBank_C = {
             };', RPM_Role, _balance] call RPM_Cfg_Network_Broadcast;
             if (RPM_Saving_Debug) then {
                 if (RPM_Diagnostics) then {
-                    [format["UltRP(Client)|Stats|Sent server bank balance of $%1!", i4], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                    [format["CHRP(Client)|Stats|Sent server bank balance of $%1!", i4], false] call RPM_Cfg_Server_DiagnosticsDumper;
                 };
             };
         };
@@ -139,7 +139,7 @@ RPM_Saving_SaveBank_S = {
                 };
                 if (RPM_Saving_Debug) then {
                     if (RPM_Diagnostics) then {
-                        [format["UltRP(Server)|Stats|UID %1 sent server bank balance of $%2!", _uid, _balance], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                        [format["CHRP(Server)|Stats|UID %1 sent server bank balance of $%2!", _uid, _balance], false] call RPM_Cfg_Server_DiagnosticsDumper;
                     };
                 };
                 RPM_Saving_Saving = false;
@@ -161,7 +161,7 @@ RPM_Saving_SaveLicenses_C = {
             };', RPM_Role, _licenses] call RPM_Cfg_Network_Broadcast;
             if (RPM_Saving_Debug) then {
                 if (RPM_Diagnostics) then {
-                    [format["UltRP(Client)|Stats|Sent server %1 licenses!", count(_licenses)], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                    [format["CHRP(Client)|Stats|Sent server %1 licenses!", count(_licenses)], false] call RPM_Cfg_Server_DiagnosticsDumper;
                 };
             };
         };
@@ -193,7 +193,7 @@ RPM_Saving_SaveLicenses_S = {
                 };
                 if (RPM_Saving_Debug) then {
                     if (RPM_Diagnostics) then {
-                        [format["UltRP(Server)|Stats|UID %1 sent server %2 licenses!", _uid, _nlics], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                        [format["CHRP(Server)|Stats|UID %1 sent server %2 licenses!", _uid, _nlics], false] call RPM_Cfg_Server_DiagnosticsDumper;
                     };
                 };
                 RPM_Saving_Saving = false;
@@ -215,7 +215,7 @@ RPM_Saving_SaveStorage_C = {
             };', RPM_Role, _storage] call RPM_Cfg_Network_Broadcast;
             if (RPM_Saving_Debug) then {
                 if (RPM_Diagnostics) then {
-                    [format["UltRP(Client)|Stats|Sent server %1 items in storage!", count(_storage)], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                    [format["CHRP(Client)|Stats|Sent server %1 items in storage!", count(_storage)], false] call RPM_Cfg_Server_DiagnosticsDumper;
                 };
             };
         };
@@ -254,7 +254,7 @@ RPM_Saving_SaveStorage_S = {
                 };
                 if (RPM_Saving_Debug) then {
                     if (RPM_Diagnostics) then {
-                        [format["UltRP(Server)|Stats|UID %1 sent server %2 items for storage!", _uid, _items], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                        [format["CHRP(Server)|Stats|UID %1 sent server %2 items for storage!", _uid, _items], false] call RPM_Cfg_Server_DiagnosticsDumper;
                     };
                 };
                 RPM_Saving_Saving = false;
@@ -276,7 +276,7 @@ RPM_Saving_SaveSkills_C = {
             };', RPM_Role, _skills] call RPM_Cfg_Network_Broadcast;
             if (RPM_Saving_Debug) then {
                 if (RPM_Diagnostics) then {
-                    [format["UltRP(Client)|Stats|Sent server %1 items in skills!", count(_skills)], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                    [format["CHRP(Client)|Stats|Sent server %1 items in skills!", count(_skills)], false] call RPM_Cfg_Server_DiagnosticsDumper;
                 };
             };
         };
@@ -315,7 +315,7 @@ RPM_Saving_SaveSkills_S = {
                 };
                 if (RPM_Saving_Debug) then {
                     if (RPM_Diagnostics) then {
-                        [format["UltRP(Server)|Stats|UID %1 sent server %2 items for skills!", _uid, _items], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                        [format["CHRP(Server)|Stats|UID %1 sent server %2 items for skills!", _uid, _items], false] call RPM_Cfg_Server_DiagnosticsDumper;
                     };
                 };
                 RPM_Saving_Saving = false;
@@ -354,7 +354,7 @@ RPM_Saving_Saver = {
                                         if (RPM_Saving_Debug) then {
                                             if (RPM_Saving_Debug) then {
                                                 if (RPM_Diagnostics) then {
-                                                    [format["RPM(Stats)|Save|%1|%2|%3|%4", _this select 0, _uid, _pdata, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                    [format["CHRP(Stats)|Save|%1|%2|%3|%4", _this select 0, _uid, _pdata, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                                 };
                                             };
                                         };
@@ -362,7 +362,7 @@ RPM_Saving_Saver = {
                                     if (_process) then {
                                         if (RPM_Saving_Debug) then {
                                             if (RPM_Diagnostics) then {
-                                                [format["UltRP(Server)|Stats|Set bank balance for UID %1 at index %2 to $%3!", _uid, _c, _pdata], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                [format["CHRP(Server)|Stats|Set bank balance for UID %1 at index %2 to $%3!", _uid, _c, _pdata], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                             };
                                         };
                                     };
@@ -370,7 +370,7 @@ RPM_Saving_Saver = {
                             };
                             if (RPM_Saving_Debug) then {
                                 if (RPM_Diagnostics) then {
-                                    [format["UltRP(Server)|Stats|Bank array saved to MySQL in %1 seconds!",  round(time - _sbanktime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                    [format["CHRP(Server)|Stats|Bank array saved to MySQL in %1 seconds!",  round(time - _sbanktime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                 };
                             };
                         };
@@ -401,7 +401,7 @@ RPM_Saving_Saver = {
                                             if (RPM_Saving_Debug) then {
                                                 if (RPM_Saving_Debug) then {
                                                     if (RPM_Diagnostics) then {
-                                                        [format["RPM(Stats)|Save|%1|%2|%3|%4", _this select 0, _uid, _lic, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                        [format["CHRP(Stats)|Save|%1|%2|%3|%4", _this select 0, _uid, _lic, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                                     };
                                                 };
                                             };
@@ -413,7 +413,7 @@ RPM_Saving_Saver = {
                                     if (RPM_Saving_Debug) then {
                                         if (_licenses >= 1) then {
                                             if (RPM_Diagnostics) then {
-                                                [format["UltRP(Server)|Stats|Processed %1 licenses at index %2 for UID %3!",  _licenses, _n, _uid], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                [format["CHRP(Server)|Stats|Processed %1 licenses at index %2 for UID %3!",  _licenses, _n, _uid], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                             };
                                         };
                                     };
@@ -421,7 +421,7 @@ RPM_Saving_Saver = {
                             };
                             if (RPM_Saving_Debug) then {
                                 if (RPM_Diagnostics) then {
-                                    [format["UltRP(Server)|Stats|License array saved to MySQL in %1 seconds!",  round(time - _slictime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                    [format["CHRP(Server)|Stats|License array saved to MySQL in %1 seconds!",  round(time - _slictime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                 };
                             };
                         };
@@ -454,7 +454,7 @@ RPM_Saving_Saver = {
                                             if (RPM_Saving_Debug) then {
                                                 if (RPM_Saving_Debug) then {
                                                     if (RPM_Diagnostics) then {
-                                                        [format["RPM(Stats)|Save|%1|%2|%3|%4|%5", _this select 0, _uid, _itemid, _amount, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                        [format["CHRP(Stats)|Save|%1|%2|%3|%4|%5", _this select 0, _uid, _itemid, _amount, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                                     };
                                                 };
                                             };
@@ -466,14 +466,14 @@ RPM_Saving_Saver = {
                                     if (RPM_Saving_Debug) then {
                                         if (_items >= 1) then {
                                             if (RPM_Diagnostics) then {
-                                                [format["UltRP(Server)|Stats|Processed %1 items in storage at index %2 for UID %3!",  _items, _n, _uid], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                [format["CHRP(Server)|Stats|Processed %1 items in storage at index %2 for UID %3!",  _items, _n, _uid], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                             };
                                         };
                                     };
                                 };
                                 if (RPM_Saving_Debug) then {
                                     if (RPM_Diagnostics) then {
-                                        [format["UltRP(Server)|Stats|Storage array saved to MySQL in %1 seconds!",  round(time - _sstortime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                        [format["CHRP(Server)|Stats|Storage array saved to MySQL in %1 seconds!",  round(time - _sstortime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                     };
                                 };
                             };
@@ -505,7 +505,7 @@ RPM_Saving_Saver = {
                                             _process = (call compile (format['"Arma2Net.Unmanaged" callExtension "CLServer2Lib [Skills_SetSkillPoints, ""%1"", ""%2"", ""%3""]";', _uid, _skill, _points])) call RPM_str_strToBool;
                                             if (RPM_Saving_Debug) then {
                                                 if (RPM_Diagnostics) then {
-                                                    [format["RPM(Stats)|Save|%1|%2|%3|%4", _this select 0, _uid, _skill, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                    [format["CHRP(Stats)|Save|%1|%2|%3|%4", _this select 0, _uid, _skill, _process], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                                 };
                                             };
                                         };
@@ -516,7 +516,7 @@ RPM_Saving_Saver = {
                                     if (RPM_Saving_Debug) then {
                                         if (_skills >= 1) then {
                                             if (RPM_Diagnostics) then {
-                                                [format["UltRP(Server)|Stats|Processed %1 skills at index %2 for UID %3!",  _skills, _n, _uid], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                                [format["CHRP(Server)|Stats|Processed %1 skills at index %2 for UID %3!",  _skills, _n, _uid], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                             };
                                         };
                                     };
@@ -524,7 +524,7 @@ RPM_Saving_Saver = {
                             };
                             if (RPM_Saving_Debug) then {
                                 if (RPM_Diagnostics) then {
-                                    [format["UltRP(Server)|Stats|Skills array saved to MySQL in %1 seconds!",  round(time - _sskillstime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                                    [format["CHRP(Server)|Stats|Skills array saved to MySQL in %1 seconds!",  round(time - _sskillstime)], false] call RPM_Cfg_Server_DiagnosticsDumper;
                                 };
                             };
                         };
@@ -644,7 +644,7 @@ RPM_Saving_C_Load = {
                                     diag_log _line;
                                 } else {
                                     diag_log _line;
-                                    RPM_Role commandChat _line;
+                                    RPM_Role groupChat _line;
                                 };
                             };
                             format['if (isServer) then {
@@ -681,7 +681,7 @@ RPM_Saving_S_Load = {
                                                     diag_log _line;
                                                 } else {
                                                     diag_log _line;
-                                                    RPM_Role commandChat _line;
+                                                    RPM_Role groupChat _line;
                                                 };
                                             };
                                             _varindex = ["RPM_Saving_S_Array", _variable] call RPM_Saving_VarIndex;
@@ -693,7 +693,7 @@ RPM_Saving_S_Load = {
                                                             diag_log _line;
                                                         } else {
                                                             diag_log _line;
-                                                            RPM_Role commandChat _line;
+                                                            RPM_Role groupChat _line;
                                                         };
                                                     };
                                                     _uidindex = ["RPM_Saving_S_Array", _variable, _uid] call RPM_Saving_UIDIndex;
@@ -705,7 +705,7 @@ RPM_Saving_S_Load = {
                                                                     diag_log _line;
                                                                 } else {
                                                                     diag_log _line;
-                                                                    RPM_Role commandChat _line;
+                                                                    RPM_Role groupChat _line;
                                                                 };
                                                             };
                                                             _data = (((RPM_Saving_S_Array select _varindex) select 1) select _uidindex) select 1;
@@ -717,7 +717,7 @@ RPM_Saving_S_Load = {
                                                                         diag_log _line;
                                                                     } else {
                                                                         diag_log _line;
-                                                                        RPM_Role commandChat _line;
+                                                                        RPM_Role groupChat _line;
                                                                     };
                                                                 };
                                                                 _cpeh = format["RPM_Saving_Data_%1", _player];
@@ -734,7 +734,7 @@ RPM_Saving_S_Load = {
                                                                     diag_log _line;
                                                                 } else {
                                                                     diag_log _line;
-                                                                    RPM_Role commandChat _line;
+                                                                    RPM_Role groupChat _line;
                                                                 };
                                                             };
                                                             _cpeh = format["RPM_Saving_Data_%1", _player];
@@ -752,7 +752,7 @@ RPM_Saving_S_Load = {
                                                             diag_log _line;
                                                         } else {
                                                             diag_log _line;
-                                                            RPM_Role commandChat _line;
+                                                            RPM_Role groupChat _line;
                                                         };
                                                     };
                                                     _cpeh = format["RPM_Saving_Data_%1", _player];
@@ -795,7 +795,7 @@ RPM_Saving_C_Save = {
                                             diag_log _line;
                                         } else {
                                             diag_log _line;
-                                            RPM_Role commandChat _line;
+                                            RPM_Role groupChat _line;
                                         };
                                     };
                                     // Pass variable, object, and data
@@ -808,7 +808,7 @@ RPM_Saving_C_Save = {
                                                 diag_log _line;
                                             } else {
                                                 diag_log _line;
-                                                RPM_Role commandChat _line;
+                                                RPM_Role groupChat _line;
                                             };
                                         };
                                         _save = _arr call RPM_Saving_S_Save;
@@ -830,7 +830,7 @@ RPM_Saving_C_Save = {
                                                     diag_log _line;
                                                 } else {
                                                     diag_log _line;
-                                                    RPM_Role commandChat _line;
+                                                    RPM_Role groupChat _line;
                                                 };
                                             };
                                             call compile format["RPM_Saving_S_Data%1 = [];", _slot];
@@ -871,7 +871,7 @@ RPM_Saving_S_Save = {
                                                     diag_log _line;
                                                 } else {
                                                     diag_log _line;
-                                                    RPM_Role commandChat _line;
+                                                    RPM_Role groupChat _line;
                                                 };
                                             };
                                             // Get the variable index
@@ -883,7 +883,7 @@ RPM_Saving_S_Save = {
                                                         diag_log _line;
                                                     } else {
                                                         diag_log _line;
-                                                        RPM_Role commandChat _line;
+                                                        RPM_Role groupChat _line;
                                                     };
                                                 };
                                                 // Setup the shebang variable with player data initializer
@@ -898,7 +898,7 @@ RPM_Saving_S_Save = {
                                                         diag_log _line;
                                                     } else {
                                                         diag_log _line;
-                                                        RPM_Role commandChat _line;
+                                                        RPM_Role groupChat _line;
                                                     };
                                                     _ret = true;
                                                 };
@@ -911,7 +911,7 @@ RPM_Saving_S_Save = {
                                                         diag_log _line;
                                                     } else {
                                                         diag_log _line;
-                                                        RPM_Role commandChat _line;
+                                                        RPM_Role groupChat _line;
                                                     };
                                                     // Didn't find UID in variable array
                                                     _temparr = + ((RPM_Saving_S_Array select _varindex) select 1);
@@ -924,7 +924,7 @@ RPM_Saving_S_Save = {
                                                             diag_log _line;
                                                         } else {
                                                             diag_log _line;
-                                                            RPM_Role commandChat _line;
+                                                            RPM_Role groupChat _line;
                                                         };
                                                         _ret = true;
                                                     };
@@ -942,7 +942,7 @@ RPM_Saving_S_Save = {
                                                             diag_log _line;
                                                         } else {
                                                             diag_log _line;
-                                                            RPM_Role commandChat _line;
+                                                            RPM_Role groupChat _line;
                                                         };
                                                     };
                                                     _ret = true;
@@ -1215,7 +1215,6 @@ RPM_Saving_GetSavedVariableLength = {
     };
     _ret;
 };
-//FORCE SAVE
 RPM_Saving_C_ToldToSave = {
     private ["_ret"];
     _ret = false;
@@ -1244,7 +1243,7 @@ RPM_Saving_S_Loop = {
                 RPM_Saving_Saving = true;
                 publicVariable "RPM_Saving_Saving";
                 format['if (!(isServer)) then {
-                    RPM_Role globalChat "%1";
+                    hint "%1";
                 }', format[localize "v107"]] call RPM_Cfg_Network_Broadcast;
                 sleep 1.5;
                 _stime = time;
@@ -1256,7 +1255,7 @@ RPM_Saving_S_Loop = {
                 RPM_Saving_Saving = false;
                 publicVariable "RPM_Saving_Saving";
                 format['if (!(isServer)) then {
-                    RPM_ROle globalChat "%1";
+                    hint "%1";
                 }', format[localize "v106", _etime - _stime]] call RPM_Cfg_Network_Broadcast;
                 sleep RPM_Saving_Interval;
             };
@@ -1272,7 +1271,7 @@ RPM_Saving_Init = {
         private ["_i","_var"];
         // Server
         if ((isServer) || (isDedicated) || (local server)) then {
-            [format["UltRP(Server)|SavingInit"], false] call RPM_Cfg_Server_DiagnosticsDumper;
+            [format["CHRP(Server)|SavingInit"], false] call RPM_Cfg_Server_DiagnosticsDumper;
             execVM "RPM\Server\FNC_Inventory.sqf";
             waitUntil {(!(isNil("b40")))};
             // Save functions
@@ -1295,17 +1294,17 @@ RPM_Saving_Init = {
                 _var addPublicVariableEventHandler {
                     _slot = [[_this select 0, 16, ((_this select 0) call RPM_str_Length)-1] call RPM_str_SubString] call RPM_Cfg_Objects_GetSlotByString;
                     if (!(isNil("_slot"))) then {
-                        diag_log format["%1 UltRP(Server)|Saving|Received|%2|%3", format["(T:%1)", floor(time)], _slot, _this select 1];
+                        diag_log format["%1 CHRP(Server)|Saving|Received|%2|%3", format["(T:%1)", floor(time)], _slot, _this select 1];
                     };
                     _save = (_this select 1) call RPM_Saving_S_Save;
                     if (_save) then {
-                        diag_log format["%1 UltRP(Server)|Saving|Saved|%2", format["(T:%1)", floor(time)], _slot];
+                        diag_log format["%1 CHRP(Server)|Saving|Saved|%2", format["(T:%1)", floor(time)], _slot];
                     };
                 };
             };
             call RPM_Saving_S_Loop;
             if (RPM_Diagnostics) then {
-                [format["UltRP(Server)|Started"], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                [format["CHRP(Server)|Started"], false] call RPM_Cfg_Server_DiagnosticsDumper;
             };
         };
         // Client
@@ -1319,14 +1318,14 @@ RPM_Saving_Init = {
                 };
             };
             if (RPM_Diagnostics) then {
-                [format["UltRP(Client)|Started"], false] call RPM_Cfg_Server_DiagnosticsDumper;
+                [format["CHRP(Client)|Started"], false] call RPM_Cfg_Server_DiagnosticsDumper;
             };
         };
     };
 };
 RPM_Saving_JipLoop = {
     [] spawn {
-        [format["UltRP(Server)|JIPActive"], false] call RPM_Cfg_Server_DiagnosticsDumper;
+        [format["CHRP(Server)|JIPActive"], false] call RPM_Cfg_Server_DiagnosticsDumper;
         while {true} do {
             if (RPM_JIP) then {
                 publicVariable "CBA_display_ingame_warnings";

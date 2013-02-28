@@ -37,7 +37,7 @@ RPM_NPC_CivActions = [
      
 	// Storage
     [npc_storage_civ, [format[localize "v343"], "RPM\Global\STD_NoScript.sqf", format["[""Storage"", 0, 0, %1] call RPM_Cfg_Storage_GUI;", npc_storage_civ], 5, "", 4]],
-    
+
 	//Delivery
     [npc_getjob1, [format[localize "STRM_Act_Delivery_Get"], "RPM\Global\STD_NoScript.sqf", "npc_getjob1 call RPM_Cfg_Delivery_Logic;", 4, "((!(b3)))", 4]],
    
@@ -113,7 +113,8 @@ RPM_NPC_CopActions = [
     [PDBikes, [format[localize "v324"], "RPM\Global\STD_NoScript.sqf", "[43] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
     [PDUCCars, [format[localize "v325"], "RPM\Global\STD_NoScript.sqf", "[44] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
 	[PDK9Cars, [format[localize "v326"], "RPM\Global\STD_NoScript.sqf", "[45] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
-	[PDCars, [format[localize "v327"], "RPM\Global\STD_NoScript.sqf", "[46] call RPM_Cfg_Shops_GUI;", 4, "", 4]]
+	[PDCars, [format[localize "v327"], "RPM\Global\STD_NoScript.sqf", "[46] call RPM_Cfg_Shops_GUI;", 4, "", 4]],
+	[npc_storage_cop, [format[localize "v356"], "RPM\Global\STD_NoScript.sqf", format["[""Storage"", 0, 0, %1] call RPM_Cfg_Storage_GUI;", npc_storage_cop], 5, "", 4]]
 ];
 
 
