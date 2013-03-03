@@ -13,7 +13,6 @@ OneShot
 Hunter
 ========
 - Fix handledmg script to show health properly
-- Fix batchfile and dll file on server box
 
 
 Testers

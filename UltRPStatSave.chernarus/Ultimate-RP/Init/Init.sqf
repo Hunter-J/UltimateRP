@@ -20,7 +20,8 @@ waitUntil {!(isNil "ServerLoaded")};
 		"Ultimate-RP\Functions\FNC_Train.sqf",
 		"Ultimate-RP\Functions\FNC_Rob.sqf",
 		"Ultimate-RP\Functions\FNC_UI.sqf",
-		"Ultimate-RP\Functions\FNC_Taxi.sqf"
+		"Ultimate-RP\Functions\FNC_Taxi.sqf",
+		"Ultimate-RP\FD\FD.sqf"
 	];
 	_loaded = 0;
 	for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {
@@ -56,6 +57,7 @@ waitUntil {!(isNil "ServerLoaded")};
 	execVM "Ultimate-RP\SpeedCams.sqf";
 	execVM "Ultimate-RP\itemactions.sqf";
 	execVM "Ultimate-RP\net.sqf";
+	BIS_Effects_Burn=compile preprocessFileLineNumbers "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf";
 	execVM "Ultimate-RP\monitor.sqf";
 
 	if (RPM_Cop) then {
