@@ -1,5 +1,13 @@
 // By Ultimate-RP Dev Team: http://ultimate-rp.com
 
+if (RPM_Cop or RPM_FF) then {
+	player setVariable ["Street", "None", true];
+};
+player setVariable ["Surrender", "False", true];
+
+Dispatch 		= [];
+DispatchTaxi	= [];
+	
 isAdmin			= false;
 AdminMode		= false;
 Teleport 		= false;
