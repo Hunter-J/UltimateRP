@@ -5,16 +5,15 @@ UltRP_FireLoop = {
 			player commandChat "Loop";
 			if (!isNull serverfire) then {
 			_random = (ceil (random 10));
+			if (_random < 5) then {_Intensity = 8};
+			if (_random >= 5 && _random < 8) then {_Intensity = 9};
+			if (_random == 10) then {_Intensity = 10};
+				
 			_sleeptime = [12000,15000,18000] call BIS_fnc_selectRandom;
 			_firePos = _firepositions select (ceil (random (count _firepositions)));
 				
 				sleep _sleeptime;
-		
-				if (_random < 5) then {_type = "[_firepositions,5,time,false,false] spawn BIS_Effects_Burn"};
-				if (_random >= 5 && _random < 8) then {_type = "[_firepositions,7,time,false,false] spawn BIS_Effects_Burn"};
-				if (_random >= 8) then {_type = "[_firepositions,10,time,false,false] spawn BIS_Effects_Burn"};
-		
-				serverfire = _type createVehicle (getPos _firePos);
+				[_firePos, _Intensity, false, false, false] spawn BIS_Effects_Burn;
 				player commandChat format ["%1 fire spawned", _type];
 				_mrk = createMarker ["Fire_Mrk", getPos _firePos];
 				_mrk setMarkerShape "ICON";
