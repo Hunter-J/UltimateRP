@@ -17,3 +17,6 @@ _Houses = [House1, House2, House3, House4, House5, House6];
 	_x setVariable ["FLock", "Locked", true];
 	_x setVariable ["BLock", "Locked", true];
 } forEach _Houses;
+
+ServerLoaded = true;
+publicvariable "ServerLoaded";
