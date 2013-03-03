@@ -37,7 +37,7 @@ while {true} do {
 	
 	
 	//NPC Surrender Reset
-	execVM "Scripts\ResetNpc.sqf";
+	execVM "Ultimate-RP\ResetNpc.sqf";
 	
 	
 	//Key Spam
