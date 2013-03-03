@@ -152,7 +152,7 @@ _Sel = _this select 0;
 
 
 			if (RPM_Cop) then {
-				CopAction1 = player addaction ["<t color=""#FF2424"">" +"Reset Bank","robbank.sqf",["Reset"],1,false,true,"",'player distance mainbank <= 3 and !canUseBank'];
+				CopAction1 = player addaction ["<t color=""#FF2424"">" +"Reset Bank","rob.sqf",["Bank","Reset"],1,false,true,"",'player distance mainbank <= 3 and !canUseBank'];
 
 				CopAction2 = player addaction ["<t color=""#FF2424"">" +"Take Evidense","noscript.sqf",'player commandChat "evidence removed."; {DeleteObject _x} foreach (nearestobjects [getpos player, ["weaponholder"], 3])',1,false,true,"",'_briefcase = (nearestobjects [getpos player, ["weaponholder"], 3] select 0); player distance _briefcase <= 5'];
 

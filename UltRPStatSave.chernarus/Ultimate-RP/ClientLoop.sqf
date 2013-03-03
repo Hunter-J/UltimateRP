@@ -30,6 +30,23 @@ while {true} do {
 	};
 	
 	
+	//Surrender Check (for players)
+	if (animationState player == "Civil") then {
+		player setVariable ["Surrender", "False", true];
+	};
+	
+	
+	//NPC Surrender Reset
+	execVM "Scripts\ResetNpc.sqf";
+	
+	
+	//Key Spam
+	while {KeySpam} do {
+		sleep 1.5;
+		KeySpam = false;
+	};
+	
+	
 	//Force First Person On Foot
 	if ((vehicle player == player) && (cameraView == "EXTERNAL" || cameraView == "GROUP")) then {
 		vehicle player switchCamera "INTERNAL";
