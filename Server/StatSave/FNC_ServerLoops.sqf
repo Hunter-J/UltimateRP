@@ -15,7 +15,7 @@ UltRP_FireLoop = {
 				if (_random >= 8) then {_type = "[_firepositions,10,time,false,false] spawn BIS_Effects_Burn"};
 		
 				serverfire = _type createVehicle (getPos _firePos);
-				player commandChat format ["%1 fire spawned", _spawn];
+				player commandChat format ["%1 fire spawned", _type];
 				_mrk = createMarker ["Fire_Mrk", getPos _firePos];
 				_mrk setMarkerShape "ICON";
 				_mrk setMarkerType "WARNING";
