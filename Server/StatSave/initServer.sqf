@@ -8,4 +8,4 @@ execVM "Server\StatSave\Variables.sqf";
 execVM "Server\StatSave\CivDescriptions.sqf";
 //execVM "Server\StatSave\setposition.sqf";
 execVM "Server\StatSave\serverloop.sqf";
-execVM "Server\StatSave\Fire.sqf";
+execVM "Server\StatSave\fire.sqf";
