@@ -8,29 +8,29 @@ _Sel = _this select 0;
 				CivAction1 = player addaction ["Take boar meat","noscript.sqf",'(nearestobjects [getpos player, ["wildboar"],  3] select 0) setvariable ["inuse", 1, true]; player playmove "AinvPknlMstpSlayWrflDnon_medic"; sleep 4; waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"}; DeleteObject (nearestobjects [getpos player, ["wildboar"],  3] select 0); [573, 1] call RPM_Cfg_Inv_AddItemAmount; player commandChat "You got some raw pork";',1,false,true,"",'_w = (nearestobjects [getpos player, ["wildboar"],  3] select 0) getvariable "inuse"; isnil "_w" and player distance (nearestobjects [getpos player, ["wildboar"],  3] select 0) <= 5 and !alive (nearestobjects [getpos player, ["wildboar"],  3] select 0)'];
 				CivAction2 = player addaction ["Take cow meat","noscript.sqf",'(nearestobjects [getpos player, ["cow01"],  3] select 0) setvariable ["inuse", 1, true]; player playmove "AinvPknlMstpSlayWrflDnon_medic"; sleep 4; waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"}; DeleteObject (nearestobjects [getpos player, ["cow01"],  3] select 0); [574, 1] call RPM_Cfg_Inv_AddItemAmount; player commandChat "You got some raw beef";',1,false,true,"",'_w = (nearestobjects [getpos player, ["cow01"],  3] select 0) getvariable "inuse"; isnil "_w" and player distance (nearestobjects [getpos player, ["cow01"],  3] select 0) <= 5 and !alive (nearestobjects [getpos player, ["cow01"],  3] select 0)'];
 
-				CivAction3 = player addaction ["<t color=""#FF0000"">" +"Produce Meth","Ultimate-RP\Drugs\MakeMeth.sqf",[],1,false,true,"",'_methlab = nearestObject [player, "a2l_methlab"]; player distance _methlab <=5 and _methlab getVariable "inUse" != "True"'];
+				CivAction3 = player addaction ["<t color=""##FF2424"">" +"Produce Meth","Ultimate-RP\Drugs\MakeMeth.sqf",[],1,false,true,"",'_methlab = nearestObject [player, "a2l_methlab"]; player distance _methlab <=5 and _methlab getVariable "inUse" != "True"'];
 
-				CivAction4 = player addaction ["<t color=""#FFFF00"">" +"Refuel Vehicle ($100)","Ultimate-RP\PetrolRefuel.sqf","",1,false,true,"",'_Pumps = nearestobjects [getpos player, ["Land_A_Fuelstation_Feed", "cl_police_fuel_point"], 5]; _Pump1 = _Pumps select 0; _Pump2 = _Pumps select 1; _Car = nearestObject [player, "LandVehicle"]; (vehicle player == player) and (player distance _Car <= 3) and (_Car distance _Pump1 <= 5 or _Car distance _Pump2 <= 5) and (Fuel _Car <= .9)'];
+				CivAction4 = player addaction ["<t color=""#FF2424"">" +"Refuel Vehicle ($100)","Ultimate-RP\PetrolRefuel.sqf","",1,false,true,"",'_Pumps = nearestobjects [getpos player, ["Land_A_Fuelstation_Feed", "cl_police_fuel_point"], 5]; _Pump1 = _Pumps select 0; _Pump2 = _Pumps select 1; _Car = nearestObject [player, "LandVehicle"]; (vehicle player == player) and (player distance _Car <= 3) and (_Car distance _Pump1 <= 5 or _Car distance _Pump2 <= 5) and (Fuel _Car <= .9)'];
 
-				CivAction5 = pub1 addaction ["<t color=""#FF0000"">" +"Rob Pub","Ultimate-RP\Rob.sqf","Pub",1,false,true,"",'RPM_Role call RPM_Cfg_Objects_IsArmed'];
+				CivAction5 = pub1 addaction ["<t color=""##FF2424"">" +"Rob Pub","Ultimate-RP\Rob.sqf","Pub",1,false,true,"",'RPM_Role call RPM_Cfg_Objects_IsArmed'];
 
-				CivAction6 = npc_petrol1 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","player distance npc_petrol1 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
-				CivAction7 = npc_petrol2 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 2],1,false,true,"","player distance npc_petrol2 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
-				CivAction8 = npc_petrol3 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","player distance npc_petrol3 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
-				CivAction9 = npc_petrol4 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","player distance npc_petrol4 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
-				CivAction10 = npc_petrol5 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","player distance npc_petrol5 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
-				CivAction11 = npc_petrol6 addaction ["<t color=""#FF0000"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","player distance npc_petrol6 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction6 = npc_petrol1 addaction ["<t color=""##FF2424"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 1],1,false,true,"","player distance npc_petrol1 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction7 = npc_petrol2 addaction ["<t color=""##FF2424"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 2],1,false,true,"","player distance npc_petrol2 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction8 = npc_petrol3 addaction ["<t color=""##FF2424"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 8],1,false,true,"","player distance npc_petrol3 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction9 = npc_petrol4 addaction ["<t color=""##FF2424"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 4],1,false,true,"","player distance npc_petrol4 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction10 = npc_petrol5 addaction ["<t color=""##FF2424"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 7],1,false,true,"","player distance npc_petrol5 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
+				CivAction11 = npc_petrol6 addaction ["<t color=""##FF2424"">" +"Rob Gas Station","Ultimate-RP\Rob.sqf",["Station", 13],1,false,true,"","player distance npc_petrol6 <= 5 and RPM_Role call RPM_Cfg_Objects_IsArmed"];
 
-				CivAction12 = player addaction ["<t color=""#FF0000"">" +"Rob Bank","Ultimate-RP\Rob.sqf",["Bank", "Rob"],1,false,true,"",'player distance mainbank <= 5 and canUseBank and RPM_Role call RPM_Cfg_Objects_IsArmed'];
+				CivAction12 = player addaction ["<t color=""##FF2424"">" +"Rob Bank","Ultimate-RP\Rob.sqf",["Bank", "Rob"],1,false,true,"",'player distance mainbank <= 5 and canUseBank and RPM_Role call RPM_Cfg_Objects_IsArmed'];
 
-				CivAction13 = cashpile1 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile1],1,false,true,"",'!canUseBank'];
-				CivAction14 = cashpile2 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile2],1,false,true,"",'!canUseBank'];
-				CivAction15 = cashpile3 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile3],1,false,true,"",'!canUseBank'];
-				CivAction16 = cashpile4 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile4],1,false,true,"",'!canUseBank'];
-				CivAction17 = cashpile5 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile5],1,false,true,"",'!canUseBank'];
-				CivAction18 = cashpile6 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile6],1,false,true,"",'!canUseBank'];
-				CivAction19 = cashpile7 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile7],1,false,true,"",'!canUseBank'];
-				CivAction20 = cashpile8 addaction ["<t color=""#FF0000"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile8],1,false,true,"",'!canUseBank'];
+				CivAction13 = cashpile1 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile1],1,false,true,"",'!canUseBank'];
+				CivAction14 = cashpile2 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile2],1,false,true,"",'!canUseBank'];
+				CivAction15 = cashpile3 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile3],1,false,true,"",'!canUseBank'];
+				CivAction16 = cashpile4 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile4],1,false,true,"",'!canUseBank'];
+				CivAction17 = cashpile5 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile5],1,false,true,"",'!canUseBank'];
+				CivAction18 = cashpile6 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile6],1,false,true,"",'!canUseBank'];
+				CivAction19 = cashpile7 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile7],1,false,true,"",'!canUseBank'];
+				CivAction20 = cashpile8 addaction ["<t color=""##FF2424"">" +"Take Cash","Ultimate-RP\Rob.sqf",["Bank", "Take", cashpile8],1,false,true,"",'!canUseBank'];
 
 				//Kamenka
 				TrainAction1 = Kamenka addaction ["Komarovo (Costs $25)","Ultimate-RP\Train.sqf",["Komarovo", 25],1,false,true,"",''];
@@ -146,29 +146,32 @@ _Sel = _this select 0;
 
 			if (RPM_Cop or RPM_FF) then {
 				EmergAction1 = player addaction ["Take Road Cone","Ultimate-RP\DeleteObject.sqf",["roadcone", "Land_coneLight"],1,false,true,"",'player distance (nearestobjects [getpos player, ["Land_coneLight"],  3] select 0) <= 5'];
-				EmergAction2 = player addaction ["<t color=""#FFFF00"">" +"Refuel Vehicle","Ultimate-RP\PetrolRefuel.sqf","",1,false,true,"",'_Pumps = nearestobjects [getpos player, ["Land_A_Fuelstation_Feed", "cl_police_fuel_point"], 5]; _Pump1 = _Pumps select 0; _Pump2 = _Pumps select 1; _Car = nearestObject [player, "LandVehicle"]; _tgt = cursorTarget; _tgt == _car and (vehicle player == player) and (player distance _Car <= 3) and (_Car distance _Pump1 <= 5 or _Car distance _Pump2 <= 5) and (Fuel _Car <= .9)'];
+				EmergAction2 = player addaction ["<t color=""#FF2424"">" +"Refuel Vehicle","Ultimate-RP\PetrolRefuel.sqf","",1,false,true,"",'_Pumps = nearestobjects [getpos player, ["Land_A_Fuelstation_Feed", "cl_police_fuel_point"], 5]; _Pump1 = _Pumps select 0; _Pump2 = _Pumps select 1; _Car = nearestObject [player, "LandVehicle"]; _tgt = cursorTarget; _tgt == _car and (vehicle player == player) and (player distance _Car <= 3) and (_Car distance _Pump1 <= 5 or _Car distance _Pump2 <= 5) and (Fuel _Car <= .9)'];
 			};
 
 
 
 			if (RPM_Cop) then {
-				CopAction1 = player addaction ["<t color=""#0000FF"">" +"Reset Bank","robbank.sqf",["Reset"],1,false,true,"",'player distance mainbank <= 3 and !canUseBank'];
+				CopAction1 = player addaction ["<t color=""#FF2424"">" +"Reset Bank","robbank.sqf",["Reset"],1,false,true,"",'player distance mainbank <= 3 and !canUseBank'];
 
-				CopAction2 = player addaction ["<t color=""#0000FF"">" +"Take Evidense","noscript.sqf",'player commandChat "evidence removed."; {DeleteObject _x} foreach (nearestobjects [getpos player, ["weaponholder"], 3])',1,false,true,"",'_briefcase = (nearestobjects [getpos player, ["weaponholder"], 3] select 0); player distance _briefcase <= 5'];
+				CopAction2 = player addaction ["<t color=""#FF2424"">" +"Take Evidense","noscript.sqf",'player commandChat "evidence removed."; {DeleteObject _x} foreach (nearestobjects [getpos player, ["weaponholder"], 3])',1,false,true,"",'_briefcase = (nearestobjects [getpos player, ["weaponholder"], 3] select 0); player distance _briefcase <= 5'];
 
-				CopAction3 = player addaction ["<t color=""#0000FF"">" +"Take Spike Strip","Ultimate-RP\DeleteObject.sqf",["spikestrip", "spikestrip"],1,false,true,"",'player distance (nearestobjects [getpos player, ["spikestrip"],  5] select 0) <= 5'];
-				CopAction4 = player addaction ["<t color=""#0000FF"">" +"Take Stop Sign","Ultimate-RP\DeleteObject.sqf",["glt_roadsign_octagon", "glt_roadsign_octagon"],1,false,true,"",'player distance (nearestobjects [getpos player, ["glt_roadsign_octagon"],  5] select 0) <= 5'];
-				CopAction5 = player addaction ["<t color=""#0000FF"">" +"Take Searchlight","Ultimate-RP\DeleteObject.sqf",["SearchLight_UN_EP1", "SearchLight_UN_EP1"],1,false,true,"",'player distance (nearestobjects [getpos player, ["SearchLight_UN_EP1"],  5] select 0) <= 5'];
-				CopAction6 = player addaction ["<t color=""#0000FF"">" +"Take Roadblock","Ultimate-RP\DeleteObject.sqf",["roadblock", "Land_CncBlock_Stripes"],1,false,true,"",'player distance (nearestobjects [getpos player, ["Land_CncBlock_Stripes"],  5] select 0) <= 5'];
-				CopAction7 = player addaction ["<t color=""#0000FF"">" +"Take Bar Gate","Ultimate-RP\DeleteObject.sqf",["bargate", "ZavoraAnim"],1,false,true,"",'player distance Bargate > 5 and player distance (nearestobjects [getpos player, ["ZavoraAnim"],  5] select 0) <= 5'];
+				CopAction3 = player addaction ["<t color=""#FF2424"">" +"Take Spike Strip","Ultimate-RP\DeleteObject.sqf",["spikestrip", "spikestrip"],1,false,true,"",'player distance (nearestobjects [getpos player, ["spikestrip"],  5] select 0) <= 5'];
+				CopAction4 = player addaction ["<t color=""#FF2424"">" +"Take Stop Sign","Ultimate-RP\DeleteObject.sqf",["glt_roadsign_octagon", "glt_roadsign_octagon"],1,false,true,"",'player distance (nearestobjects [getpos player, ["glt_roadsign_octagon"],  5] select 0) <= 5'];
+				CopAction5 = player addaction ["<t color=""#FF2424"">" +"Take Searchlight","Ultimate-RP\DeleteObject.sqf",["SearchLight_UN_EP1", "SearchLight_UN_EP1"],1,false,true,"",'player distance (nearestobjects [getpos player, ["SearchLight_UN_EP1"],  5] select 0) <= 5'];
+				CopAction6 = player addaction ["<t color=""#FF2424"">" +"Take Roadblock","Ultimate-RP\DeleteObject.sqf",["roadblock", "Land_CncBlock_Stripes"],1,false,true,"",'player distance (nearestobjects [getpos player, ["Land_CncBlock_Stripes"],  5] select 0) <= 5'];
+				CopAction7 = player addaction ["<t color=""#FF2424"">" +"Take Bar Gate","Ultimate-RP\DeleteObject.sqf",["bargate", "ZavoraAnim"],1,false,true,"",'player distance Bargate > 5 and player distance (nearestobjects [getpos player, ["ZavoraAnim"],  5] select 0) <= 5'];
+				CopAction8 = player addaction ["<t color=""#FF2424"">" +"Pull Civ Out","Ultimate-RP\Police\Pullout\pullout_cop.sqf","",1,true,true,"",'_Vcl = nearestObject [player, "LandVehicle"]; player distance _Vcl <= 5 and count (crew _Vcl) > 0 and (call INV_isArmed)'];
+				CopAction9 = player addaction ["<t color=""#FF2424"">" +"Put Civ In","Ultimate-RP\Police\Putin\putin_cop.sqf","",1,true,true,"",'_civ = nearestobjects [player, ["Man"], 5] - [player] select 0; _vcl = nearestObject [player, "LandVehicle"]; player distance _vcl <= 5 and !(isNull _civ) and (_civ in RPM_POBJArrCiv) and animationstate _civ == "civillying01"'];
+	
 			};
 			
 			if (RPM_FF) then {
-				FFAction1 = player addaction ["<t color=""#FFFF00"">" +"Attach Vehicle","Scripts\tow.sqf","Attach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "False" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
-				FFAction2 = player addaction ["<t color=""#FFFF00"">" +"Detach Vehicle","Scripts\tow.sqf","Detach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "True" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
+				FFAction1 = player addaction ["<t color=""#FF2424"">" +"Attach Vehicle","Scripts\tow.sqf","Attach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "False" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
+				FFAction2 = player addaction ["<t color=""#FF2424"">" +"Detach Vehicle","Scripts\tow.sqf","Detach",1,false,true,"",'_TowTruck = nearestObject [player, "il_towtruck"]; _TowTruck getVariable "Towing" == "True" and (vehicle player == player) and (player distance _TowTruck <= 5)'];
 
-				FFAction3 = FDAirShop addaction ["<t color=""#0000FF"">" +"Go to Helipad","Scripts\FDTele.sqf","To",1,false,true,"",''];
-				FFAction4 = FDTeleTop addaction ["<t color=""#0000FF"">" +"Go back down","Scripts\FDTele.sqf","From",1,false,true,"",''];
+				FFAction3 = FDAirShop addaction ["<t color=""#FF2424"">" +"Go to Helipad","Scripts\FDTele.sqf","To",1,false,true,"",''];
+				FFAction4 = FDTeleTop addaction ["<t color=""#FF2424"">" +"Go back down","Scripts\FDTele.sqf","From",1,false,true,"",''];
 			};
 
 
@@ -317,6 +320,8 @@ _Sel = _this select 0;
 				player RemoveAction CopAction5;
 				player RemoveAction CopAction6;
 				player RemoveAction CopAction7;
+				player RemoveAction CopAction8;
+				player RemoveAction CopAction9;
 			};
 			
 			if (RPM_FF) then {

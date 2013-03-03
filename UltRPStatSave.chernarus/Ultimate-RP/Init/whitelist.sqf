@@ -14,7 +14,6 @@ _PD = [
 "14941318", //Domo
 "32388422", //Scott.E
 "243265", //Murdock
-"2355072", //Smith.J
 "3392128", //Hunter
 "87740038", //Kratzer
 "77240838", //State Trooper aka J.Moore
@@ -71,6 +70,17 @@ if (!(_id in _Admins)) then {
 	};*/
 	if (!(_id in _FD) and RPM_FF) then {
 		titletext ["YOU ARE NOT ALLOWED TO PLAY ON THIS SIDE (OPFOR)", "BLACK", 1];
+		player enableSimulation false;
+		endMission "LOSER";
+	};
+	//PD & FD CANNOT GO CIV
+	if (_id in _PD) and RPM_Civ) then {
+		titletext ["YOU ARE A COP! YOU CANNOT PLAY CIV!", "BLACK", 1];
+		player enableSimulation false;
+		endMission "LOSER";
+	};
+	if (_id in _FD) and RPM_Civ) then {
+		titletext ["YOU ARE A FIREFIGHTER! YOU CANNOT PLAY CIV!", "BLACK", 1];
 		player enableSimulation false;
 		endMission "LOSER";
 	};
