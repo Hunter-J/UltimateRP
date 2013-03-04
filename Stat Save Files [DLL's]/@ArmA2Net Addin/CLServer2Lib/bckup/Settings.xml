@@ -1,0 +1,11 @@
+<Server>
+	<MySQL>
+		<Server>localhost</Server>
+		<Port>3306</Port>
+		<User>ultrp</User>
+		<Password>ultrpsave</Password>
+		<Database>ultrp</Database>
+	</MySQL>
+	<StatsFilePath>C:\Program Files\Bohemia Interactive\ArmA 2 Operation Arrowhead\a2server</StatsFilePath>
+	<StatsFile>stats.sqf</StatsFile>
+</Server>
