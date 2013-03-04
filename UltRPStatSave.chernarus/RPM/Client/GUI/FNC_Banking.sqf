@@ -35,8 +35,8 @@ RPM_Cfg_Banking_GUI = {
             };
             lbSetCurSel[69, 0];
             while {ctrlVisible 68} do {
-                ctrlSetText[73, format["$%1", [521] call RPM_Cfg_Inv_GetItemAmount]];
-                ctrlSetText[74, format["$%1", i4]];
+                ctrlSetText[73, format["$%1", [([521] call RPM_Cfg_Inv_GetItemAmount), 1, 0, true] call CBA_fnc_formatNumber]];
+                ctrlSetText[74, format["$%1", [floor(i4), 1, 0, true] call CBA_fnc_formatNumber]];
                 if ((!((ctrlText 68) call RPM_str_IsNumeric)) || ((ctrlText 68) call RPM_str_StrToInt) >= RPM_MAX_NUMBER) then {
                     ctrlSetText[68, "1"];
                 };

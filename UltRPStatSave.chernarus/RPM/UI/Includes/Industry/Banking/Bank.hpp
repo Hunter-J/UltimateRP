@@ -6,10 +6,10 @@ class BankDialog: RscGroup {
 	controls[] = {
 		BankFrame,
 		BankAccountLabel,
-		BankPocketLabel,
+		BankCashLabel,
 		BankTargetLabel,
 		BankAmountLabel,
-		BankPocketValue,
+		BankCashValue,
 		BankAccountValue,
 		BankAmountEdit,
 		BankTargetCombo,
@@ -21,131 +21,147 @@ class BankDialog: RscGroup {
 	class DialogBackground: RscBackground
 	{
 		colorBackground[] = {0, 0, 0, 0.88};
-		x = 0.234375;
-		y = 0.35;
-		w = 0.53125;
-		h = 0.3;
+		x = 0.284334 * safezoneW + safezoneX;
+		y = 0.365 * safezoneH + safezoneY;
+		w = 0.478734 * safezoneW;
+		h = 0.2575 * safezoneH;
 	};
 	class BankFrame: RscFrame
 	{
 		idc = -1;
 		text = "Bank";
-		x = 0.234375;
-		y = 0.35;
-		w = 0.53125;
-		h = 0.3;
+		x = 0.284334 * safezoneW + safezoneX;
+		y = 0.365 * safezoneH + safezoneY;
+		w = 0.478734 * safezoneW;
+		h = 0.2575 * safezoneH;
 		moving = 1;
+	};
+	class BankDepositButton: RscShortcutButton
+	{
+		idc = 70;
+		text = "Deposit";
+		x = 0.610175 * safezoneW + safezoneX;
+		y = 0.3725 * safezoneH + safezoneY;
+		w = 0.100539 * safezoneW;
+		h = 0.08 * safezoneH;
+	};
+	class BankWithdrawButton: RscShortcutButton
+	{
+		idc = 72;
+		text = "Withdraw";
+		x = 0.608615 * safezoneW + safezoneX;
+		y = 0.43 * safezoneH + safezoneY;
+		w = 0.113042 * safezoneW;
+		h = 0.08 * safezoneH;
+		default = 0;
 	};
 	class BankAccountLabel: RscText
 	{
 		idc = -1;
 		text = "Account:";
-		x = 0.25;
-		y = 0.425;
-		w = 0.09375;
-		h = 0.05;
-	};
-	class BankPocketLabel: RscText
-	{
-		idc = -1;
-		text = "Pocket:";
-		x = 0.25;
-		y = 0.375;
-		w = 0.09375;
-		h = 0.05;
-	};
-	class BankTargetLabel: RscText
-	{
-		idc = -1;
-		text = "Target:";
-		x = 0.671875;
-		y = 0.375;
-		w = 0.078125;
-		h = 0.05;
-	};
-	class BankAmountLabel: RscText
-	{
-		idc = -1;
-		text = "Amount:";
-		x = 0.25;
-		y = 0.475;
-		w = 0.09375;
-		h = 0.05;
-	};
-	class BankPocketValue: RscText
-	{
-		idc = 73;
-		text = "$0";
-		x = 0.359375;
-		y = 0.375;
-		w = 0.09375;
-		h = 0.05;
+		x = 0.3 * safezoneW + safezoneX;
+		y = 0.395 * safezoneH + safezoneY;
+		w = 0.0614698 * safezoneW;
+		h = 0.03375 * safezoneH;
+		sizeEx = 0.035;
+		colorText[] = { 0, 5, 0, 1 };
 	};
 	class BankAccountValue: RscText
 	{
 		idc = 74;
 		text = "$0";
-		x = 0.359375;
-		y = 0.425;
-		w = 0.125;
-		h = 0.05;
+		x = 0.373153 * safezoneW + safezoneX;
+		y = 0.4 * safezoneH + safezoneY;
+		w = 0.17103 * safezoneW;
+		h = 0.0294455 * safezoneH;
+		sizeEx = 0.035;
+		colorText[] = { 0, 5, 0, 1 };
 	};
-	class BankAmountEdit: RscEdit
+	class BankCashLabel: RscText
 	{
-		idc = 68;
-		text = "1";
-		x = 0.359375;
-		y = 0.475;
-		w = 0.09375;
-		h = 0.05;
+		idc = -1;
+		text = "Cash:";
+		x = 0.3 * safezoneW + safezoneX;
+		y = 0.4475 * safezoneH + safezoneY;
+		w = 0.0372466 * safezoneW;
+		h = 0.0325 * safezoneH;
+		sizeEx = 0.035;
+		colorText[] = { 0, 5, 0, 1 };
+	};
+	class BankTargetLabel: RscText
+	{
+		idc = -1;
+		text = "Target:";
+		x = 0.3 * safezoneW + safezoneX;
+		y = 0.5575 * safezoneH + safezoneY;
+		w = 0.0536558 * safezoneW;
+		h = 0.03625 * safezoneH;
+		sizeEx = 0.035;
+		colorText[] = { 5, 0, 0, 1 };
+	};
+	class BankAmountLabel: RscText
+	{
+		idc = -1;
+		text = "Amount:";
+		x = 0.3 * safezoneW + safezoneX;
+		y = 0.5 * safezoneH + safezoneY;
+		w = 0.0638139 * safezoneW;
+		h = 0.035 * safezoneH;
+		sizeEx = 0.035;
+		colorText[] = { 0, 5, 0, 1 };
 	};
 	class BankTargetCombo: RscCombo
 	{
 		idc = 69;
-		x = 0.53125;
-		y = 0.425;
-		w = 0.21875;
-		h = 0.05;
+		x = 0.370809 * safezoneW + safezoneX;
+		y = 0.55875 * safezoneH + safezoneY;
+		w = 0.204464 * safezoneW;
+		h = 0.03375 * safezoneH;
 	};
-	class BankDepositButton: RscButton
-	{
-		idc = 70;
-		text = "Deposit";
-		x = 0.25;
-		y = 0.575;
-		w = 0.109375;
-		h = 0.05;
-		default = 0;
-	};
-	class BankTransferButton: RscButton
+	class BankTransferButton: RscShortcutButton
 	{
 		idc = 71;
 		text = "Transfer";
-		x = 0.5;
-		y = 0.575;
-		w = 0.109375;
-		h = 0.05;
+		x = 0.60627 * safezoneW + safezoneX;
+		y = 0.4875 * safezoneH + safezoneY;
+		w = 0.108354 * safezoneW;
+		h = 0.08 * safezoneH;
 		default = 0;
 	};
-	class BankWithdrawButton: RscButton
-	{
-		idc = 72;
-		text = "Withdraw";
-		x = 0.375;
-		y = 0.575;
-		w = 0.109375;
-		h = 0.05;
-		default = 0;
-	};
-	class BankCloseButton: RscButton
+	class BankCloseButton: RscShortcutButton
 	{
 		idc = -1;
 		text = "Close";
-		x = 0.640625;
-		y = 0.575;
-		w = 0.109375;
-		h = 0.05;
-		action = "closeDialog 0;";
-		default = 1;
+		x = 0.660967 * safezoneW + safezoneX;
+		y = 0.55875 * safezoneH + safezoneY;
+		w = 0.0974139 * safezoneW;
+		h = 0.08 * safezoneH;
+		action = "closeDialog 0";
+	};
+	class BankCashValue: RscText
+	{
+		idc = 73;
+		text = "$0";
+		x = 0.372372 * safezoneW + safezoneX;
+		y = 0.4475 * safezoneH + safezoneY;
+		w = 0.17103 * safezoneW;
+		h = 0.0294455 * safezoneH;
+		sizeEx = 0.035;
+		colorText[] = { 0, 5, 0, 1 };
+	};
+	class BankAmountEdit: RscEdit
+	{
+		idc = 68;
+		text = "0";
+		x = 0.371069 * safezoneW + safezoneX;
+		y = 0.505 * safezoneH + safezoneY;
+		w = 0.17103 * safezoneW;
+		h = 0.0294455 * safezoneH;
+		sizeEx = 0.035;
 	};
 };
+
+
+
+
+

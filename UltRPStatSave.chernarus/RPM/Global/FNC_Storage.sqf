@@ -177,6 +177,8 @@ RPM_Cfg_Storage_GetNPC = {
                             case "Storage": {
                                 if ((side(_player)) == civilian) then {
                                     _ret = npc_storage_civ;
+									_ret = npc_storage_air;
+									_ret = npc_storage_boat;
                                 } else {
                                     _ret = npc_storage_cop;
                                 };

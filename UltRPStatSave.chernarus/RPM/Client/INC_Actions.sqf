@@ -37,6 +37,9 @@ RPM_NPC_CivActions = [
      
 	// Storage
     [npc_storage_civ, [format[localize "v343"], "RPM\Global\STD_NoScript.sqf", format["[""Storage"", 0, 0, %1] call RPM_Cfg_Storage_GUI;", npc_storage_civ], 5, "", 4]],
+	[npc_storage_air, [format[localize "v548"], "RPM\Global\STD_NoScript.sqf", format["[""Storage"", 0, 0, %1] call RPM_Cfg_Storage_GUI;", npc_storage_air], 5, "", 4]],
+	[npc_storage_boat, [format[localize "v549"], "RPM\Global\STD_NoScript.sqf", format["[""Storage"", 0, 0, %1] call RPM_Cfg_Storage_GUI;", npc_storage_boat], 5, "", 4]],
+
 
 	//Delivery
     [npc_getjob1, [format[localize "STRM_Act_Delivery_Get"], "RPM\Global\STD_NoScript.sqf", "npc_getjob1 call RPM_Cfg_Delivery_Logic;", 4, "((!(b3)))", 4]],

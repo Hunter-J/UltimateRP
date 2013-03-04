@@ -6,7 +6,6 @@ while {true} do {
 	//Acre
 	if (RPM_Cop or RPM_FF) then {
 		["Emerg"] call UltRP_ACRE;
-		[] call UltRP_FireLoop;
 	};
 	if (RPM_Civ) then {
 		["Civ"] call UltRP_ACRE;

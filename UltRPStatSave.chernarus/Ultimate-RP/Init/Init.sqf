@@ -17,9 +17,8 @@ if (!isDedicated) then {
 		"Ultimate-RP\Functions\FNC_Debug.sqf",
 		"Ultimate-RP\Functions\FNC_Train.sqf",
 		"Ultimate-RP\Functions\FNC_Rob.sqf",
-		"Ultimate-RP\Functions\FNC_UI.sqf",
+		"Ultimate-RP\Functions\FNC_UI.sqf"
 		//"Ultimate-RP\Functions\FNC_Taxi.sqf",
-		"Ultimate-RP\FD\FD.sqf"
 	];
 	_loaded = 0;
 	for [{_i = 0}, {_i < count(_scripts)}, {_i = _i + 1}] do {

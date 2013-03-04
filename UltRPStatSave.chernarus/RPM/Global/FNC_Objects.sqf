@@ -490,6 +490,12 @@ RPM_Cfg_Objects_GetBox = {
         case npc_storage_cop: {
             _distance = 14;
         };
+		case npc_storage_air: {
+            _distance = 14;
+        };
+		case npc_storage_boat: {
+            _distance = 14;
+        };
     };
     for [{_i = 0}, {_i < count(a6)}, {_i = _i + 1}] do {
         if (_npc distance (a6 select _i) <= _distance) then {

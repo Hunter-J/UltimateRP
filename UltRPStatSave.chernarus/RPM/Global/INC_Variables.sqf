@@ -278,6 +278,9 @@ a39 = [];
 // Storage Spawns (NPC, Spawnpoint(s))
 a42 = [
     [npc_storage_civ, ["storage_civ_sp1", "storage_civ_sp2", "storage_civ_sp3"]],
+	[npc_storage_cop, ["storage_cop_sp1", "storage_cop_sp2" ,"storage_cop_sp3"]],
+	[npc_storage_air, ["storage_air_sp1", "storage_air_sp2" ,"storage_air_sp3"]],
+	[npc_storage_boat, ["storage_boat_sp1", "storage_boat_sp2" ,"storage_boat_sp3"]],
     [npc_ctrlarea1, ["ctrlarea1_sp1", "ctrlarea1_sp2", "ctrlarea1_sp3"]],
     [npc_ctrlarea2, ["ctrlarea2_sp1", "ctrlarea2_sp2", "ctrlarea2_sp3"]]
 ];
@@ -509,7 +512,9 @@ a67 = [
 a73 = [
     [npc_storage_civ, [100000]],
 	[npc_storage_cop, [100000]],
+	[npc_storage_boat, [100000]],
     [npc_ctrlarea1, [10000]],
+	[npc_storage_air, [100000]],
     [npc_ctrlarea2, [10000]]
 ];
 RPM_Person_CivActionsAdded = [];
